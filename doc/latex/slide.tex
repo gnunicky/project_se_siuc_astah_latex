@@ -1,21 +1,39 @@
-\documentclass{beamer}
+\documentclass[t]{beamer} %<- 'c' is default option, 't' forces top aligned
 \usepackage[italian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx,hyperref,ru,url}
-\usepackage{ragged2e}
 \usepackage{pgf}
 \usepackage{xcolor}
 \usepackage{pifont}
-\usepackage{hyperref}
-\justifying
 
 % pacchetto per l'inclusione di figure postscript
 \usepackage{graphics}
-
 \DeclareGraphicsExtensions{.gif,.png,.pdf,.jpg,.mps}
+
 % pacchetto per inserire figure affiancate
 \usepackage{subfigure}
 \usepackage[centerlast, bf]{caption}
+
+\setbeamerfont{frametitle}{size=\large}
+
+%Inserimento nell'indice dei numeri per ogni frame nella sezione e sottosezione 
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
+
+%Ridefinizione dei comandi 
+\newcommand{\virgolette}[1]{``#1''}
+
+%Pacchetto per giustificare gli itemize
+\usepackage{ragged2e}
+\let\olditem=\item%
+\renewcommand{\item}{\olditem \justifying}%
+
+%Giustifica i frame
+\justifying
+
+%Pacchetto e impostazioni per i link web
+\usepackage{hyperref}
+\hypersetup {colorlinks=false,linkcolor=blue,filecolor=green,urlcolor=black,citecolor=blue }
 
 % The title of the presentation:
 %  - first a short version which is visible at the bottom of each slide;
@@ -62,39 +80,461 @@
 % bar, and hence the university name and logo. If you do not add any sections 
 % they will not be visible.
 
-\section{Problema}
-\begin{frame}
-  \frametitle{}
-   \hyperlink{theorem}
-   {\beamergotobutton{Jump to Theorem\#1}
-   }
+% Eliminare numeri allowframebreaks
+\setbeamertemplate{frametitle continuation}{}
+
+\section{Indice}
+ \begin{frame}[allowframebreaks]{Indice} %--> oppure per il titolo del frame \frametitle {Indice}
+    \tableofcontents
+ \end{frame}
+
+\section{Ideazione - Iterazione 1}
+ \begin{frame}[allowframebreaks] 
+  \frametitle {Descrizione realtà d'interesse} 
+   Nel Piano Nazionale della Ricerca (PNR)  messo a punto da HORIZON ITALIA e MIUR viene bandito un progetto chiamato:\newline
+   \textbf{\virgolette{Smart Intelligent University Communications (SIUC)}} destinato a tutti gli atenei italiani.\newline 
+   Tale progetto è caratterizzato dalle seguenti specifiche descritti nel seguito, che consente ad appassionati, studenti,    
+   ricercatori, docenti e imprese di scambiarsi messaggi in tempo reale su condivisioni, integrazioni e competenze di idee per una contaminazione tra ambiti 
+   disciplinari diversi, realtà diverse e stimolare nei partecipanti lo sviluppo della  cultura dell’intraprendere e dell’innovazione.\newline 
+   In tale sistema si richiedono le seguenti specifiche:
+   \begin{itemize} 
+    \item Esistono diversi canali o stanze virtuali (ciascuna legata a un corso di laurea per ogni facoltà, includendo sia la triennale e la magistrale di quel 
+          determinato corso di laurea) nelle quali un utente può entrare per scambiare messaggi con gli altri utenti presenti nella stessa stanza.
+    \item \`E possibile inviare due tipi di messaggi: 
+          \setbeamertemplate{itemize items}[triangle]
+          \begin{itemize} 
+            \item \virgolette{pubblici}: dei messaggi inviati da un utente e trasmessi a tutti gli altri partecipanti presenti nella stanza; 
+            \item \virgolette{privati}: dei messaggi inviati da un utente e trasmessi ad uno specifico partecipante presente nella stessa stanza, in questo caso il 
+                                        destinatario selezionato sarà l’unico a ricevere il messaggio.
+          \end{itemize}
+          \setbeamertemplate{itemize items}[circle]
+    \item In ogni istante il sistema prevede la presenza di una tipologia di utente particolare, chiamato amministratore. I compiti più importanti di un 
+          amministratore sono i seguenti: 
+          \setbeamertemplate{itemize items}[triangle]
+          \begin{itemize} 
+            \item può creare o eliminare stanze del servizio di messaggistica; 
+            \item inviare messaggi di avviso ad un utente;
+            \item in caso di comportamenti irregolari è possibile espellere un utente dalla stanza e l'utente non può più rientrare fin quando questo non sarà
+                  rimosso dalla lista dei partecipanti bannati della stanza presente nel sistema.
+          \end{itemize}
+    \item Il sistema deve mandare dei messaggi di notifica, che permettono di aggiornare l’utente di un cambiamento dello stato del sistema.
+  \end{itemize}
 \end{frame}
 
-\section{Iterazione 1}
-\begin{frame}[label=theorem]
-  \frametitle{}
+\subsection{Iterazione 1: Requisiti}
+\begin{frame} [allowframebreaks]
+  \frametitle{Iterazione 1: Requisiti - Documento di Visione}
+   La caratteristica principale del progetto è quella di consentire ad appassionati, studenti, ricercatori, docenti e imprese di scambiarsi messaggi in tempo reale   
+   per ogni ateneo.  In particolare in questo progetto sono presenti diverse stanze virtuali che rappresentano le facoltà di un ateneo con due tipologie di    
+   utilizzatori di sistema, ovvero l’amministratore e gli utenti del servizio di messaggistica.  Con le seguenti  caratteristiche:
+   \begin{itemize} 
+    \item l’amministratore gestisce le stanze virtuali e supervisiona gli utenti del servizio;
+    \item gli utenti per usufruire di tale servizio inseriscono un nickname e si collegano al server impostando dei parametri di connessione. Ogni utente può    
+          accedere a una stanza e inviare messaggi ad ogni utente presente nella stanza in tempo reale, inoltre ognuno può contattare in maniera privata gli altri 
+          partecipanti presenti nella stanza.
+   \end{itemize}
+   L’architettura utilizzata per offrire il servizio è di tipo client-server, questo approccio consente di fornire un’interfaccia  più flessibile per l’accesso al   
+   servizio di messaggistica anche con un semplice browser, senza modificare pesantemente la progettazione rispetto ad un architettura peer-to-peer.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Iterazione 1: Requisiti - Diagrammi dei casi d'uso}
     \hypersetup{linkbordercolor={0 0.5 0.1}}
-    \includegraphics[height=210px, width=305px,]{image/getroomsname.png}{\centering}
-    \framezoom <1><2>[border](0 cm,0 cm)(2.5 cm,4.0 cm)
-    \framezoom <1><3>[border](5.0 cm,0 cm)(2.5 cm,4.0 cm)
-    \framezoom <1><4>[border](0 cm,4 cm)(2.5 cm,3.5 cm)
-    \framezoom <1><5>[border](5.0 cm,4 cm)(2.5 cm,3.5 cm)
+    \includegraphics[height=178px, width=330px,]{image_astah/UseCaseDiagram.png}{\centering}
 \end{frame}
 
-\section{Iterazione 1 con Refactoring}
+\begin{frame} [allowframebreaks]
+  \frametitle{Iterazione 1: Requisiti - Modello dei casi d'uso}
+   \underline{Attori Identificati}: Amministratore (SiucAdmin) e Utente del Servizio di Messaggistica (SiucUser). \newline
+   \underline{Casi d'uso identificati}: RequestConnection, AccessRoom, SendRoomMessage, SendPrivateMessage, ReceiveNotify, ExitRoom, CreateRoom, RemoveRoom, 
+                                        SendAlertUser, ExpulsionUser \newline
+   Descrizione breve dei casi d'uso identificati:
+   \begin{enumerate} 
+    \item RequestConnection. L’utente si connette al sistema specificando il nickname, l’indirizzo e la porta del servizio di messaggistica.
+    \item AccessRoom. L’utente richiede al sistema l’ingresso in una specifica stanza del servizio (che deve essere stata precedentemente creata dall’amministratore 
+          del servizio). 
+    \item SendRoomMessage. Il partecipante al servizio di messaggistica invia un messaggio ``pubblico'' che viene inviato dal sistema a tutti i partecipanti che si 
+          trovano nella stessa stanza di colui che ha inviato il messaggio.
+    \item SendPrivateMessage. Il partecipante al servizio di messaggistica  invia un messaggio ``privato'' ad uno specifico partecipante.
+    \item ReceiveNotify. Il sistema manda dei messaggi di notifica, che permettono di aggiornare l’utente di un cambiamento dello stato del sistema.
+    \item ExitRoom. Un partecipante richiede al sistema l’uscita dal servizio. Questo comporta la sua eliminazione dall’insieme dei partecipanti presenti nella 
+          stanza del servizio cui era precedentemente associato l’utente.
+    \item CreateRoom. L’amministratore del servizio di messaggistica è responsabile della creazione (preventiva) delle stanze che potranno successivamente essere 
+          visitate dai partecipanti.
+    \item RemoveRoom. In ogni momento l’amministratore può eliminare una stanza dal servizio (ad esempio perchè non ci sono partecipanti). Ciò comporta l’invio 
+          preventivo di un messaggio a tutti i patecipanti eventualmente presenti nella stanza, i quali potranno in seguito richiedere l’ingresso in una   
+          nuova stanza del servizio.
+    \item SendAlertUser. L’amministratore può in ogni momento inviare un messaggio di avviso ad uno specifico partecipante al servizio.
+    \item ExpulsionUser. L’amministratore può in ogni momento espellere da una stanza uno specifico partecipante.  
+   \end{enumerate}
+\end{frame}
+
+\begin{frame} [allowframebreaks]
+ \frametitle{Iterazione 1: Requisiti, caso d'uso UC1\_RequestConnection}
+  \begin{table}[!htbp]
+    \caption {Descrizione Dettagliata: Caso d'uso UC1\_RequestConnection}
+    \label{table:1}
+     \resizebox{\linewidth}{!}{%
+      \begin{tabular}{|l|p{10cm}|}\hline
+       Nome caso d'uso &  UC1\_RequestConnection \\\hline
+       Portata & Applicazione Smart Intelligent University Communications \\\hline
+       Livello &  Obiettivo Utente \\\hline
+       Attore primario &  SiucUser \\\hline
+       Parti interessate e interessi &  SiucUser: vuole collegarsi al servizio di messaggistica \\\hline
+       Pre-condizioni & L'utente inserisce correttamente i parametri della connessione al servizio di messaggistica  \\\hline
+       Post-condizioni (garanzia di successo) &  L'utente è inserito tra gli utenti online con il nickname confermato del servizio di messaggistica ottenendo un 
+                                                 messaggio di benvenuto \\\hline
+       Scenario principale di successo &  
+       \begin{enumerate} 
+       \item L'utente inserisci un nickname, l'address e la porta del server.
+       \item Il sistema esamina il nickname inviato dall'utente verifica se è presente una omonimia.
+       \item Il sistema conferma inserimento tra gli utenti online inviando una notifica di benvenuto.
+       \end{enumerate} \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\begin{frame} [allowframebreaks]
+ \frametitle{Iterazione 1: Requisiti, caso d'uso UC1\_RequestConnection}
+  \begin{table}[!htbp]
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Estensioni (o flussi alternativi) &  
+          \begin{enumerate} 
+           \item (2A) Nel caso che è presente omonimia, cambia il nickname aggiungendo \_ al nickname, cioè nickname\_ . 
+           \item  Il sistema conferma inserimento tra gli utenti online inviando una notifica di benvenuto.
+          \end{enumerate} \\\hline
+       Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
+                                                        invio e ricezione del messaggio\\\hline
+       Elenco delle varianti tecnologiche &  L’applicazione dovrebbe essere in grado di adattarsi graficamente in modo automatico al dispositivo con cui viene 
+                                             utilizzata. \\\hline
+       Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
+       Varie e/o Problemi Aperti &  // \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
 \begin{frame}
-  \frametitle{Descrizione delle 5 Fasi ...}
+ \frametitle{Iterazione 1: Requisiti, caso d'uso UC2\_AccessRoom}
+  \begin{table}[!htbp]
+   \caption {Caso d'uso UC2\_AccessRoom}
+    \label{table:1}
+     \resizebox{\linewidth}{!}{%
+      \begin{tabular}{|l|p{10cm}|}\hline
+       Nome caso d'uso &  UC2\_AccessRoom\\\hline
+       Portata & Applicazione Smart Intelligent University Communications \\\hline
+       Livello & Obiettivo Utente \\\hline
+       Attore primario & SiucUser  \\\hline
+       Parti interessate e interessi & 
+        \begin{itemize}
+         \item SiucUser: vuole registrarsi e effettuare l’ingresso in una stanza presente nel servizio di messaggistica.         
+         \item SiucAdmin: E’ interessato che l’utente espulso non può registrarsi nella stanza selezionata. 
+        \end{itemize} \\\hline
+       Pre-condizioni &
+        \begin{itemize}
+         \item Nel sistema è presente almeno una stanza creata da un amministratore.
+         \item Il sistema verifica che l’utente non sia stato espulso dalla stanza  
+        \end{itemize} \\\hline
+       Post-condizioni (garanzia di successo) &  Nel caso di svolgimento normale l’utente è registrato ed è presente nell’insieme degli utenti della stanza 
+                                                 specificata. \\\hline
+      \end{tabular}}
+   \end{table}
 \end{frame}
 
-\section{Iterazione 2}
+\begin{frame} [allowframebreaks]
+ \frametitle{Iterazione 1: Requisiti, caso d'uso UC2\_AccessRoom}
+  \begin{table}[!htbp]
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+          Scenario principale di successo &  
+           \begin{enumerate} 
+            \item L’utente richiede una lista di stanze presenti nel sistema  di messaggistica.
+            \item Il sistema invia la lista delle stanze.
+            \item L’utente seleziona la stanza tra quelle presenti in lista.
+            \item Il sistema verifica l’esistenza della stanza.
+            \item Il sistema registra l’utente alla stanza.
+          \end{enumerate} \\\hline 
+         Estensioni (o flussi alternativi) &  
+          \begin{enumerate} 
+           \item (4A) Se nel servizio di messaggistica non esiste una stanza con il nome specificato dall’utente.  
+           \item L’interazione termina con la segnalazione dell’errore al sotto sistema chiamante e all’utente.
+          \end{enumerate} \\\hline
+       Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
+                                                        invio e ricezione del messaggio\\\hline
+       Elenco delle varianti tecnologiche &  L’applicazione dovrebbe essere in grado di adattarsi graficamente in modo automatico al dispositivo con cui viene 
+                                             utilizzata. \\\hline
+       Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
+       Varie e/o Problemi Aperti &  // \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\begin{frame} [allowframebreaks]
+ \frametitle{Iterazione 1: Requisiti, contratto CO1 - nameCO1}
+  \begin{table}[!htbp]
+   \caption {Contratto CO1 - nameCO1}
+    \label{table:1}
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Operazione & \\\hline 
+         Riferimenti &  \\\hline
+         Pre-condizione & \\\hline 
+         Post-condizione &  \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\subsection{Iterazione 1: Progettazione}
 \begin{frame}
-  \frametitle{Descrizione delle 5 Fasi ...}
+ \frametitle{Iterazione 1: Progettazione, casi d'uso UC1 e UC2}
 \end{frame}
 
-\section{Iterazione 3}
+\subsection{Iterazione 1: Implementazione}
 \begin{frame}
-  \frametitle{Descrizione delle 5 Fasi ...}
+ \frametitle{Iterazione 1: Implementazione, casi d'uso UC1 e UC2}
 \end{frame}
 
+\subsection{Iterazione 1: Test}
+\begin{frame}
+ \frametitle{Iterazione 1: Test, casi d'uso UC1 e UC2}
+\end{frame}
+
+\section{Ideazione - Refactoring}
+\begin{frame}
+  \frametitle{Descrizione Iterazione 1 con Refactoring}
+\end{frame}
+
+\subsection{Iterazione 1 - Refactoring: Progettazione}
+\begin{frame}
+  \frametitle{Iterazione 1 - Refactoring: Progettazione, casi d'uso UC1 e UC2}
+\end{frame}
+
+\subsection{Iterazione 1 - Refactoring: Implementazione}
+\begin{frame}
+  \frametitle{Iterazione 1 - Refactoring: Implementazione, casi d'uso UC1 e UC2}
+\end{frame}
+
+\subsection{Iterazione 1 - Refactoring: Test}
+\begin{frame}
+  \frametitle{Iterazione 1 - Refactoring: Test, casi d'uso UC1 e UC2}
+\end{frame}
+
+\section{Elaborazione - Iterazione 2}
+\begin{frame}
+  \frametitle{Descrizione Iterazione 2}
+\end{frame}
+
+\subsection{Iterazione 2: Requisiti}
+\begin{frame}
+  \frametitle{Iterazione 2: Requisiti, caso d'uso UC3\_SendRoomMessage}
+  \begin{table}[!htbp]
+    \caption {Caso d'uso UC3\_SendRoomMessage}
+     \label{table:1}
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+        Nome caso d'uso &  UC3\_SendRoomMessage\\\hline
+        Portata & Applicazione Smart Intelligent University Communications \\\hline
+        Livello & Obiettivo Utente \\\hline
+        Attore primario & SiucUser  \\\hline
+        Parti interessate e interessi & 
+         \begin{itemize}
+          \item SiucUser: vuole che i messaggi siano inviati a ogni utente della stanza virtuale.
+          \item SiucAdmin: è interessato a supervisionare gli utenti del servizio affinché non ci siano abusi.       
+         \end{itemize} \\\hline
+        Pre-condizioni &
+         \begin{itemize}  
+          \item Nel sistema è presente almeno una stanza creata da un amministratore.
+          \item L'utente è registrato nella stanza in cui desidera inviare i messaggi.
+         \end{itemize} \\\hline
+        Post-condizioni (garanzia di successo) & Ogni utente riceve il messaggio inviato. \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\begin{frame} [allowframebreaks]
+ \frametitle{Iterazione 2: Requisiti, caso d'uso UC3\_SendRoomMessage}
+  \begin{table}[!htbp]
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Scenario principale di successo &  
+         \begin{enumerate} 
+          \item Il sistema visualizza a video gli utenti presenti nella stanza.
+          \item Il sistema visualizza un’area pubblica dove vengono mostrati tutte le conversazioni in corso dal quel momento in poi. 
+          \item L’utente inserisce da tastiera il messaggio da inviare.
+          \item Il server tiene traccia del log del messaggio (??).
+          \item Il messaggio viene inoltrato agli altri utenti presenti nella stanza selezionata. 
+         \end{enumerate} \\\hline
+         Estensioni (o flussi alternativi) &  
+          \begin{enumerate} 
+           \item (1A) La connessione fallisce.
+           \item Il server rimuove l’utente dalle stanze in cui è registrato.
+          \end{enumerate} \\\hline
+         Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
+                                                        invio e ricezione del messaggio\\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\begin{frame} [allowframebreaks]
+ \frametitle{Iterazione 2: Requisiti, caso d'uso UC3\_SendRoomMessage}
+  \begin{table}[!htbp]
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Elenco delle varianti tecnologiche &  
+          \begin{itemize}  
+           \item \`E possibile inviare messaggi confidenziali, autenticati e integri al server del servizio di messaggistica.
+           \item  L’applicazione dovrebbe essere in grado di adattarsi graficamente in modo automatico al dispositivo con cui viene utilizzata.
+          \end{itemize} \\\hline
+         Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
+         Varie e/o Problemi Aperti &  // \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\subsection{Iterazione 2: Analisi}
+\begin{frame}
+  \frametitle{Iterazione 2: Analisi, caso d'uso UC3\_SendRoomMessage}
+\end{frame}
+
+\subsection{Iterazione 2: Progettazione}
+\begin{frame}
+  \frametitle{Iterazione 2: Progettazione, caso d'uso UC3\_SendRoomMessage}
+\end{frame}
+
+\subsection{Iterazione 2: Implementazione}
+\begin{frame}
+  \frametitle{Iterazione 2: Implementazione, caso d'uso UC3\_SendRoomMessage}
+\end{frame}
+
+\subsection{Iterazione 2: Test}
+\begin{frame}
+  \frametitle{Iterazione 2: Test, caso d'uso UC3\_SendRoomMessage}
+\end{frame}
+
+\section{Elaborazione - Iterazione 3}
+\begin{frame}
+  \frametitle{Descrizione Iterazione 3}
+\end{frame}
+
+\subsection{Iterazione 3: Requisiti}
+\begin{frame}
+  \frametitle{Iterazione 3: Requisiti, caso d'uso UC4\_SendPrivateMessage}
+  \begin{table}[!htbp]
+    \caption {Caso d'uso UC4\_SendPrivateMessage}
+     \label{table:1}
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+        Nome caso d'uso &  UC4\_SendPrivateMessage\\\hline
+        Portata & Applicazione Smart Intelligent University Communications \\\hline
+        Livello & Obiettivo Utente \\\hline
+        Attore primario & SiucUser  \\\hline
+        Parti interessate e interessi & 
+         \begin{itemize}
+          \item SiucUser: vuole che i messaggi siano inviati all’utente selezionato presente nella stanza virtuale.      
+         \end{itemize} \\\hline
+        Pre-condizioni &
+         \begin{itemize}  
+          \item Nel sistema è presente almeno una stanza creata da un amministratore.
+          \item L'utente è registrato nella stanza in cui desidera inviare un messaggio ad un altro utente presente.
+         \end{itemize} \\\hline
+        Post-condizioni (garanzia di successo) &  L’utente selezionato riceve il messaggio inviato\\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\begin{frame} [allowframebreaks]
+ \frametitle{Iterazione 3: Requisiti, caso d'uso UC4\_SendPrivateMessage}
+  \begin{table}[!htbp]
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Scenario principale di successo &  
+         \begin{enumerate} 
+          \item L’utente seleziona una stanza.
+          \item Il sistema visualizza a video gli utenti presenti nella stanza e un’area pubblica dove vengono mostrati tutte le conversazioni in corso da quel 
+                momento in poi.
+          \item L’utente seleziona il destinatario del messaggio privato.
+          \item L’utente inserisce da tastiera il messaggio da inviare.
+	  \item Il messaggio viene inoltrato al destinatario selezionato.
+         \end{enumerate} \\\hline
+         Estensioni (o flussi alternativi) &  
+          \begin{enumerate} 
+           \item (1A) La connessione fallisce. (??)
+           \item Il server rimuove l’utente dalle stanze in cui è registrato. (??)
+          \end{enumerate} \\\hline
+         Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
+                                                        invio e ricezione del messaggio\\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\begin{frame} [allowframebreaks]
+ \frametitle{Iterazione 3: Requisiti, caso d'uso UC4\_SendPrivateMessage}
+  \begin{table}[!htbp]
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Elenco delle varianti tecnologiche &  
+          \begin{itemize}  
+           \item \`E possibile inviare messaggi confidenziali, autenticati e integri al server del servizio di messaggistica.
+           \item  L’applicazione dovrebbe essere in grado di adattarsi graficamente in modo automatico al dispositivo con cui viene utilizzata.
+          \end{itemize} \\\hline
+         Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
+         Varie e/o Problemi Aperti &  // \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\subsection{Iterazione 3: Analisi}
+\begin{frame}
+  \frametitle{Iterazione 3: Analisi, caso d'uso UC4\_SendPrivateMessage}
+\end{frame}
+
+\subsection{Iterazione 3: Progettazione}
+\begin{frame}
+  \frametitle{Iterazione 3: Progettazione, caso d'uso UC4\_SendPrivateMessage}
+\end{frame}
+
+\subsection{Iterazione 3: Implementazione}
+\begin{frame}
+  \frametitle{Iterazione 3: Implementazione, caso d'uso UC4\_SendPrivateMessage}
+\end{frame}
+
+\subsection{Iterazione 3: Test}
+\begin{frame}
+  \frametitle{Iterazione 3: Test, caso d'uso UC4\_SendPrivateMessage}
+\end{frame}
+
+\section{Glossario}
+\setbeamertemplate{itemize items}[triangle]
+\begin{frame}
+  \frametitle{Glossario} 
+   \begin{itemize} 
+    \item SiucUser: è l'utente del servizio di messaggistica.
+    \item SiucAdmin: è l'amministratore del servizio di messaggistica.
+    
+  \end{itemize}
+\end{frame}
+
+\begin {frame} 
+ \frametitle {\refname}
+  \begin {thebibliography}{99}
+   {\tiny 
+     \bibitem {bib1}  Martin Fowler, L. Baresi, S. Gaburri 
+     \newblock \emph{UML distilled. Guida rapida al linguaggio di modellazione standard} 
+     \newblock {Pearson Education Italia, 2010}
+
+     \bibitem {bib2} Craig Larman, Luca Cabibbo
+     \newblock \emph{Applicare UML e i pattern: analisi e progettazione orientata agli oggetti} 
+     \newblock {Pearson Education Italia, 2005}
+
+     \bibitem {bib3} M.L. Liu
+     \newblock \emph{Distributed Computing: Principles and Applications} 
+     \newblock {Addison-Wesley, 2003}
+
+     \bibitem {bib4} Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
+     \newblock \emph{Design patterns - Elementi per il riuso di software ad oggetti} 
+     \newblock {Pearson Education Italia, 1995}
+   }
+   \end {thebibliography}
+\end {frame}
 
 \end{document}
