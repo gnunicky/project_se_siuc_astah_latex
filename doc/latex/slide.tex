@@ -169,7 +169,7 @@
    \end{enumerate}
 \end{frame}
 
-\begin{frame} [allowframebreaks]
+\begin{frame}
  \frametitle{Iterazione 1: Requisiti, caso d'uso UC1\_RequestConnection}
   \begin{table}[!htbp]
     \caption {Descrizione Dettagliata: Caso d'uso UC1\_RequestConnection}
@@ -181,33 +181,38 @@
        Livello &  Obiettivo Utente \\\hline
        Attore primario &  SiucUser \\\hline
        Parti interessate e interessi &  SiucUser: vuole collegarsi al servizio di messaggistica \\\hline
-       Pre-condizioni & L'utente inserisce correttamente i parametri della connessione al servizio di messaggistica  \\\hline
-       Post-condizioni (garanzia di successo) &  L'utente è inserito tra gli utenti online con il nickname confermato del servizio di messaggistica ottenendo un 
+       Pre-condizioni & L'utente ha bisogno di una connessione di rete\\\hline
+       Post-condizioni (garanzia di successo) &  L'utente è inserito tra gli utenti online con il nickname confermato dal servizio di messaggistica ottenendo un 
                                                  messaggio di benvenuto \\\hline
        Scenario principale di successo &  
        \begin{enumerate} 
        \item L'utente inserisci un nickname, l'address e la porta del server.
-       \item Il sistema esamina il nickname inviato dall'utente verifica se è presente una omonimia.
-       \item Il sistema conferma inserimento tra gli utenti online inviando una notifica di benvenuto.
+       \item Il sistema esamina il nickname inviato dall'utente e verifica se è presente una omonimia.
+       \item Il sistema conferma l'inserimento tra gli utenti online inviando una notifica di benvenuto.
        \end{enumerate} \\\hline
       \end{tabular}}
    \end{table}
 \end{frame}
 
-\begin{frame} [allowframebreaks]
+\begin{frame}
  \frametitle{Iterazione 1: Requisiti, caso d'uso UC1\_RequestConnection}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
          Estensioni (o flussi alternativi) &  
-          \begin{enumerate} 
-           \item (2A) Nel caso che è presente omonimia, cambia il nickname aggiungendo \_ al nickname, cioè nickname\_ . 
-           \item  Il sistema conferma inserimento tra gli utenti online inviando una notifica di benvenuto.
-          \end{enumerate} \\\hline
+           1A - SiucUser inserisce parametri errati: 
+          \begin{itemize} 
+           \item Viene visualizzato un messaggio di errore e viene richiesto nuovamente l’inserimento di tali parametri.
+          \end{itemize} 
+           2A - Omonimia del nickname:
+          \begin{itemize}       
+           \item Il sistema cambia il nickname aggiungendo "\_" al nickname (es. \_nickname). 
+           \item Il sistema conferma l'inserimento tra gli utenti online inviando una notifica di benvenuto.
+          \end{itemize} \\\hline
        Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
-                                                        invio e ricezione del messaggio\\\hline
-       Elenco delle varianti tecnologiche &  L’applicazione dovrebbe essere in grado di adattarsi graficamente in modo automatico al dispositivo con cui viene 
-                                             utilizzata. \\\hline
+                                                        invio e ricezione del messaggio.\\\hline
+       Elenco delle varianti tecnologiche &  L’applicazione dovrebbe essere flessibile al funzionamento di diversi protocolli di comunicazione (es. TCP, UDP) e con   
+       diversi strati middleware (es. Socket, RMI) \\\hline
        Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
        Varie e/o Problemi Aperti &  // \\\hline
       \end{tabular}}
@@ -225,23 +230,15 @@
        Portata & Applicazione Smart Intelligent University Communications \\\hline
        Livello & Obiettivo Utente \\\hline
        Attore primario & SiucUser  \\\hline
-       Parti interessate e interessi & 
-        \begin{itemize}
-         \item SiucUser: vuole registrarsi e effettuare l’ingresso in una stanza presente nel servizio di messaggistica.         
-         \item SiucAdmin: E’ interessato che l’utente espulso non può registrarsi nella stanza selezionata. 
-        \end{itemize} \\\hline
-       Pre-condizioni &
-        \begin{itemize}
-         \item Nel sistema è presente almeno una stanza creata da un amministratore.
-         \item Il sistema verifica che l’utente non sia stato espulso dalla stanza  
-        \end{itemize} \\\hline
+       Parti interessate e interessi & SiucUser: vuole registrarsi e effettuare l’ingresso in una stanza presente nel servizio di messaggistica \\\hline
+       Pre-condizioni & Nel sistema è presente almeno una stanza creata da un amministratore.\\\hline
        Post-condizioni (garanzia di successo) &  Nel caso di svolgimento normale l’utente è registrato ed è presente nell’insieme degli utenti della stanza 
                                                  specificata. \\\hline
       \end{tabular}}
    \end{table}
 \end{frame}
 
-\begin{frame} [allowframebreaks]
+\begin{frame}
  \frametitle{Iterazione 1: Requisiti, caso d'uso UC2\_AccessRoom}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
@@ -251,26 +248,74 @@
             \item L’utente richiede una lista di stanze presenti nel sistema  di messaggistica.
             \item Il sistema invia la lista delle stanze.
             \item L’utente seleziona la stanza tra quelle presenti in lista.
-            \item Il sistema verifica l’esistenza della stanza.
             \item Il sistema registra l’utente alla stanza.
           \end{enumerate} \\\hline 
          Estensioni (o flussi alternativi) &  
+           3A - Il SiucUser inserisce una stanza non in elenco:
           \begin{enumerate} 
-           \item (4A) Se nel servizio di messaggistica non esiste una stanza con il nome specificato dall’utente.  
-           \item L’interazione termina con la segnalazione dell’errore al sotto sistema chiamante e all’utente.
+           \item Il sistema invia un messaggio di errore.
           \end{enumerate} \\\hline
        Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
-                                                        invio e ricezione del messaggio\\\hline
-       Elenco delle varianti tecnologiche &  L’applicazione dovrebbe essere in grado di adattarsi graficamente in modo automatico al dispositivo con cui viene 
-                                             utilizzata. \\\hline
+                                                        invio e ricezione del messaggio.\\\hline
+       Elenco delle varianti tecnologiche &  L’applicazione dovrebbe essere flessibile al funzionamento di diversi protocolli di comunicazione (es. TCP, UDP) e con   
+       diversi strati middleware (es. Socket, RMI) \\\hline
        Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
        Varie e/o Problemi Aperti &  // \\\hline
       \end{tabular}}
    \end{table}
 \end{frame}
 
-\begin{frame} [allowframebreaks]
- \frametitle{Iterazione 1: Requisiti, contratto CO1 - nameCO1}
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/01_siuc_open.png}{\centering}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/02_siuc_menu_server.png}{\centering}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/03_siuc_menu_help.png}{\centering}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/04_siuc_menu_siuc.png}{\centering}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/05_siuc_config_network.png}{\centering}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/06_siuc_connect.png}{\centering}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/07_siuc_user_room_ce.png}{\centering}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/08_siuc_user_room_ce_private.png}{\centering}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+    \includegraphics[height=190px, width=286px,]{image_mockups/09_siuc_user_room_medical.png}{\centering}
+\end{frame}
+
+\subsection{Iterazione 1: Analisi, casi d'uso UC1 e UC2}
+\begin{frame} {Iterazione 1: Analisi, casi d'uso UC1 e UC2}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 1: Analisi, contratto CO1 - nameCO1}
   \begin{table}[!htbp]
    \caption {Contratto CO1 - nameCO1}
     \label{table:1}
@@ -338,20 +383,16 @@
         Attore primario & SiucUser  \\\hline
         Parti interessate e interessi & 
          \begin{itemize}
-          \item SiucUser: vuole che i messaggi siano inviati a ogni utente della stanza virtuale.
-          \item SiucAdmin: è interessato a supervisionare gli utenti del servizio affinché non ci siano abusi.       
+          \item SiucUser, vuole che i messaggi siano inviati a ogni utente della stanza virtuale.
+          \item SiucAdmin, è interessato a supervisionare gli utenti del servizio affinché non ci siano abusi.       
          \end{itemize} \\\hline
-        Pre-condizioni &
-         \begin{itemize}  
-          \item Nel sistema è presente almeno una stanza creata da un amministratore.
-          \item L'utente è registrato nella stanza in cui desidera inviare i messaggi.
-         \end{itemize} \\\hline
+        Pre-condizioni &  L'utente è registrato nella stanza in cui desidera inviare i messaggi.\\\hline
         Post-condizioni (garanzia di successo) & Ogni utente riceve il messaggio inviato. \\\hline
       \end{tabular}}
    \end{table}
 \end{frame}
 
-\begin{frame} [allowframebreaks]
+\begin{frame}
  \frametitle{Iterazione 2: Requisiti, caso d'uso UC3\_SendRoomMessage}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
@@ -361,21 +402,20 @@
           \item Il sistema visualizza a video gli utenti presenti nella stanza.
           \item Il sistema visualizza un’area pubblica dove vengono mostrati tutte le conversazioni in corso dal quel momento in poi. 
           \item L’utente inserisce da tastiera il messaggio da inviare.
-          \item Il server tiene traccia del log del messaggio (??).
           \item Il messaggio viene inoltrato agli altri utenti presenti nella stanza selezionata. 
          \end{enumerate} \\\hline
          Estensioni (o flussi alternativi) &  
-          \begin{enumerate} 
-           \item (1A) La connessione fallisce.
+           1A - La connessione fallisce:
+          \begin{itemize} 
            \item Il server rimuove l’utente dalle stanze in cui è registrato.
-          \end{enumerate} \\\hline
+          \end{itemize} \\\hline
          Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
                                                         invio e ricezione del messaggio\\\hline
       \end{tabular}}
    \end{table}
 \end{frame}
 
-\begin{frame} [allowframebreaks]
+\begin{frame} 
  \frametitle{Iterazione 2: Requisiti, caso d'uso UC3\_SendRoomMessage}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
@@ -383,7 +423,8 @@
          Elenco delle varianti tecnologiche &  
           \begin{itemize}  
            \item \`E possibile inviare messaggi confidenziali, autenticati e integri al server del servizio di messaggistica.
-           \item  L’applicazione dovrebbe essere in grado di adattarsi graficamente in modo automatico al dispositivo con cui viene utilizzata.
+           \item L’applicazione dovrebbe essere flessibile al funzionamento di diversi protocolli di comunicazione (es. TCP, UDP) e con diversi strati middleware 
+                 (es. Socket, RMI)
           \end{itemize} \\\hline
          Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
          Varie e/o Problemi Aperti &  // \\\hline
@@ -434,7 +475,6 @@
          \end{itemize} \\\hline
         Pre-condizioni &
          \begin{itemize}  
-          \item Nel sistema è presente almeno una stanza creata da un amministratore.
           \item L'utente è registrato nella stanza in cui desidera inviare un messaggio ad un altro utente presente.
          \end{itemize} \\\hline
         Post-condizioni (garanzia di successo) &  L’utente selezionato riceve il messaggio inviato\\\hline
@@ -442,7 +482,7 @@
    \end{table}
 \end{frame}
 
-\begin{frame} [allowframebreaks]
+\begin{frame}
  \frametitle{Iterazione 3: Requisiti, caso d'uso UC4\_SendPrivateMessage}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
@@ -457,17 +497,17 @@
 	  \item Il messaggio viene inoltrato al destinatario selezionato.
          \end{enumerate} \\\hline
          Estensioni (o flussi alternativi) &  
-          \begin{enumerate} 
-           \item (1A) La connessione fallisce. (??)
-           \item Il server rimuove l’utente dalle stanze in cui è registrato. (??)
-          \end{enumerate} \\\hline
+           1A - La connessione fallisce:
+          \begin{itemize} 
+           \item Il server rimuove l’utente dalle stanze in cui è registrato.
+          \end{itemize} \\\hline
          Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
                                                         invio e ricezione del messaggio\\\hline
       \end{tabular}}
    \end{table}
 \end{frame}
 
-\begin{frame} [allowframebreaks]
+\begin{frame}
  \frametitle{Iterazione 3: Requisiti, caso d'uso UC4\_SendPrivateMessage}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
@@ -475,7 +515,8 @@
          Elenco delle varianti tecnologiche &  
           \begin{itemize}  
            \item \`E possibile inviare messaggi confidenziali, autenticati e integri al server del servizio di messaggistica.
-           \item  L’applicazione dovrebbe essere in grado di adattarsi graficamente in modo automatico al dispositivo con cui viene utilizzata.
+           \item L’applicazione dovrebbe essere flessibile al funzionamento di diversi protocolli di comunicazione (es. TCP, UDP) e con diversi strati middleware 
+                 (es. Socket, RMI)
           \end{itemize} \\\hline
          Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
          Varie e/o Problemi Aperti &  // \\\hline
@@ -505,12 +546,24 @@
 
 \section{Glossario}
 \setbeamertemplate{itemize items}[triangle]
-\begin{frame}
+\begin{frame} [allowframebreaks]
   \frametitle{Glossario} 
    \begin{itemize} 
-    \item SiucUser: è l'utente del servizio di messaggistica.
-    \item SiucAdmin: è l'amministratore del servizio di messaggistica.
-    
+    \item SiucUser, User, Utente: è l'utente del servizio di messaggistica che usufruisce dei servizi forniti.
+    \item SiucAdmin, Admin, Amministratore: è il gestore del servizio di messaggistica, che possiedono la facoltà di creare e/o eliminare una stanza, di inviare un 
+          particolare messaggio di avviso ad un partecipante per un comportamento non corretto ed eventualmente di bannarlo eliminandolo dalla stanza.
+    \item Servizio di messaggistica, sistema, (chat): ...
+    \item Room, stanza, canale: insieme che si può differenziare dalle altre in base alle tematiche trattate.
+    \item Comando, Comand: particolare istruzione inserita da un utente o partecipante per richiedere un determinato servizio. Vediamo qui di seguito l’elenco dei 
+          comandi implementati:
+     \setbeamertemplate{itemize items}[circle]
+     \begin{itemize} 
+      \item /listRooms:	comando che restituisce la lista delle stanze presenti nel server.
+      \item /join '[nameRoom]': comando che permette la registrazione dell’utente nella stanza che ha come nome NameRoom.
+     \end{itemize}   
+    \item Messaggio Pubblico: messaggio testuale inviato da un partecipante a tutti gli utenti presenti nella stanza.
+    \item Messaggio Privato: messaggio testuale inviato da un partecipante ad un particolare partecipante presente nella stanza.
+    \item Notifica: particolari messaggi di avviso inviati dal server agli utenti del servizio.  
   \end{itemize}
 \end{frame}
 
