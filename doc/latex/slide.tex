@@ -169,6 +169,21 @@
    \end{enumerate}
 \end{frame}
 
+\setbeamertemplate{itemize items}[triangle]
+\begin{frame} [allowframebreaks]
+  \frametitle{Glossario} 
+   \begin{itemize} 
+    \item SiucUser, User, Utente: è l'utente del servizio di messaggistica che usufruisce dei servizi forniti.
+    \item SiucAdmin, Admin, Amministratore: è il gestore del servizio di messaggistica, che possiede la facoltà di creare e/o eliminare una stanza, di inviare un 
+          particolare messaggio di avviso ad un partecipante per un comportamento non corretto ed eventualmente di bannarlo eliminandolo dalla stanza.
+    \item Messaging Service, Servizio di messaggistica, sistema, chat: sistema che si occupa della gestione.
+    \item Room, stanza, canale: insieme che si può differenziare dalle altre in base alle tematiche trattate.
+    \item Messaggio Pubblico: messaggio testuale inviato da un partecipante a tutti gli utenti presenti nella stanza.
+    \item Messaggio Privato: messaggio testuale inviato da un partecipante ad un particolare partecipante presente nella stanza.
+    \item Notifica: particolari messaggi di avviso inviati dal server agli utenti del servizio.  
+  \end{itemize}
+\end{frame}
+
 \begin{frame}
  \frametitle{Iterazione 1: Requisiti, caso d'uso UC1\_RequestConnection}
   \begin{table}[!htbp]
@@ -249,6 +264,8 @@
             \item Il sistema invia la lista delle stanze.
             \item L’utente seleziona la stanza tra quelle presenti in lista.
             \item Il sistema registra l’utente alla stanza.
+            \item Il sistema visualizza a video gli utenti presenti nella stanza.
+            \item Il sistema visualizza un’area pubblica dove vengono mostrati tutte le conversazioni in corso dal quel momento in poi. 
           \end{enumerate} \\\hline 
          Estensioni (o flussi alternativi) &  
            3A - Il SiucUser inserisce una stanza non in elenco:
@@ -388,6 +405,11 @@
          \end{itemize} \\\hline
         Pre-condizioni &  L'utente è registrato nella stanza in cui desidera inviare i messaggi.\\\hline
         Post-condizioni (garanzia di successo) & Ogni utente riceve il messaggio inviato. \\\hline
+         Scenario principale di successo &  
+         \begin{enumerate} 
+          \item L’utente inserisce in una opportuna area il messaggio da inviare.
+          \item Il messaggio viene inoltrato agli utenti presenti nella stanza selezionata. 
+         \end{enumerate} \\\hline
       \end{tabular}}
    \end{table}
 \end{frame}
@@ -397,29 +419,8 @@
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
-         Scenario principale di successo &  
-         \begin{enumerate} 
-          \item Il sistema visualizza a video gli utenti presenti nella stanza.
-          \item Il sistema visualizza un’area pubblica dove vengono mostrati tutte le conversazioni in corso dal quel momento in poi. 
-          \item L’utente inserisce da tastiera il messaggio da inviare.
-          \item Il messaggio viene inoltrato agli altri utenti presenti nella stanza selezionata. 
-         \end{enumerate} \\\hline
-         Estensioni (o flussi alternativi) &  
-           1A - La connessione fallisce:
-          \begin{itemize} 
-           \item Il server rimuove l’utente dalle stanze in cui è registrato.
-          \end{itemize} \\\hline
          Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
                                                         invio e ricezione del messaggio\\\hline
-      \end{tabular}}
-   \end{table}
-\end{frame}
-
-\begin{frame} 
- \frametitle{Iterazione 2: Requisiti, caso d'uso UC3\_SendRoomMessage}
-  \begin{table}[!htbp]
-      \resizebox{\linewidth}{!}{%
-       \begin{tabular}{|l|p{10cm}|}\hline
          Elenco delle varianti tecnologiche &  
           \begin{itemize}  
            \item \`E possibile inviare messaggi confidenziali, autenticati e integri al server del servizio di messaggistica.
@@ -465,44 +466,20 @@
      \label{table:1}
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
-        Nome caso d'uso &  UC4\_SendPrivateMessage\\\hline
+        Nome caso d'uso &  UC3\_SendRoomMessage\\\hline
         Portata & Applicazione Smart Intelligent University Communications \\\hline
         Livello & Obiettivo Utente \\\hline
         Attore primario & SiucUser  \\\hline
-        Parti interessate e interessi & 
-         \begin{itemize}
-          \item SiucUser: vuole che i messaggi siano inviati all’utente selezionato presente nella stanza virtuale.      
-         \end{itemize} \\\hline
-        Pre-condizioni &
-         \begin{itemize}  
-          \item L'utente è registrato nella stanza in cui desidera inviare un messaggio ad un altro utente presente.
-         \end{itemize} \\\hline
-        Post-condizioni (garanzia di successo) &  L’utente selezionato riceve il messaggio inviato\\\hline
-      \end{tabular}}
-   \end{table}
-\end{frame}
-
-\begin{frame}
- \frametitle{Iterazione 3: Requisiti, caso d'uso UC4\_SendPrivateMessage}
-  \begin{table}[!htbp]
-      \resizebox{\linewidth}{!}{%
-       \begin{tabular}{|l|p{10cm}|}\hline
+        Parti interessate e interessi & SiucUser: vuole che i messaggi siano inviati all’utente selezionato presente nella stanza virtuale \\\hline
+        Pre-condizioni &  L'utente è registrato nella stanza in cui desidera inviare un messaggio ad un altro utente presente \\\hline
+        Post-condizioni (garanzia di successo) & L'utente selezionato riceve il messaggio inviato \\\hline
          Scenario principale di successo &  
          \begin{enumerate} 
-          \item L’utente seleziona una stanza.
-          \item Il sistema visualizza a video gli utenti presenti nella stanza e un’area pubblica dove vengono mostrati tutte le conversazioni in corso da quel 
-                momento in poi.
           \item L’utente seleziona il destinatario del messaggio privato.
           \item L’utente inserisce da tastiera il messaggio da inviare.
 	  \item Il messaggio viene inoltrato al destinatario selezionato.
          \end{enumerate} \\\hline
-         Estensioni (o flussi alternativi) &  
-           1A - La connessione fallisce:
-          \begin{itemize} 
-           \item Il server rimuove l’utente dalle stanze in cui è registrato.
-          \end{itemize} \\\hline
-         Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
-                                                        invio e ricezione del messaggio\\\hline
+
       \end{tabular}}
    \end{table}
 \end{frame}
@@ -512,6 +489,8 @@
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
+         Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
+                                                        invio e ricezione del messaggio\\\hline
          Elenco delle varianti tecnologiche &  
           \begin{itemize}  
            \item \`E possibile inviare messaggi confidenziali, autenticati e integri al server del servizio di messaggistica.
@@ -542,29 +521,6 @@
 \subsection{Iterazione 3: Test}
 \begin{frame}
   \frametitle{Iterazione 3: Test, caso d'uso UC4\_SendPrivateMessage}
-\end{frame}
-
-\section{Glossario}
-\setbeamertemplate{itemize items}[triangle]
-\begin{frame} [allowframebreaks]
-  \frametitle{Glossario} 
-   \begin{itemize} 
-    \item SiucUser, User, Utente: è l'utente del servizio di messaggistica che usufruisce dei servizi forniti.
-    \item SiucAdmin, Admin, Amministratore: è il gestore del servizio di messaggistica, che possiedono la facoltà di creare e/o eliminare una stanza, di inviare un 
-          particolare messaggio di avviso ad un partecipante per un comportamento non corretto ed eventualmente di bannarlo eliminandolo dalla stanza.
-    \item Servizio di messaggistica, sistema, (chat): ...
-    \item Room, stanza, canale: insieme che si può differenziare dalle altre in base alle tematiche trattate.
-    \item Comando, Comand: particolare istruzione inserita da un utente o partecipante per richiedere un determinato servizio. Vediamo qui di seguito l’elenco dei 
-          comandi implementati:
-     \setbeamertemplate{itemize items}[circle]
-     \begin{itemize} 
-      \item /listRooms:	comando che restituisce la lista delle stanze presenti nel server.
-      \item /join '[nameRoom]': comando che permette la registrazione dell’utente nella stanza che ha come nome NameRoom.
-     \end{itemize}   
-    \item Messaggio Pubblico: messaggio testuale inviato da un partecipante a tutti gli utenti presenti nella stanza.
-    \item Messaggio Privato: messaggio testuale inviato da un partecipante ad un particolare partecipante presente nella stanza.
-    \item Notifica: particolari messaggi di avviso inviati dal server agli utenti del servizio.  
-  \end{itemize}
 \end{frame}
 
 \begin {frame} 

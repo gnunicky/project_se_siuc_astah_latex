@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.17)  24 FEB 2015 15:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.17)  24 FEB 2015 20:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1564,7 +1564,7 @@ Package caption Info: End \AtBeginDocument code.
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 72.
  (./slide.nav)
-Overfull \vbox (13.7097pt too high) detected at line 76
+Overfull \vbox (7.20973pt too high) detected at line 76
  []
 
 
@@ -1610,7 +1610,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  <./ru_logo.png>] [8
 
 
- <./ru_logo.png>] <image_astah/UseCaseDiagram.png, id=294, 1073.611pt x 579.766
+ <./ru_logo.png>] <image_astah/UseCaseDiagram.png, id=279, 1073.611pt x 579.766
 pt>
 File: image_astah/UseCaseDiagram.png Graphic file (type png)
 
@@ -1642,44 +1642,53 @@ Overfull \hbox (7.53824pt too wide) in paragraph at lines 170--170
 
  <./ru_logo.png>] [14
 
+
+ <./ru_logo.png>] [15
+
+ <./ru_logo.png>] [16
+
  <./ru_logo.png>]pdfTeX warning (ext4): destination with the same identifier (n
 ame{table:1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.239 \end{frame}
-                  [15
-
- <./ru_logo.png>] [16
+l.254 \end{frame}
+                  [17
 
  <./ru_logo.png>]
-<image_mockups/01_siuc_open.png, id=411, 1027.84pt x 682.55pt>
+Overfull \vbox (2.48006pt too high) detected at line 283
+ []
+
+[18
+
+ <./ru_logo.png>]
+<image_mockups/01_siuc_open.png, id=414, 1027.84pt x 682.55pt>
 File: image_mockups/01_siuc_open.png Graphic file (type png)
 
 <use image_mockups/01_siuc_open.png>
-Package pdftex.def Info: image_mockups/01_siuc_open.png used on input line 271.
+Package pdftex.def Info: image_mockups/01_siuc_open.png used on input line 288.
 
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [17
+ [19
 
  <./ru_logo.png> <./image_mockups/01_siuc_open.png>]
-<image_mockups/02_siuc_menu_server.png, id=427, 1027.84pt x 682.55pt>
+<image_mockups/02_siuc_menu_server.png, id=430, 1027.84pt x 682.55pt>
 File: image_mockups/02_siuc_menu_server.png Graphic file (type png)
 
 <use image_mockups/02_siuc_menu_server.png>
 Package pdftex.def Info: image_mockups/02_siuc_menu_server.png used on input li
-ne 276.
+ne 293.
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [18
+ [20
 
  <./ru_logo.png> <./image_mockups/02_siuc_menu_server.png>]
-<image_mockups/03_siuc_menu_help.png, id=443, 1027.84pt x 682.55pt>
+<image_mockups/03_siuc_menu_help.png, id=445, 1027.84pt x 682.55pt>
 File: image_mockups/03_siuc_menu_help.png Graphic file (type png)
 
 <use image_mockups/03_siuc_menu_help.png>
 Package pdftex.def Info: image_mockups/03_siuc_menu_help.png used on input line
- 281.
+ 298.
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [19
+ [21
 
  <./ru_logo.png> <./image_mockups/03_siuc_menu_help.png>]
 <image_mockups/04_siuc_menu_siuc.png, id=460, 1027.84pt x 682.55pt>
@@ -1687,72 +1696,68 @@ File: image_mockups/04_siuc_menu_siuc.png Graphic file (type png)
 
 <use image_mockups/04_siuc_menu_siuc.png>
 Package pdftex.def Info: image_mockups/04_siuc_menu_siuc.png used on input line
- 286.
+ 303.
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [20
+ [22
 
  <./ru_logo.png> <./image_mockups/04_siuc_menu_siuc.png>]
-<image_mockups/05_siuc_config_network.png, id=477, 1027.84pt x 682.55pt>
+<image_mockups/05_siuc_config_network.png, id=475, 1027.84pt x 682.55pt>
 File: image_mockups/05_siuc_config_network.png Graphic file (type png)
 
 <use image_mockups/05_siuc_config_network.png>
 Package pdftex.def Info: image_mockups/05_siuc_config_network.png used on input
- line 291.
+ line 308.
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [21
+ [23
 
  <./ru_logo.png> <./image_mockups/05_siuc_config_network.png>]
-<image_mockups/06_siuc_connect.png, id=493, 1027.84pt x 682.55pt>
+<image_mockups/06_siuc_connect.png, id=491, 1027.84pt x 682.55pt>
 File: image_mockups/06_siuc_connect.png Graphic file (type png)
 
 <use image_mockups/06_siuc_connect.png>
-Package pdftex.def Info: image_mockups/06_siuc_connect.png used on input line 2
-96.
+Package pdftex.def Info: image_mockups/06_siuc_connect.png used on input line 3
+13.
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [22
+ [24
 
  <./ru_logo.png> <./image_mockups/06_siuc_connect.png>]
-<image_mockups/07_siuc_user_room_ce.png, id=509, 1027.84pt x 682.55pt>
+<image_mockups/07_siuc_user_room_ce.png, id=506, 1027.84pt x 682.55pt>
 File: image_mockups/07_siuc_user_room_ce.png Graphic file (type png)
 
 <use image_mockups/07_siuc_user_room_ce.png>
 Package pdftex.def Info: image_mockups/07_siuc_user_room_ce.png used on input l
-ine 301.
+ine 318.
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [23
+ [25
 
  <./ru_logo.png> <./image_mockups/07_siuc_user_room_ce.png>]
-<image_mockups/08_siuc_user_room_ce_private.png, id=525, 1027.84pt x 682.55pt>
+<image_mockups/08_siuc_user_room_ce_private.png, id=522, 1027.84pt x 682.55pt>
 File: image_mockups/08_siuc_user_room_ce_private.png Graphic file (type png)
 
 <use image_mockups/08_siuc_user_room_ce_private.png>
 Package pdftex.def Info: image_mockups/08_siuc_user_room_ce_private.png used on
- input line 306.
+ input line 323.
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [24
+ [26
 
  <./ru_logo.png> <./image_mockups/08_siuc_user_room_ce_private.png>]
-<image_mockups/09_siuc_user_room_medical.png, id=541, 1027.84pt x 682.55pt>
+<image_mockups/09_siuc_user_room_medical.png, id=537, 1027.84pt x 682.55pt>
 File: image_mockups/09_siuc_user_room_medical.png Graphic file (type png)
 
 <use image_mockups/09_siuc_user_room_medical.png>
 Package pdftex.def Info: image_mockups/09_siuc_user_room_medical.png used on in
-put line 311.
+put line 328.
 (pdftex.def)             Requested size: 287.0718pt x 190.70651pt.
- [25
+ [27
 
- <./ru_logo.png> <./image_mockups/09_siuc_user_room_medical.png>] [26
+ <./ru_logo.png> <./image_mockups/09_siuc_user_room_medical.png>] [28
 
  <./ru_logo.png>]pdfTeX warning (ext4): destination with the same identifier (n
 ame{table:1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.330 \end{frame}
-                  [27
-
- <./ru_logo.png>] [28
-
- <./ru_logo.png>] [29
+l.347 \end{frame}
+                  [29
 
  <./ru_logo.png>] [30
 
@@ -1766,16 +1771,20 @@ l.330 \end{frame}
 
  <./ru_logo.png>] [35
 
+ <./ru_logo.png>] [36
+
+ <./ru_logo.png>] [37
+
  <./ru_logo.png>]pdfTeX warning (ext4): destination with the same identifier (n
 ame{table:1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.393 \end{frame}
-                  [36
+l.415 \end{frame}
+                 
+Overfull \vbox (5.79324pt too high) detected at line 415
+ []
 
- <./ru_logo.png>] [37
-
- <./ru_logo.png>] [38
+[38
 
  <./ru_logo.png>] [39
 
@@ -1787,14 +1796,20 @@ l.393 \end{frame}
 
  <./ru_logo.png>] [43
 
+ <./ru_logo.png>] [44
+
  <./ru_logo.png>]pdfTeX warning (ext4): destination with the same identifier (n
 ame{table:1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.483 \end{frame}
-                  [44
+l.485 \end{frame}
+                 
+Underfull \hbox (badness 1939) in paragraph at lines 485--485
+[]\OT1/cmss/m/n/10.95 SiucUser: vuo-le che i mes-sag-gi sia-no in-via-ti al-l'u
+-ten-te
+ []
 
- <./ru_logo.png>] [45
+[45
 
  <./ru_logo.png>] [46
 
@@ -1808,11 +1823,6 @@ l.483 \end{frame}
 
  <./ru_logo.png>] [51
 
- <./ru_logo.png>] [52
-
-
- <./ru_logo.png>] [53
-
  <./ru_logo.png> </usr/share/texmf/tex/latex/beamer/base/art/beamericonarticle.
 pdf>]
 \tf@nav=\write6
@@ -1824,14 +1834,20 @@ pdf>]
 \tf@snm=\write8
 \openout8 = `slide.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 593.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 593.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 549.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 549.
  (./slide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 593.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 593.
-Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: DB2572FC6B57296EF48C6A26F255453F;1732.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 549.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 549.
 
+
+Package rerunfilecheck Warning: File `slide.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `slide.out':
+(rerunfilecheck)             Before: 36084448BD419FC051877E85EEB0D293;1687
+(rerunfilecheck)             After:  F2B325B5B4AB7AE3E372672A5DF141C8;1687.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
@@ -1842,30 +1858,59 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 593.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 549.
  ) 
 Here is how much of TeX's memory you used:
- 18908 strings out of 493307
- 344440 string characters out of 6139905
- 429397 words of memory out of 5000000
- 21741 multiletter control sequences out of 15000+600000
- 14599 words of font info for 53 fonts, out of 8000000 for 9000
+ 18903 strings out of 493307
+ 344444 string characters out of 6139905
+ 430397 words of memory out of 5000000
+ 21733 multiletter control sequences out of 15000+600000
+ 14038 words of font info for 51 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,19n,53p,421b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msam7.pfb>
-Output written on slide.pdf (53 pages, 2556317 bytes).
+ 49i,19n,53p,421b,761s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Navigation52} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.5.5.51} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.5.4.50} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.5.3.49} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.5.2.48} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.5.1.46} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.4.5.44} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.4.4.43} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.4.3.42} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Outline0.4.2.41} has been referenced but does not e
+xist, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/symbols/msam7.pfb>
+Output written on slide.pdf (51 pages, 2468464 bytes).
 PDF statistics:
- 1014 PDF objects out of 1200 (max. 8388607)
- 794 compressed objects within 8 object streams
- 136 named destinations out of 1000 (max. 500000)
- 572 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 936 PDF objects out of 1000 (max. 8388607)
+ 724 compressed objects within 8 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 554 words of extra memory for PDF output out of 10000 (max. 10000000)
 
