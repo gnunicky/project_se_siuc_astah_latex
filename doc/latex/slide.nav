@@ -60,82 +60,103 @@
 \headcommand {\beamer@framepages {26}{26}}
 \headcommand {\slideentry {2}{1}{17}{27/27}{Iterazione 1: Requisiti}{0}}
 \headcommand {\beamer@framepages {27}{27}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{28}{Iterazione 1: Analisi, casi d'uso UC1 e UC2}}\headcommand {\beamer@subsectionpages {7}{27}}
-\headcommand {\slideentry {2}{2}{1}{28/28}{Iterazione 1: Analisi, casi d'uso UC1 e UC2}{0}}
+\headcommand {\slideentry {2}{1}{18}{28/28}{Iterazione 1: Requisiti}{0}}
 \headcommand {\beamer@framepages {28}{28}}
-\headcommand {\slideentry {2}{2}{2}{29/29}{Iterazione 1: Analisi, casi d'uso UC1 e UC2}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{29}{Iterazione 1: Analisi - UC1\_RequestConnection}}\headcommand {\beamer@subsectionpages {7}{28}}
+\headcommand {\slideentry {2}{2}{1}{29/29}{Iterazione 1: Analisi - UC1\_RequestConnection}{0}}
 \headcommand {\beamer@framepages {29}{29}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{30}{Iterazione 1: Progettazione}}\headcommand {\beamer@subsectionpages {28}{29}}
-\headcommand {\slideentry {2}{3}{1}{30/30}{Iterazione 1: Progettazione}{0}}
+\headcommand {\slideentry {2}{2}{2}{30/30}{Iterazione 1: Analisi - UC1\_RequestConnection}{0}}
 \headcommand {\beamer@framepages {30}{30}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{31}{Iterazione 1: Implementazione}}\headcommand {\beamer@subsectionpages {30}{30}}
-\headcommand {\slideentry {2}{4}{1}{31/31}{Iterazione 1: Implementazione}{0}}
+\headcommand {\slideentry {2}{2}{3}{31/31}{Iterazione 1: Analisi - UC1\_RequestConnection}{0}}
 \headcommand {\beamer@framepages {31}{31}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{32}{Iterazione 1: Test}}\headcommand {\beamer@subsectionpages {31}{31}}
-\headcommand {\slideentry {2}{5}{1}{32/32}{Iterazione 1: Test}{0}}
+\headcommand {\slideentry {2}{2}{4}{32/32}{Iterazione 1: Analisi - UC1\_RequestConnection}{0}}
 \headcommand {\beamer@framepages {32}{32}}
-\headcommand {\sectionentry {3}{Ideazione - Refactoring}{33}{Ideazione - Refactoring}{0}}
-\headcommand {\beamer@sectionpages {4}{32}}
-\headcommand {\beamer@subsectionpages {32}{32}}
-\headcommand {\slideentry {3}{0}{2}{33/33}{}{0}}
+\headcommand {\slideentry {2}{2}{5}{33/33}{Iterazione 1: Analisi - UC1\_RequestConnection}{0}}
 \headcommand {\beamer@framepages {33}{33}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{34}{Iterazione 1 - Refactoring: Progettazione}}\headcommand {\beamer@subsectionpages {33}{33}}
-\headcommand {\slideentry {3}{1}{1}{34/34}{Iterazione 1 - Refactoring: Progettazione}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{34}{Iterazione 1: Analisi - UC2\_AccessRoom}}\headcommand {\beamer@subsectionpages {29}{33}}
+\headcommand {\slideentry {2}{3}{1}{34/34}{Iterazione 1: Analisi - UC2\_AccessRoom}{0}}
 \headcommand {\beamer@framepages {34}{34}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{35}{Iterazione 1 - Refactoring: Implementazione}}\headcommand {\beamer@subsectionpages {34}{34}}
-\headcommand {\slideentry {3}{2}{1}{35/35}{Iterazione 1 - Refactoring: Implementazione}{0}}
+\headcommand {\slideentry {2}{3}{2}{35/35}{Iterazione 1: Analisi - UC2\_AccessRoom}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{36}{Iterazione 1 - Refactoring: Test}}\headcommand {\beamer@subsectionpages {35}{35}}
-\headcommand {\slideentry {3}{3}{1}{36/36}{Iterazione 1 - Refactoring: Test}{0}}
+\headcommand {\slideentry {2}{3}{3}{36/36}{Iterazione 1: Analisi - UC2\_AccessRoom}{0}}
 \headcommand {\beamer@framepages {36}{36}}
-\headcommand {\sectionentry {4}{Elaborazione - Iterazione 2}{37}{Elaborazione - Iterazione 2}{0}}
-\headcommand {\beamer@sectionpages {33}{36}}
-\headcommand {\beamer@subsectionpages {36}{36}}
-\headcommand {\slideentry {4}{0}{2}{37/37}{}{0}}
+\headcommand {\slideentry {2}{3}{4}{37/37}{Iterazione 1: Analisi - UC2\_AccessRoom}{0}}
 \headcommand {\beamer@framepages {37}{37}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{38}{Iterazione 2: Requisiti}}\headcommand {\beamer@subsectionpages {37}{37}}
-\headcommand {\slideentry {4}{1}{1}{38/38}{Iterazione 2: Requisiti}{0}}
+\headcommand {\slideentry {2}{3}{5}{38/38}{Iterazione 1: Analisi - UC2\_AccessRoom}{0}}
 \headcommand {\beamer@framepages {38}{38}}
-\headcommand {\slideentry {4}{1}{2}{39/39}{Iterazione 2: Requisiti}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{39}{Iterazione 1: Progettazione }}\headcommand {\beamer@subsectionpages {34}{38}}
+\headcommand {\slideentry {2}{4}{1}{39/39}{Iterazione 1: Progettazione }{0}}
 \headcommand {\beamer@framepages {39}{39}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{40}{Iterazione 2: Analisi}}\headcommand {\beamer@subsectionpages {38}{39}}
-\headcommand {\slideentry {4}{2}{1}{40/40}{Iterazione 2: Analisi}{0}}
-\headcommand {\beamer@framepages {40}{40}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{41}{Iterazione 2: Progettazione}}\headcommand {\beamer@subsectionpages {40}{40}}
-\headcommand {\slideentry {4}{3}{1}{41/41}{Iterazione 2: Progettazione}{0}}
-\headcommand {\beamer@framepages {41}{41}}
-\headcommand {\beamer@subsectionentry {0}{4}{4}{42}{Iterazione 2: Implementazione}}\headcommand {\beamer@subsectionpages {41}{41}}
-\headcommand {\slideentry {4}{4}{1}{42/42}{Iterazione 2: Implementazione}{0}}
+\headcommand {\slideentry {2}{4}{2}{40/41}{Iterazione 1: Progettazione }{0}}
+\headcommand {\beamer@framepages {40}{41}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{42}{Iterazione 1: Implementazione - UC1 e UC2}}\headcommand {\beamer@subsectionpages {39}{41}}
+\headcommand {\slideentry {2}{5}{1}{42/42}{Iterazione 1: Implementazione - UC1 e UC2}{0}}
 \headcommand {\beamer@framepages {42}{42}}
-\headcommand {\beamer@subsectionentry {0}{4}{5}{43}{Iterazione 2: Test}}\headcommand {\beamer@subsectionpages {42}{42}}
-\headcommand {\slideentry {4}{5}{1}{43/43}{Iterazione 2: Test}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{6}{43}{Iterazione 1: Test - UC1 e UC2}}\headcommand {\beamer@subsectionpages {42}{42}}
+\headcommand {\slideentry {2}{6}{1}{43/43}{Iterazione 1: Test - UC1 e UC2}{0}}
 \headcommand {\beamer@framepages {43}{43}}
-\headcommand {\sectionentry {5}{Elaborazione - Iterazione 3}{44}{Elaborazione - Iterazione 3}{0}}
-\headcommand {\beamer@sectionpages {37}{43}}
+\headcommand {\sectionentry {3}{Ideazione: Refactoring Iterazione 1}{44}{Ideazione: Refactoring Iterazione 1}{0}}
+\headcommand {\beamer@sectionpages {4}{43}}
 \headcommand {\beamer@subsectionpages {43}{43}}
-\headcommand {\slideentry {5}{0}{2}{44/44}{}{0}}
+\headcommand {\slideentry {3}{0}{2}{44/44}{}{0}}
 \headcommand {\beamer@framepages {44}{44}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{45}{Iterazione 3: Requisiti}}\headcommand {\beamer@subsectionpages {44}{44}}
-\headcommand {\slideentry {5}{1}{1}{45/45}{Iterazione 3: Requisiti}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{45}{Iterazione 1 Refactoring: Progettazione}}\headcommand {\beamer@subsectionpages {44}{44}}
+\headcommand {\slideentry {3}{1}{1}{45/45}{Iterazione 1 Refactoring: Progettazione}{0}}
 \headcommand {\beamer@framepages {45}{45}}
-\headcommand {\slideentry {5}{1}{2}{46/46}{Iterazione 3: Requisiti}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{46}{Iterazione 1 Refactoring: Implementazione - UC2\_AccessRoom}}\headcommand {\beamer@subsectionpages {45}{45}}
+\headcommand {\slideentry {3}{2}{1}{46/46}{Iterazione 1 Refactoring: Implementazione - UC2\_AccessRoom}{0}}
 \headcommand {\beamer@framepages {46}{46}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{47}{Iterazione 3: Analisi}}\headcommand {\beamer@subsectionpages {45}{46}}
-\headcommand {\slideentry {5}{2}{1}{47/47}{Iterazione 3: Analisi}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{47}{Iterazione 1 Refactoring: Test - UC2\_AccessRoom}}\headcommand {\beamer@subsectionpages {46}{46}}
+\headcommand {\slideentry {3}{3}{1}{47/47}{Iterazione 1 Refactoring: Test - UC2\_AccessRoom}{0}}
 \headcommand {\beamer@framepages {47}{47}}
-\headcommand {\beamer@subsectionentry {0}{5}{3}{48}{Iterazione 3: Progettazione}}\headcommand {\beamer@subsectionpages {47}{47}}
-\headcommand {\slideentry {5}{3}{1}{48/48}{Iterazione 3: Progettazione}{0}}
+\headcommand {\sectionentry {4}{Elaborazione - Iterazione 2}{48}{Elaborazione - Iterazione 2}{0}}
+\headcommand {\beamer@sectionpages {44}{47}}
+\headcommand {\beamer@subsectionpages {47}{47}}
+\headcommand {\slideentry {4}{0}{2}{48/48}{}{0}}
 \headcommand {\beamer@framepages {48}{48}}
-\headcommand {\beamer@subsectionentry {0}{5}{4}{49}{Iterazione 3: Implementazione}}\headcommand {\beamer@subsectionpages {48}{48}}
-\headcommand {\slideentry {5}{4}{1}{49/49}{Iterazione 3: Implementazione}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{49}{Iterazione 2: Requisiti - UC3\_SendRoomMessage}}\headcommand {\beamer@subsectionpages {48}{48}}
+\headcommand {\slideentry {4}{1}{1}{49/49}{Iterazione 2: Requisiti - UC3\_SendRoomMessage}{0}}
 \headcommand {\beamer@framepages {49}{49}}
-\headcommand {\beamer@subsectionentry {0}{5}{5}{50}{Iterazione 3: Test}}\headcommand {\beamer@subsectionpages {49}{49}}
-\headcommand {\slideentry {5}{5}{1}{50/50}{Iterazione 3: Test}{0}}
+\headcommand {\slideentry {4}{1}{2}{50/50}{Iterazione 2: Requisiti - UC3\_SendRoomMessage}{0}}
 \headcommand {\beamer@framepages {50}{50}}
-\headcommand {\slideentry {5}{5}{2}{51/51}{Iterazione 3: Test}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{51}{Iterazione 2: Analisi}}\headcommand {\beamer@subsectionpages {49}{50}}
+\headcommand {\slideentry {4}{2}{1}{51/51}{Iterazione 2: Analisi}{0}}
 \headcommand {\beamer@framepages {51}{51}}
-\headcommand {\beamer@partpages {1}{51}}
-\headcommand {\beamer@subsectionpages {50}{51}}
-\headcommand {\beamer@sectionpages {44}{51}}
-\headcommand {\beamer@documentpages {51}}
-\headcommand {\def \inserttotalframenumber {51}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{52}{Iterazione 2: Progettazione}}\headcommand {\beamer@subsectionpages {51}{51}}
+\headcommand {\slideentry {4}{3}{1}{52/52}{Iterazione 2: Progettazione}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{53}{Iterazione 2: Implementazione - UC3\_SendRoomMessage}}\headcommand {\beamer@subsectionpages {52}{52}}
+\headcommand {\slideentry {4}{4}{1}{53/53}{Iterazione 2: Implementazione - UC3\_SendRoomMessage}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{54}{Iterazione 2: Test - UC3\_SendRoomMessage}}\headcommand {\beamer@subsectionpages {53}{53}}
+\headcommand {\slideentry {4}{5}{1}{54/54}{Iterazione 2: Test - UC3\_SendRoomMessage}{0}}
+\headcommand {\beamer@framepages {54}{54}}
+\headcommand {\sectionentry {5}{Elaborazione - Iterazione 3}{55}{Elaborazione - Iterazione 3}{0}}
+\headcommand {\beamer@sectionpages {48}{54}}
+\headcommand {\beamer@subsectionpages {54}{54}}
+\headcommand {\slideentry {5}{0}{2}{55/55}{}{0}}
+\headcommand {\beamer@framepages {55}{55}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{56}{Iterazione 3: Requisiti - UC4\_SendPrivateMessage}}\headcommand {\beamer@subsectionpages {55}{55}}
+\headcommand {\slideentry {5}{1}{1}{56/56}{Iterazione 3: Requisiti - UC4\_SendPrivateMessage}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\slideentry {5}{1}{2}{57/57}{Iterazione 3: Requisiti - UC4\_SendPrivateMessage}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{58}{Iterazione 3: Analisi}}\headcommand {\beamer@subsectionpages {56}{57}}
+\headcommand {\slideentry {5}{2}{1}{58/58}{Iterazione 3: Analisi}{0}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{59}{Iterazione 3: Progettazione}}\headcommand {\beamer@subsectionpages {58}{58}}
+\headcommand {\slideentry {5}{3}{1}{59/59}{Iterazione 3: Progettazione}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\beamer@subsectionentry {0}{5}{4}{60}{Iterazione 3: Implementazione - UC4\_SendPrivateMessage}}\headcommand {\beamer@subsectionpages {59}{59}}
+\headcommand {\slideentry {5}{4}{1}{60/60}{Iterazione 3: Implementazione - UC4\_SendPrivateMessage}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\beamer@subsectionentry {0}{5}{5}{61}{Iterazione 3: Implementazione - UC4\_SendPrivateMessage}}\headcommand {\beamer@subsectionpages {60}{60}}
+\headcommand {\slideentry {5}{5}{1}{61/61}{Iterazione 3: Implementazione - UC4\_SendPrivateMessage}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {5}{5}{2}{62/62}{Iterazione 3: Implementazione - UC4\_SendPrivateMessage}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\beamer@partpages {1}{62}}
+\headcommand {\beamer@subsectionpages {61}{62}}
+\headcommand {\beamer@sectionpages {55}{62}}
+\headcommand {\beamer@documentpages {62}}
+\headcommand {\def \inserttotalframenumber {61}}

@@ -12,7 +12,9 @@
 
 % pacchetto per inserire figure affiancate
 \usepackage{subfigure}
-\usepackage[centerlast, bf]{caption}
+\usepackage[centerlast, bf, justification=justified,singlelinecheck=false]{caption}
+\setbeamertemplate{caption}[numbered]
+\setbeamerfont{caption}{size=\tiny}
 
 \setbeamerfont{frametitle}{size=\large}
 
@@ -134,13 +136,17 @@
           partecipanti presenti nella stanza.
    \end{itemize}
    L’architettura utilizzata per offrire il servizio è di tipo client-server, questo approccio consente di fornire un’interfaccia  più flessibile per l’accesso al   
-   servizio di messaggistica anche con un semplice browser, senza modificare pesantemente la progettazione rispetto ad un architettura peer-to-peer.
+   servizio di messaggistica anche con un semplice browser, senza modificare pesantemente la progettazione rispetto ad un architettura peer-to-peer. 
 \end{frame}
 
 \begin{frame}
   \frametitle{Iterazione 1: Requisiti - Diagrammi dei casi d'uso}
-    \hypersetup{linkbordercolor={0 0.5 0.1}}
-    \includegraphics[height=178px, width=330px,]{image_astah/UseCaseDiagram.png}{\centering}
+   \begin{figure}[h]
+    %\def\figurename{Figure 1}
+    \includegraphics[height=178px, width=330px]{image_astah/UseCaseDiagram.png}{\centering}
+    \caption{Diagrammi dei casi uso} 
+    \label{figura 1.1}
+   \end{figure}
 \end{frame}
 
 \begin{frame} [allowframebreaks]
@@ -187,8 +193,8 @@
 \begin{frame}
  \frametitle{Iterazione 1: Requisiti, caso d'uso UC1\_RequestConnection}
   \begin{table}[!htbp]
-    \caption {Descrizione Dettagliata: Caso d'uso UC1\_RequestConnection}
-    \label{table:1}
+     \caption {Descrizione dettagliata: caso d'uso UC1\_RequestConnection}
+     \label{table:1}
      \resizebox{\linewidth}{!}{%
       \begin{tabular}{|l|p{10cm}|}\hline
        Nome caso d'uso &  UC1\_RequestConnection \\\hline
@@ -201,9 +207,9 @@
                                                  messaggio di benvenuto \\\hline
        Scenario principale di successo &  
        \begin{enumerate} 
-       \item L'utente inserisci un nickname, l'address e la porta del server.
-       \item Il sistema esamina il nickname inviato dall'utente e verifica se è presente una omonimia.
-       \item Il sistema conferma l'inserimento tra gli utenti online inviando una notifica di benvenuto.
+        \item L'utente inserisci un nickname, l'address e la porta del server.
+        \item Il sistema esamina il nickname inviato dall'utente e verifica se è presente una omonimia.
+        \item Il sistema conferma l'inserimento tra gli utenti online inviando una notifica di benvenuto.
        \end{enumerate} \\\hline
       \end{tabular}}
    \end{table}
@@ -282,59 +288,80 @@
    \end{table}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame}{Iterazione 1: Requisiti, descrizione Mockups User Interface}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame} 
+
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/01_siuc_open.png}{\centering}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/02_siuc_menu_server.png}{\centering}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/03_siuc_menu_help.png}{\centering}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/04_siuc_menu_siuc.png}{\centering}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/05_siuc_config_network.png}{\centering}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/06_siuc_connect.png}{\centering}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/07_siuc_user_room_ce.png}{\centering}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/08_siuc_user_room_ce_private.png}{\centering}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/09_siuc_user_room_medical.png}{\centering}
 \end{frame}
 
-\subsection{Iterazione 1: Analisi, casi d'uso UC1 e UC2}
-\begin{frame} {Iterazione 1: Analisi, casi d'uso UC1 e UC2}
+% ANALISI ITERAZIONE 1 UC1_RequestConnection
+\subsection{Iterazione 1: Analisi - UC1\_RequestConnection}
+\begin{frame} {Descrizione Iterazione 1: Analisi - UC1\_RequestConnection}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\begin{frame} {Iterazione 1: Analisi - UC1\_RequestConnection}
+   \begin{figure}
+     \includegraphics[scale=0.38]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_DM.png}{\centering}
+     \caption{UC1 - Modello di dominio}
+     \label{fig_UC1_RC_DM} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1: Analisi - UC1\_RequestConnection}
+   \begin{figure}
+     \includegraphics[scale=0.50]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_OM}{\centering}
+     \caption{UC1 - Oggetti di dominio}
+     \label{fig_UC1_RC_OM} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1: Analisi - UC1\_RequestConnection}
+   \begin{figure}
+     \includegraphics[scale=0.33]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_SSD.png}{\centering}
+     \caption{UC1 - Diagramma di sequenza di sistema}
+     \label{fig_UC1_RC_SSD} 
+   \end{figure}
 \end{frame}
 
 \begin{frame}
- \frametitle{Iterazione 1: Analisi, contratto CO1 - nameCO1}
+ \frametitle{Iterazione 1: Analisi, UC1 contratto CO1 - NameCO1}
   \begin{table}[!htbp]
-   \caption {Contratto CO1 - nameCO1}
+   \caption {UC1 Contratto CO1 - NameCO1}
     \label{table:1}
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
@@ -346,49 +373,105 @@
    \end{table}
 \end{frame}
 
-\subsection{Iterazione 1: Progettazione}
-\begin{frame}
- \frametitle{Iterazione 1: Progettazione, casi d'uso UC1 e UC2}
+\subsection{Iterazione 1: Analisi - UC2\_AccessRoom}
+\begin{frame} {Descrizione Iterazione 1: Analisi - UC2\_AccessRoom}
+ \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 1: Implementazione}
-\begin{frame}
- \frametitle{Iterazione 1: Implementazione, casi d'uso UC1 e UC2}
+\begin{frame} {Iterazione 1: Analisi - UC2\_AccessRoom}
+   \begin{figure}
+     \includegraphics[scale=0.29]{image_astah/Iteration_1_DomainModel/UC2_AccessRoom_DM.png}{\centering}
+     \caption{UC2 - Modello di dominio}
+     \label{fig_UC2_AR_DM} 
+   \end{figure}
 \end{frame}
 
-\subsection{Iterazione 1: Test}
-\begin{frame}
- \frametitle{Iterazione 1: Test, casi d'uso UC1 e UC2}
+\begin{frame} {Iterazione 1: Analisi - UC2\_AccessRoom}
+   \begin{figure}
+     \includegraphics[scale=0.26]{image_astah/Iteration_1_DomainModel/UC2_AccessRoom_OM}{\centering}
+     \caption{UC2 - Oggetti di dominio}
+     \label{fig_UC2_AR_OM} 
+   \end{figure}
 \end{frame}
 
-\section{Ideazione - Refactoring}
-\begin{frame}
-  \frametitle{Descrizione Iterazione 1 con Refactoring}
+\begin{frame} {Iterazione 1: Analisi - UC2\_AccessRoom}
+   \begin{figure}
+     \includegraphics[scale=0.25]{image_astah/Iteration_1_DomainModel/UC2_AccessRoom_SSD.png}{\centering}
+     \caption{UC2 - Diagramma di sequenza di sistema}
+     \label{fig_UC2_AR_SSD} 
+   \end{figure}
 \end{frame}
 
-\subsection{Iterazione 1 - Refactoring: Progettazione}
 \begin{frame}
-  \frametitle{Iterazione 1 - Refactoring: Progettazione, casi d'uso UC1 e UC2}
+ \frametitle{Iterazione 1: Analisi, UC2 contratto CO2 - NameCO2}
+  \begin{table}[!htbp]
+   \caption {UC2 Contratto CO2 - NameCO2}
+    \label{table:1}
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Operazione & \\\hline 
+         Riferimenti &  \\\hline
+         Pre-condizione & \\\hline 
+         Post-condizione &  \\\hline
+      \end{tabular}}
+   \end{table}
 \end{frame}
 
-\subsection{Iterazione 1 - Refactoring: Implementazione}
-\begin{frame}
-  \frametitle{Iterazione 1 - Refactoring: Implementazione, casi d'uso UC1 e UC2}
+%ITERAZIONE 1 PROGETTAZIONE 
+\subsection{Iterazione 1: Progettazione }
+\begin{frame} {Descrizione Iterazione 1: Progettazione }
+ \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 1 - Refactoring: Test}
-\begin{frame}
-  \frametitle{Iterazione 1 - Refactoring: Test, casi d'uso UC1 e UC2}
+\begin{frame} {Iterazione 1 Progettazione: UC1\_RequestConnection Connect}
+   \begin{figure}
+     \includegraphics[scale=0.08]{image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.png}{\centering}
+     \caption{SSD: UC1\_RequestConnection\_SSD\_3\_4\_connect}
+     \framezoom <1><2>[border](0 cm,0.5 cm)(3.0 cm,3.0 cm)% primo quadrante a sx
+     \label{fig_UC1_RC_SSD_3_4} 
+   \end{figure}
 \end{frame}
 
+\subsection {Iterazione 1: Implementazione - UC1 e UC2}
+\begin{frame} {Iterazione 1: Implementazione - UC1 e UC2}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\subsection{Iterazione 1: Test - UC1 e UC2}
+\begin{frame} {Iterazione 1: Test - UC1 e UC2}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+%ITERAZIONE 1 REFACTORING 
+\section{Ideazione: Refactoring Iterazione 1}
+\begin{frame} {Descrizione Ideazione: Refactoring Iterazione 1}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\subsection{Iterazione 1 Refactoring: Progettazione}
+\begin{frame} {Iterazione 1 Refactoring: Progettazione}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\subsection{Iterazione 1 Refactoring: Implementazione - UC2\_AccessRoom}
+\begin{frame} {Iterazione 1 Refactoring: Implementazione - UC2\_AccessRoom}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\subsection {Iterazione 1 Refactoring: Test - UC2\_AccessRoom}
+\begin{frame} {Iterazione 1 Refactoring: Test - UC2\_AccessRoom}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+
+% ELABORAZIONE ITERAZIONE 2 
 \section{Elaborazione - Iterazione 2}
-\begin{frame}
-  \frametitle{Descrizione Iterazione 2}
+\begin{frame} {Elaborazione: Iterazione 2}
+  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 2: Requisiti}
-\begin{frame}
-  \frametitle{Iterazione 2: Requisiti, caso d'uso UC3\_SendRoomMessage}
+\subsection{Iterazione 2: Requisiti - UC3\_SendRoomMessage}
+\begin{frame} {Iterazione 2: Requisiti - UC3\_SendRoomMessage}
   \begin{table}[!htbp]
     \caption {Caso d'uso UC3\_SendRoomMessage}
      \label{table:1}
@@ -414,8 +497,7 @@
    \end{table}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 2: Requisiti, caso d'uso UC3\_SendRoomMessage}
+\begin{frame} {Iterazione 2: Requisiti - UC3\_SendRoomMessage}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
@@ -433,34 +515,34 @@
    \end{table}
 \end{frame}
 
-\subsection{Iterazione 2: Analisi}
-\begin{frame}
-  \frametitle{Iterazione 2: Analisi, caso d'uso UC3\_SendRoomMessage}
+\subsection {Iterazione 2: Analisi}
+\begin{frame} {Iterazione 2: Analisi}
+  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
 \subsection{Iterazione 2: Progettazione}
-\begin{frame}
-  \frametitle{Iterazione 2: Progettazione, caso d'uso UC3\_SendRoomMessage}
+\begin{frame} {Iterazione 2: Progettazione}
+  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 2: Implementazione}
-\begin{frame}
-  \frametitle{Iterazione 2: Implementazione, caso d'uso UC3\_SendRoomMessage}
+\subsection{Iterazione 2: Implementazione - UC3\_SendRoomMessage}
+\begin{frame} {Iterazione 2: Implementazione - UC3\_SendRoomMessage}
+  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 2: Test}
-\begin{frame}
-  \frametitle{Iterazione 2: Test, caso d'uso UC3\_SendRoomMessage}
+\subsection {Iterazione 2: Test - UC3\_SendRoomMessage}
+\begin{frame} {Iterazione 2: Test - UC3\_SendRoomMessage}
+  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
+% ELABORAZIONE ITERAZIONE 3
 \section{Elaborazione - Iterazione 3}
-\begin{frame}
-  \frametitle{Descrizione Iterazione 3}
+\begin{frame} {Descrizione Elaborazione: Iterazione 3}
+  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 3: Requisiti}
-\begin{frame}
-  \frametitle{Iterazione 3: Requisiti, caso d'uso UC4\_SendPrivateMessage}
+\subsection {Iterazione 3: Requisiti - UC4\_SendPrivateMessage}
+\begin{frame} {Iterazione 3: Requisiti - UC4\_SendPrivateMessage}
   \begin{table}[!htbp]
     \caption {Caso d'uso UC4\_SendPrivateMessage}
      \label{table:1}
@@ -479,13 +561,11 @@
           \item L’utente inserisce da tastiera il messaggio da inviare.
 	  \item Il messaggio viene inoltrato al destinatario selezionato.
          \end{enumerate} \\\hline
-
       \end{tabular}}
    \end{table}
 \end{frame}
 
-\begin{frame}
- \frametitle{Iterazione 3: Requisiti, caso d'uso UC4\_SendPrivateMessage}
+\begin{frame} {Iterazione 3: Requisiti - UC4\_SendPrivateMessage}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
@@ -503,24 +583,24 @@
    \end{table}
 \end{frame}
 
-\subsection{Iterazione 3: Analisi}
-\begin{frame}
-  \frametitle{Iterazione 3: Analisi, caso d'uso UC4\_SendPrivateMessage}
+\subsection {Iterazione 3: Analisi}
+\begin{frame} {Iterazione 3: Analisi}
+  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 3: Progettazione}
-\begin{frame}
-  \frametitle{Iterazione 3: Progettazione, caso d'uso UC4\_SendPrivateMessage}
+\subsection {Iterazione 3: Progettazione}
+\begin{frame} {Iterazione 3: Progettazione}
+ \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 3: Implementazione}
-\begin{frame}
-  \frametitle{Iterazione 3: Implementazione, caso d'uso UC4\_SendPrivateMessage}
+\subsection {Iterazione 3: Implementazione - UC4\_SendPrivateMessage}
+\begin{frame} {Iterazione 3: Implementazione - UC4\_SendPrivateMessage}
+ \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 3: Test}
-\begin{frame}
-  \frametitle{Iterazione 3: Test, caso d'uso UC4\_SendPrivateMessage}
+\subsection {Iterazione 3: Implementazione - UC4\_SendPrivateMessage}
+\begin{frame} {Iterazione 3: Test - UC4\_SendPrivateMessage}
+ \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
 \begin {frame} 
