@@ -330,7 +330,7 @@
 
 % ANALISI ITERAZIONE 1 UC1_RequestConnection
 \subsection{Iterazione 1: Analisi - UC1\_RequestConnection}
-\begin{frame} {Descrizione Iterazione 1: Analisi - UC1\_RequestConnection}
+\begin{frame} {Descrizione Analisi - UC1\_RequestConnection}
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
@@ -374,7 +374,7 @@
 \end{frame}
 
 \subsection{Iterazione 1: Analisi - UC2\_AccessRoom}
-\begin{frame} {Descrizione Iterazione 1: Analisi - UC2\_AccessRoom}
+\begin{frame} {Descrizione Analisi - UC2\_AccessRoom}
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
@@ -418,26 +418,103 @@
 \end{frame}
 
 %ITERAZIONE 1 PROGETTAZIONE 
-\subsection{Iterazione 1: Progettazione }
-\begin{frame} {Descrizione Iterazione 1: Progettazione }
+\subsection{Iterazione 1: Progettazione - UC1\_RequestConnection}
+\begin{frame} {Descrizione Progettazione - UC1\_RequestConnection }
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC1\_RequestConnection Connect}
+\begin{frame} {Iterazione 1 Progettazione: UC1\_RequestConnection - OP3-4}
    \begin{figure}
-     \hypersetup{linkbordercolor={0 0.5 0.1}}
-     \includegraphics[scale=0.065]{image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.png}{\centering}
-     \caption{SSD: UC1\_RequestConnection\_SSD\_3\_4\_connect}
-     \framezoom <1><2>[border](0 cm,0.5 cm)(6.8 cm,2.8 cm)% primo quadrante a alto
-     \framezoom <1><4>[border](0 cm,3.5 cm)(6.8 cm,2.8 cm)% secondo quadrante in basso
-     \label{fig_UC1_RC_SSD_3_4} 
+     %\hypersetup{linkbordercolor={0 0.5 0.1}}
+     \includegraphics[scale=0.069]{image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.png}{\centering}
+     \caption{SSD - OP1-4: connect(nick), notify(response) del modello dominio (figura \ref{fig_UC1_RC_SSD}) }
+     %\framezoom <1><2>[border](0 cm,0.5 cm)(6.8 cm,2.8 cm)% primo quadrante a alto
+     %\framezoom <1><4>[border](0 cm,3.5 cm)(6.8 cm,2.8 cm)% secondo quadrante in basso
+     \label{fig_UC1_SSD_RC_1_4} 
    \end{figure}
 \end{frame}
+
+\subsection{Iterazione 1: Progettazione - UC1\_AccessRoom}
+\begin{frame} {Descrizione Progettazione - UC2\_AccessRoom }
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP1}
+   \begin{figure}
+     \includegraphics[scale=0.23]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_1_sendCommand.png}{\centering}
+     \caption{SSD - OP1: sendCommand(cmd1) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSD_AC_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP2}
+   \begin{figure}
+     \includegraphics[scale=0.15]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_2_getRoomsName.png}{\centering}
+     \caption{SSD - OP2: getRoomsName() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSD_AC_2} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP3}
+   \begin{figure}
+     \includegraphics[scale=0.24]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_3_notify.png}{\centering}
+     \caption{SSD - OP3: notify(list) del modello di dominio (figura \ref{fig_UC2_AR_SSD})}
+     \label{fig_UC2_SSD_AC_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP4}
+   \begin{figure}
+     \includegraphics[scale=0.26]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_4_sendCommand.png}{\centering}
+     \caption{SSD - OP4: sendCommand(cmd2) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSD_AC_4} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP5}
+   \begin{figure}
+     \includegraphics[scale=0.138]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_5_join_add.png}{\centering}
+     \caption{SSD - OP5: joinRoom(sender,room), addUserToRoom() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSD_AC_5} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP6}
+   \begin{figure}
+     \includegraphics[scale=0.16]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_6_notifypublic.png}{\centering}
+     \caption{SSD - OP6: notifypublic(updateList) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSD_AC_6} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Common}
+   \begin{figure}
+     \includegraphics[scale=0.26]{image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Common }
+     \label{fig_UC1_UC2_DCD_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Siuc Server}
+   \begin{figure}
+     \includegraphics[scale=0.28]{image_astah/Iteration_1_DesignModel/ClassDiagramSiucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Siuc Server }
+     \label{fig_UC1_UC2_DCD_2} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Siuc}
+   \begin{figure}
+     \includegraphics[scale=0.26]{image_astah/Iteration_1_DesignModel/ClassDiagramSiuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Siuc }
+     \label{fig_UC1_UC2_DCD_3} 
+   \end{figure}
+\end{frame}
+
 
 \subsection {Iterazione 1: Implementazione - UC1 e UC2}
 \begin{frame} {Iterazione 1: Implementazione - UC1 e UC2}
  \emph{INSERIRE DESCRIZIONE}
-
 \end{frame}
 
 \subsection{Iterazione 1: Test - UC1 e UC2}
