@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.17)  27 FEB 2015 00:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.17)  27 FEB 2015 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1901,10 +1901,10 @@ File: image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect
 <use image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.
 png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC1_RequestConnect
-ion_SSD_3_4_connect.png used on input line 433.
-(pdftex.def)             Requested size: 238.41557pt x 213.04025pt.
+ion_SSD_3_4_connect.png used on input line 435.
+(pdftex.def)             Requested size: 193.71548pt x 173.09775pt.
 
-Overfull \vbox (58.68811pt too high) detected at line 433
+Overfull \vbox (18.7456pt too high) detected at line 435
  []
 
 [40
@@ -1917,13 +1917,35 @@ File: image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect
 <use image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.
 png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC1_RequestConnect
-ion_SSD_3_4_connect.png used on input line 433.
-(pdftex.def)             Requested size: 238.41557pt x 213.04025pt.
+ion_SSD_3_4_connect.png used on input line 435.
+(pdftex.def)             Requested size: 193.71548pt x 173.09775pt.
  [41
 
- <./ru_logo.png>] [42
+ <./ru_logo.png>]
+File: image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect
+.png Graphic file (type png)
 
- <./ru_logo.png>] [43
+<use image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.
+png>
+Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC1_RequestConnect
+ion_SSD_3_4_connect.png used on input line 435.
+(pdftex.def)             Requested size: 193.71548pt x 173.09775pt.
+
+Overfull \vbox (18.7456pt too high) detected at line 435
+ []
+
+[42
+
+ <./ru_logo.png>]
+File: image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect
+.png Graphic file (type png)
+
+<use image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.
+png>
+Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC1_RequestConnect
+ion_SSD_3_4_connect.png used on input line 435.
+(pdftex.def)             Requested size: 193.71548pt x 173.09775pt.
+ [43
 
  <./ru_logo.png>] [44
 
@@ -1933,23 +1955,23 @@ ion_SSD_3_4_connect.png used on input line 433.
 
  <./ru_logo.png>] [47
 
+ <./ru_logo.png>] [48
+
+ <./ru_logo.png>] [49
+
  <./ru_logo.png>]
-[48
+[50
 
  <./ru_logo.png>]pdfTeX warning (ext4): destination with the same identifier (n
 ame{table:1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.498 \end{frame}
+l.500 \end{frame}
                  
-Overfull \vbox (0.79324pt too high) detected at line 498
+Overfull \vbox (0.79324pt too high) detected at line 500
  []
 
-[49
-
- <./ru_logo.png>] [50
-
- <./ru_logo.png>] [51
+[51
 
  <./ru_logo.png>] [52
 
@@ -1959,22 +1981,22 @@ Overfull \vbox (0.79324pt too high) detected at line 498
 
  <./ru_logo.png>] [55
 
+ <./ru_logo.png>] [56
+
+ <./ru_logo.png>] [57
+
  <./ru_logo.png>]pdfTeX warning (ext4): destination with the same identifier (n
 ame{table:1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.566 \end{frame}
+l.568 \end{frame}
                  
-Underfull \hbox (badness 1939) in paragraph at lines 566--566
+Underfull \hbox (badness 1939) in paragraph at lines 568--568
 []\OT1/cmss/m/n/10.95 SiucUser: vuo-le che i mes-sag-gi sia-no in-via-ti al-l'u
 -ten-te
  []
 
-[56
-
- <./ru_logo.png>] [57
-
- <./ru_logo.png>] [58
+[58
 
  <./ru_logo.png>] [59
 
@@ -1983,6 +2005,10 @@ Underfull \hbox (badness 1939) in paragraph at lines 566--566
  <./ru_logo.png>] [61
 
  <./ru_logo.png>] [62
+
+ <./ru_logo.png>] [63
+
+ <./ru_logo.png>] [64
 
  <./ru_logo.png> </usr/share/texmf/tex/latex/beamer/base/art/beamericonarticle.
 pdf>]
@@ -1995,13 +2021,13 @@ pdf>]
 \tf@snm=\write8
 \openout8 = `slide.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 629.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 629.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 631.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 631.
  (./slide.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 629.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 629.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 631.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 631.
 Package rerunfilecheck Info: File `slide.out' has not changed.
-(rerunfilecheck)             Checksum: 1C1234923C8CAFFF6194DC14383ED0FE;2025.
+(rerunfilecheck)             Checksum: 34122370CD7A2D0CD64432631214E7D7;2025.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2013,13 +2039,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 629.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 631.
  ) 
 Here is how much of TeX's memory you used:
- 19010 strings out of 493307
- 347759 string characters out of 6139905
- 430849 words of memory out of 5000000
- 21808 multiletter control sequences out of 15000+600000
+ 19016 strings out of 493307
+ 347843 string characters out of 6139905
+ 430852 words of memory out of 5000000
+ 21809 multiletter control sequences out of 15000+600000
  13744 words of font info for 50 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,19n,53p,421b,759s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2033,10 +2059,10 @@ onts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/symbols/msam7.pfb>
-Output written on slide.pdf (62 pages, 3644051 bytes).
+Output written on slide.pdf (64 pages, 3719503 bytes).
 PDF statistics:
- 1110 PDF objects out of 1200 (max. 8388607)
- 850 compressed objects within 9 object streams
- 163 named destinations out of 1000 (max. 500000)
- 652 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1139 PDF objects out of 1200 (max. 8388607)
+ 873 compressed objects within 9 object streams
+ 168 named destinations out of 1000 (max. 500000)
+ 662 words of extra memory for PDF output out of 10000 (max. 10000000)
 
