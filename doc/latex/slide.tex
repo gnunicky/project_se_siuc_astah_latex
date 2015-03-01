@@ -90,6 +90,11 @@
     \tableofcontents
  \end{frame}
 
+\subsection{Prefazione}
+ \begin{frame}[allowframebreaks] {Modello di processo software utilizzato}
+  \emph{INSERIRE DESCRIZIONE - Unified Process}
+ \end{frame}
+
 \section{Ideazione - Iterazione 1}
  \begin{frame}[allowframebreaks] 
   \frametitle {Descrizione realtà d'interesse} 
@@ -152,17 +157,18 @@
 \begin{frame} [allowframebreaks]
   \frametitle{Iterazione 1: Requisiti - Modello dei casi d'uso}
    \underline{Attori Identificati}: Amministratore (SiucAdmin) e Utente del Servizio di Messaggistica (SiucUser). \newline
-   \underline{Casi d'uso identificati}: RequestConnection, AccessRoom, SendRoomMessage, SendPrivateMessage, ReceiveNotify, ExitRoom, CreateRoom, RemoveRoom, 
-                                        SendAlertUser, ExpulsionUser \newline
+   \underline{Casi d'uso identificati}: RequestConnection, AccessRoom, SendPublicMessage, SendPrivateMessage, ReceiveNotify, SendCommand, ExitRoom, CreateRoom, 
+                                        RemoveRoom, SendAlertUser, ExpulsionUser. \newline
    Descrizione breve dei casi d'uso identificati:
    \begin{enumerate} 
     \item RequestConnection. L’utente si connette al sistema specificando il nickname, l’indirizzo e la porta del servizio di messaggistica.
     \item AccessRoom. L’utente richiede al sistema l’ingresso in una specifica stanza del servizio (che deve essere stata precedentemente creata dall’amministratore 
           del servizio). 
-    \item SendRoomMessage. Il partecipante al servizio di messaggistica invia un messaggio ``pubblico'' che viene inviato dal sistema a tutti i partecipanti che si 
-          trovano nella stessa stanza di colui che ha inviato il messaggio.
+    \item SendPublicMessage. Il partecipante al servizio di messaggistica invia un messaggio ``pubblico'' che viene inviato dal sistema a tutti i partecipanti che 
+          si trovano nella stessa stanza di colui che ha inviato il messaggio.
     \item SendPrivateMessage. Il partecipante al servizio di messaggistica  invia un messaggio ``privato'' ad uno specifico partecipante.
     \item ReceiveNotify. Il sistema manda dei messaggi di notifica, che permettono di aggiornare l’utente di un cambiamento dello stato del sistema.
+    \item SendCommand. .......
     \item ExitRoom. Un partecipante richiede al sistema l’uscita dal servizio. Questo comporta la sua eliminazione dall’insieme dei partecipanti presenti nella 
           stanza del servizio cui era precedentemente associato l’utente.
     \item CreateRoom. L’amministratore del servizio di messaggistica è responsabile della creazione (preventiva) delle stanze che potranno successivamente essere 
@@ -288,19 +294,19 @@
    \end{table}
 \end{frame}
 
-\begin{frame}{Iterazione 1: Requisiti, descrizione Mockups User Interface}
+\begin{frame}{Descrizione Mockups User Interface}
  \emph{INSERIRE DESCRIZIONE}
 \end{frame} 
 
-\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti - Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/01_siuc_open.png}{\centering}
 \end{frame}
 
-\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti - Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/02_siuc_menu_server.png}{\centering}
 \end{frame}
 
-\begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
+\begin{frame} {Iterazione 1: Requisiti  - Mockups Bozza User Interface}
     \includegraphics[height=190px, width=286px,]{image_mockups/03_siuc_menu_help.png}{\centering}
 \end{frame}
 
@@ -328,7 +334,7 @@
     \includegraphics[height=190px, width=286px,]{image_mockups/09_siuc_user_room_medical.png}{\centering}
 \end{frame}
 
-% ANALISI ITERAZIONE 1 UC1_RequestConnection
+% ANALISI ITERAZIONE 1 - UC1_RequestConnection e UC2_AccessRoom
 \subsection{Iterazione 1: Analisi - UC1\_RequestConnection}
 \begin{frame} {Descrizione Analisi - UC1\_RequestConnection}
  \emph{INSERIRE DESCRIZIONE}
@@ -511,7 +517,6 @@
    \end{figure}
 \end{frame}
 
-
 \subsection {Iterazione 1: Implementazione - UC1 e UC2}
 \begin{frame} {Iterazione 1: Implementazione - UC1 e UC2}
  \emph{INSERIRE DESCRIZIONE}
@@ -522,42 +527,130 @@
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-%ITERAZIONE 1 REFACTORING 
-\section{Ideazione: Refactoring Iterazione 1}
-\begin{frame} {Descrizione Ideazione: Refactoring Iterazione 1}
+%ITERAZIONE 1 REFACTORING PROGETTAZIONE 
+\section{Refactoring Iterazione 1}
+\begin{frame} {Descrizione: Refactoring Iterazione 1}
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 1 Refactoring: Progettazione}
-\begin{frame} {Iterazione 1 Refactoring: Progettazione}
+\subsection{Refactoring Iterazione 1 - UC1\_RequestConnection}
+\begin{frame} {Descrizione Refactoring Iterazione 1 - UC1\_RequestConnection }
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 1 Refactoring: Implementazione - UC2\_AccessRoom}
-\begin{frame} {Iterazione 1 Refactoring: Implementazione - UC2\_AccessRoom}
+\begin{frame} {Refactoring Iterazione 1: UC1\_RequestConnection - OP3-4}
+   \begin{figure}
+     \includegraphics[scale=0.068]{image_astah/Iteration_1_DesignModel_Refactored/UC1_RequestConnection_SSD_3_4_connect.png}{\centering}
+     \caption{SSD - OP1-4: connect(nick), notify(response) del modello dominio (figura \ref{fig_UC1_RC_SSD}) }
+     \label{fig_UC1_SSDR_RC_1_4} 
+   \end{figure}
+\end{frame}
+
+\subsection{Refactoring Iterazione 1 - UC1\_AccessRoom}
+\begin{frame} {Descrizione Refactoring Iterazione 1 - UC2\_AccessRoom }
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection {Iterazione 1 Refactoring: Test - UC2\_AccessRoom}
-\begin{frame} {Iterazione 1 Refactoring: Test - UC2\_AccessRoom}
+\begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP1}
+   \begin{figure}
+     \includegraphics[scale=0.21]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_1_sendCommand.png}{\centering}
+     \caption{SSD - OP1: sendCommand(cmd1) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSDR_AC_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP2}
+   \begin{figure}
+     \includegraphics[scale=0.18]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_2_getRoomsName.png}{\centering}
+     \caption{SSD - OP2: getRoomsName() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSDR_AC_2} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP3}
+   \begin{figure}
+     \includegraphics[scale=0.16]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_3_notify.png}{\centering}
+     \caption{SSD - OP3: notify(list) del modello di dominio (figura \ref{fig_UC2_AR_SSD})}
+     \label{fig_UC2_SSDR_AC_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP4}
+   \begin{figure}
+     \includegraphics[scale=0.26]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_4_sendCommand.png}{\centering}
+     \caption{SSD - OP4: sendCommand(cmd2) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSDR_AC_4} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP5}
+   \begin{figure}
+     \includegraphics[scale=0.0999]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_5_join_add.png}{\centering}
+     \caption{SSD - OP5: joinRoom(sender,room), addUserToRoom() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSDR_AC_5} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP6}
+   \begin{figure}
+     \includegraphics[scale=0.125]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_6_notifypublic.png}{\centering}
+     \caption{SSD - OP6: notifypublic(updateList) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \label{fig_UC2_SSDR_AC_6} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Common}
+   \begin{figure}
+     \includegraphics[scale=0.23]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramCommon.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Common }
+     \label{fig_UC1_UC2_DCDR_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Siuc}
+   \begin{figure}
+     \includegraphics[scale=0.235]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSiuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Siuc }
+     \label{fig_UC1_UC2_DCDR_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Siuc Server}
+   \begin{figure}
+     \includegraphics[scale=0.245]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSiucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Siuc Server }
+     \label{fig_UC1_UC2_DCDR_2} 
+   \end{figure}
+\end{frame}
+
+\subsection{Refactoring Iterazione 1: Implementazione - UC1 e UC2}
+\begin{frame} {Refactoring Iterazione 1: Implementazione - UC1 e UC2}
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
+\subsection {Refactoring Iterazione 1: Test - UC1 e UC2}
+\begin{frame} {Refactoring Iterazione 1: Test - UC1 e UC2}
+ \emph{INSERIRE DESCRIZIONE}
+\end{frame}
 
-% ELABORAZIONE ITERAZIONE 2 
+% ELABORAZIONE ITERAZIONE 2 - UC3_SendPublicMessage
 \section{Elaborazione - Iterazione 2}
-\begin{frame} {Elaborazione: Iterazione 2}
+\begin{frame} {Descrizione Elaborazione - Iterazione 2}
   \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 2: Requisiti - UC3\_SendRoomMessage}
-\begin{frame} {Iterazione 2: Requisiti - UC3\_SendRoomMessage}
+\subsection{Iterazione 2: Requisiti - UC3\_SendPublicMessage}
+\begin{frame} {Iterazione 2: Requisiti - UC3\_SendPublicMessage}
+  \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Requisiti - UC3\_SendPublicMessage}
   \begin{table}[!htbp]
-    \caption {Caso d'uso UC3\_SendRoomMessage}
+    \caption {Caso d'uso UC3\_SendPublicMessage}
      \label{table:1}
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
-        Nome caso d'uso &  UC3\_SendRoomMessage\\\hline
+        Nome caso d'uso &  UC3\_SendPublicMessage\\\hline
         Portata & Applicazione Smart Intelligent University Communications \\\hline
         Livello & Obiettivo Utente \\\hline
         Attore primario & SiucUser  \\\hline
@@ -577,7 +670,7 @@
    \end{table}
 \end{frame}
 
-\begin{frame} {Iterazione 2: Requisiti - UC3\_SendRoomMessage}
+\begin{frame} {Iterazione 2: Requisiti - UC3\_SendPublicMessage}
   \begin{table}[!htbp]
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
@@ -595,27 +688,122 @@
    \end{table}
 \end{frame}
 
-\subsection {Iterazione 2: Analisi}
-\begin{frame} {Iterazione 2: Analisi}
+\subsection {Iterazione 2: Analisi - UC3\_SendPublicMessage}
+\begin{frame} {Descrizione Iterazione 2: Analisi - UC3\_SendPublicMessage}
   \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 2: Progettazione}
-\begin{frame} {Iterazione 2: Progettazione}
+\begin{frame} {Iterazione 2: Analisi - UC3\_SendPublicMessage}
+   \begin{figure}
+     \includegraphics[scale=0.27]{image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_DM.png}{\centering}
+     \caption{UC3 - Modello di dominio}
+     \label{fig_UC3_SPM_DM} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Analisi - UC3\_SendPublicMessage}
+   \begin{figure}
+     \includegraphics[scale=0.315]{image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_OM.png}{\centering}
+     \caption{UC3 - Oggetti di dominio}
+     \label{fig_UC3_SPM_OM} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Analisi - UC3\_SendPublicMessage}
+   \begin{figure}
+     \includegraphics[scale=0.33]{image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_SSD.png}{\centering}
+     \caption{UC3 - Diagramma di sequenza di sistema}
+     \label{fig_UC3_SPM_SSD} 
+   \end{figure}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 2: Analisi, UC2 contratto CO2 - NameCO2}
+  \begin{table}[!htbp]
+   \caption {UC2 Contratto CO2 - NameCO2}
+    \label{table:1}
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Operazione & \\\hline 
+         Riferimenti &  \\\hline
+         Pre-condizione & \\\hline 
+         Post-condizione &  \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\subsection{Iterazione 2: Progettazione - UC3\_SendPublicMessage}
+\begin{frame} {Iterazione 2: Progettazione - UC3\_SendPublicMessage}
   \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Iterazione 2: Implementazione - UC3\_SendRoomMessage}
-\begin{frame} {Iterazione 2: Implementazione - UC3\_SendRoomMessage}
+\begin{frame} {Iterazione 2 Progettazione: UC3\_SendPublicMessage - OP1}
+   \begin{figure}
+     \includegraphics[scale=0.24]{image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_1_sendMsg.png}{\centering}
+     \caption{SSD - OP1: sendMsg(msg) del modello di dominio (figura \ref{fig_UC3_SPM_SSD}) }
+     \label{fig_UC3_SSD_SRM_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2 Progettazione: UC3\_SendPublicMessage - OP2}
+   \begin{figure}
+     \includegraphics[scale=0.14]{image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_2_publicMsg.png}{\centering}
+     \caption{SSD - OP2: pubblicMsg(msg) del modello di dominio (figura \ref{fig_UC3_SPM_SSD}) }
+     \label{fig_UC3_SSD_SRM_2} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2 Progettazione: UC3\_SendPublicMessage - OP3}
+   \begin{figure}
+     \includegraphics[scale=0.23]{image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_3_receiveMsg.png}{\centering}
+     \caption{SSD - OP3: receive(msg) del modello di dominio (figura \ref{fig_UC3_SPM_SSD})}
+     \label{fig_UC3_SSD_SRM_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2 Progettazione: UC3 Class Diagram - Common}
+   \begin{figure}
+     \includegraphics[scale=0.245]{image_astah/Iteration_2_DesignModel/ClassDiagramCommon.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Common }
+     \label{fig_UC3_DCD_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1 Progettazione: UC3 Class Diagram - Siuc}
+   \begin{figure}
+     \includegraphics[scale=0.24]{image_astah/Iteration_2_DesignModel/ClassDiagramSiuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Siuc }
+     \label{fig_UC3_DCD_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2 Progettazione: UC3 Class Diagram - Connector}
+   \begin{figure}
+     \includegraphics[scale=0.125]{image_astah/Iteration_2_DesignModel/ClassDiagramConnector.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Connector }
+     \label{fig_UC3_DCD_4} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2 Progettazione: UC3 Class Diagram - Siuc Server}
+   \begin{figure}
+     \includegraphics[scale=0.245]{image_astah/Iteration_2_DesignModel/ClassDiagramSiucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Siuc Server }
+     \label{fig_UC3_DCD_2} 
+   \end{figure}
+\end{frame}
+
+\subsection{Iterazione 2: Implementazione - UC3\_SendPublicMessage}
+\begin{frame} {Iterazione 2: Implementazione - UC3\_SendPublicMessage}
   \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection {Iterazione 2: Test - UC3\_SendRoomMessage}
-\begin{frame} {Iterazione 2: Test - UC3\_SendRoomMessage}
+\subsection {Iterazione 2: Test - UC3\_SendPublicMessage}
+\begin{frame} {Iterazione 2: Test - UC3\_SendPublicMessage}
   \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-% ELABORAZIONE ITERAZIONE 3
+% ELABORAZIONE ITERAZIONE 3 - UC4\_SendPrivateMessage
 \section{Elaborazione - Iterazione 3}
 \begin{frame} {Descrizione Elaborazione: Iterazione 3}
   \emph{INSERIRE DESCRIZIONE}
@@ -663,14 +851,109 @@
    \end{table}
 \end{frame}
 
-\subsection {Iterazione 3: Analisi}
-\begin{frame} {Iterazione 3: Analisi}
+\subsection {Iterazione 3: Analisi - UC4\_SendPrivateMessage}
+\begin{frame} {Descrizione Iterazione 3: Analisi - UC4\_SendPrivateMessage}
   \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection {Iterazione 3: Progettazione}
-\begin{frame} {Iterazione 3: Progettazione}
- \emph{INSERIRE DESCRIZIONE}
+\begin{frame} {Iterazione 3: Analisi - UC4\_SendPrivateMessage}
+   \begin{figure}
+     \includegraphics[scale=0.255]{image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_DM.png}{\centering}
+     \caption{UC3 - Modello di dominio}
+     \label{fig_UC4_SPM_DM} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 3: Analisi - UC4\_SendPrivateMessage}
+   \begin{figure}
+     \includegraphics[scale=0.435]{image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_OM.png}{\centering}
+     \caption{UC3 - Oggetti di dominio}
+     \label{fig_UC4_SPM_OM} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 3: Analisi - UC4\_SendPrivateMessage}
+   \begin{figure}
+     \includegraphics[scale=0.33]{image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_SSD.png}{\centering}
+     \caption{UC4 - Diagramma di sequenza di sistema}
+     \label{fig_UC4_SPM_SSD} 
+   \end{figure}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 3: Analisi, UC3 contratto CO3 - NameCO3}
+  \begin{table}[!htbp]
+   \caption {UC3 Contratto CO3 - NameCO3}
+    \label{table:1}
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Operazione & \\\hline 
+         Riferimenti &  \\\hline
+         Pre-condizione & \\\hline 
+         Post-condizione &  \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\subsection{Iterazione 3: Progettazione - UC4\_SendPrivateMessage}
+\begin{frame} {Iterazione 3: Progettazione - UC4\_SendPrivateMessage}
+  \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\begin{frame} {Iterazione 3 Progettazione: UC4\_SendPrivateMessage - OP1}
+   \begin{figure}
+     \includegraphics[scale=0.22]{image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_1_sendMsg.png}{\centering}
+     \caption{SSD - OP1: sendMsg(msg) del modello di dominio (figura \ref{fig_UC4_SPM_SSD}) }
+     \label{fig_UC4_SSD_SRM_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 3 Progettazione: UC4\_SendPrivateMessage - OP2}
+   \begin{figure}
+     \includegraphics[scale=0.14]{image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_2_privateMsg}{\centering}
+     \caption{SSD - OP2: privateMsg(msg) del modello di dominio (figura \ref{fig_UC4_SPM_SSD}) }
+     \label{fig_UC4_SSD_SRM_2} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 3 Progettazione: UC4\_SendPrivateMessage - OP3}
+   \begin{figure}
+     \includegraphics[scale=0.22]{image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_3_receive.png}{\centering}
+     \caption{SSD - OP3: receive(msg) del modello di dominio (figura \ref{fig_UC4_SPM_SSD})}
+     \label{fig_UC4_SSD_SRM_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 3 Progettazione: UC4 Class Diagram - Common}
+   \begin{figure}
+     \includegraphics[scale=0.215]{image_astah/Iteration_3_DesignModel/ClassDiagramCommon.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Common }
+     \label{fig_UC4_DCD_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 3 Progettazione: UC4 Class Diagram - Siuc}
+   \begin{figure}
+     \includegraphics[scale=0.235]{image_astah/Iteration_3_DesignModel/ClassDiagramSiuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Siuc }
+     \label{fig_UC4_DCD_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 3 Progettazione: UC4 Class Diagram - Connector}
+   \begin{figure}
+     \includegraphics[scale=0.125]{image_astah/Iteration_3_DesignModel/ClassDiagramConnector.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Connector }
+     \label{fig_UC4_DCD_4} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 3 Progettazione: UC4 Class Diagram - Siuc Server}
+   \begin{figure}
+     \includegraphics[scale=0.245]{image_astah/Iteration_3_DesignModel/ClassDiagramSiucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Siuc Server }
+     \label{fig_UC4_DCD_2} 
+   \end{figure}
 \end{frame}
 
 \subsection {Iterazione 3: Implementazione - UC4\_SendPrivateMessage}
@@ -687,6 +970,7 @@
  \frametitle {\refname}
   \begin {thebibliography}{99}
    {\tiny 
+     \setbeamertemplate{bibliography item}[book]
      \bibitem {bib1}  Martin Fowler, L. Baresi, S. Gaburri 
      \newblock \emph{UML distilled. Guida rapida al linguaggio di modellazione standard} 
      \newblock {Pearson Education Italia, 2010}
@@ -702,6 +986,10 @@
      \bibitem {bib4} Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides
      \newblock \emph{Design patterns - Elementi per il riuso di software ad oggetti} 
      \newblock {Pearson Education Italia, 1995}
+      
+     \setbeamertemplate{bibliography item}[online]
+     \bibitem {bib5} Pattern GOF - Giuseppe Dell'Abate's Blog
+     \newblock Indirizzo Web: \emph{\url{https://dellabate.wordpress.com/category/gof-pattern/ }}
    }
    \end {thebibliography}
 \end {frame}
