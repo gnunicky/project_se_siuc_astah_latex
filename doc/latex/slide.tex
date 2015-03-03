@@ -44,7 +44,7 @@
 
 % Optional: a subtitle to be dispalyed on the title slide
 \subtitle{
-\Large Smart Intelligent University Communications \\
+\Large Smart Network University Communications \\
 \Large  Software Engineering Projects\\
 }
 % The author(s) of the presentation:
@@ -95,11 +95,27 @@
   \emph{INSERIRE DESCRIZIONE - Unified Process}
  \end{frame}
 
+ \begin{frame} {Modello di processo software utilizzato}
+   \begin{figure}
+     \includegraphics[scale=0.30]{image/Up_Structure.png}{\centering}
+    \caption{Fasi dell'Unified Process} 
+    \label{fig_US}
+   \end{figure}
+  \end{frame}
+
+ \begin{frame} {Modello di processo software utilizzato}
+   \begin{figure}
+     \includegraphics[scale=0.30]{image/Up_Iteration_Workflows.png}{\centering}
+    \caption{Iterazioni dell'Unifiled Process} 
+    \label{fig_UIW}
+   \end{figure}
+  \end{frame}
+
 \section{Ideazione - Iterazione 1}
  \begin{frame}[allowframebreaks] 
   \frametitle {Descrizione realtà d'interesse} 
    Nel Piano Nazionale della Ricerca (PNR)  messo a punto da HORIZON ITALIA e MIUR viene bandito un progetto chiamato:\newline
-   \textbf{\virgolette{Smart Intelligent University Communications (SIUC)}} destinato a tutti gli atenei italiani.\newline 
+   \textbf{\virgolette{Smart Network University Communications (SNUC)}} destinato a tutti gli atenei italiani.\newline 
    Tale progetto è caratterizzato dalle seguenti specifiche descritti nel seguito, che consente ad appassionati, studenti,    
    ricercatori, docenti e imprese di scambiarsi messaggi in tempo reale su condivisioni, integrazioni e competenze di idee per una contaminazione tra ambiti 
    disciplinari diversi, realtà diverse e stimolare nei partecipanti lo sviluppo della  cultura dell’intraprendere e dell’innovazione.\newline 
@@ -150,13 +166,13 @@
     %\def\figurename{Figure 1}
     \includegraphics[height=178px, width=330px]{image_astah/UseCaseDiagram.png}{\centering}
     \caption{Diagrammi dei casi uso} 
-    \label{figura 1.1}
+    \label{fig_UCD}
    \end{figure}
 \end{frame}
 
 \begin{frame} [allowframebreaks]
   \frametitle{Iterazione 1: Requisiti - Modello dei casi d'uso}
-   \underline{Attori Identificati}: Amministratore (SiucAdmin) e Utente del Servizio di Messaggistica (SiucUser). \newline
+   \underline{Attori Identificati}: Amministratore (SnucAdmin) e Utente del Servizio di Messaggistica (SnucUser). \newline
    \underline{Casi d'uso identificati}: RequestConnection, AccessRoom, SendPublicMessage, SendPrivateMessage, ReceiveNotify, SendCommand, ExitRoom, CreateRoom, 
                                         RemoveRoom, SendAlertUser, ExpulsionUser. \newline
    Descrizione breve dei casi d'uso identificati:
@@ -185,8 +201,8 @@
 \begin{frame} [allowframebreaks]
   \frametitle{Glossario} 
    \begin{itemize} 
-    \item SiucUser, User, Utente: è l'utente del servizio di messaggistica che usufruisce dei servizi forniti.
-    \item SiucAdmin, Admin, Amministratore: è il gestore del servizio di messaggistica, che possiede la facoltà di creare e/o eliminare una stanza, di inviare un 
+    \item SnucUser, User, Utente: è l'utente del servizio di messaggistica che usufruisce dei servizi forniti.
+    \item SnucAdmin, Admin, Amministratore: è il gestore del servizio di messaggistica, che possiede la facoltà di creare e/o eliminare una stanza, di inviare un 
           particolare messaggio di avviso ad un partecipante per un comportamento non corretto ed eventualmente di bannarlo eliminandolo dalla stanza.
     \item Messaging Service, Servizio di messaggistica, sistema, chat: sistema che si occupa della gestione.
     \item Room, stanza, canale: insieme che si può differenziare dalle altre in base alle tematiche trattate.
@@ -206,8 +222,8 @@
        Nome caso d'uso &  UC1\_RequestConnection \\\hline
        Portata & Applicazione Smart Intelligent University Communications \\\hline
        Livello &  Obiettivo Utente \\\hline
-       Attore primario &  SiucUser \\\hline
-       Parti interessate e interessi &  SiucUser: vuole collegarsi al servizio di messaggistica \\\hline
+       Attore primario &  SnucUser \\\hline
+       Parti interessate e interessi &  SnucUser: vuole collegarsi al servizio di messaggistica \\\hline
        Pre-condizioni & L'utente ha bisogno di una connessione di rete\\\hline
        Post-condizioni (garanzia di successo) &  L'utente è inserito tra gli utenti online con il nickname confermato dal servizio di messaggistica ottenendo un 
                                                  messaggio di benvenuto \\\hline
@@ -227,7 +243,7 @@
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
          Estensioni (o flussi alternativi) &  
-           1A - SiucUser inserisce parametri errati: 
+           1A - SnucUser inserisce parametri errati: 
           \begin{itemize} 
            \item Viene visualizzato un messaggio di errore e viene richiesto nuovamente l’inserimento di tali parametri.
           \end{itemize} 
@@ -256,8 +272,8 @@
        Nome caso d'uso &  UC2\_AccessRoom\\\hline
        Portata & Applicazione Smart Intelligent University Communications \\\hline
        Livello & Obiettivo Utente \\\hline
-       Attore primario & SiucUser  \\\hline
-       Parti interessate e interessi & SiucUser: vuole registrarsi e effettuare l’ingresso in una stanza presente nel servizio di messaggistica \\\hline
+       Attore primario & SnucUser  \\\hline
+       Parti interessate e interessi & SnucUser: vuole registrarsi e effettuare l’ingresso in una stanza presente nel servizio di messaggistica \\\hline
        Pre-condizioni & Nel sistema è presente almeno una stanza creata da un amministratore.\\\hline
        Post-condizioni (garanzia di successo) &  Nel caso di svolgimento normale l’utente è registrato ed è presente nell’insieme degli utenti della stanza 
                                                  specificata. \\\hline
@@ -280,7 +296,7 @@
             \item Il sistema visualizza un’area pubblica dove vengono mostrati tutte le conversazioni in corso dal quel momento in poi. 
           \end{enumerate} \\\hline 
          Estensioni (o flussi alternativi) &  
-           3A - Il SiucUser inserisce una stanza non in elenco:
+           3A - Il SnucUser inserisce una stanza non in elenco:
           \begin{enumerate} 
            \item Il sistema invia un messaggio di errore.
           \end{enumerate} \\\hline
@@ -299,39 +315,39 @@
 \end{frame} 
 
 \begin{frame} {Iterazione 1: Requisiti - Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/01_siuc_open.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/01_snuc_open.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti - Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/02_siuc_menu_server.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/02_snuc_menu_server.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti  - Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/03_siuc_menu_help.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/03_snuc_menu_help.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/04_siuc_menu_siuc.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/04_snuc_menu_snuc.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/05_siuc_config_network.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/05_snuc_config_network.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/06_siuc_connect.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/06_snuc_connect.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/07_siuc_user_room_ce.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/07_snuc_user_room_ce.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/08_siuc_user_room_ce_private.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/08_snuc_user_room_ce_private.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[height=190px, width=286px,]{image_mockups/09_siuc_user_room_medical.png}{\centering}
+    \includegraphics[scale=0.29]{image_mockups/09_snuc_user_room_medical.png}{\centering}
 \end{frame}
 
 % ANALISI ITERAZIONE 1 - UC1_RequestConnection e UC2_AccessRoom
@@ -501,18 +517,18 @@
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Siuc Server}
+\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Snuc Server}
    \begin{figure}
-     \includegraphics[scale=0.28]{image_astah/Iteration_1_DesignModel/ClassDiagramSiucServer.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Siuc Server }
+     \includegraphics[scale=0.28]{image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc Server }
      \label{fig_UC1_UC2_DCD_2} 
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Siuc}
+\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Snuc}
    \begin{figure}
-     \includegraphics[scale=0.26]{image_astah/Iteration_1_DesignModel/ClassDiagramSiuc.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Siuc }
+     \includegraphics[scale=0.26]{image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc }
      \label{fig_UC1_UC2_DCD_3} 
    \end{figure}
 \end{frame}
@@ -607,18 +623,18 @@
    \end{figure}
 \end{frame}
 
-\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Siuc}
+\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Snuc}
    \begin{figure}
-     \includegraphics[scale=0.235]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSiuc.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Siuc }
+     \includegraphics[scale=0.235]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc }
      \label{fig_UC1_UC2_DCDR_3} 
    \end{figure}
 \end{frame}
 
-\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Siuc Server}
+\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Snuc Server}
    \begin{figure}
-     \includegraphics[scale=0.245]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSiucServer.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Siuc Server }
+     \includegraphics[scale=0.245]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc Server }
      \label{fig_UC1_UC2_DCDR_2} 
    \end{figure}
 \end{frame}
@@ -653,11 +669,11 @@
         Nome caso d'uso &  UC3\_SendPublicMessage\\\hline
         Portata & Applicazione Smart Intelligent University Communications \\\hline
         Livello & Obiettivo Utente \\\hline
-        Attore primario & SiucUser  \\\hline
+        Attore primario & SnucUser  \\\hline
         Parti interessate e interessi & 
          \begin{itemize}
-          \item SiucUser, vuole che i messaggi siano inviati a ogni utente della stanza virtuale.
-          \item SiucAdmin, è interessato a supervisionare gli utenti del servizio affinché non ci siano abusi.       
+          \item SnucUser, vuole che i messaggi siano inviati a ogni utente della stanza virtuale.
+          \item SnucAdmin, è interessato a supervisionare gli utenti del servizio affinché non ci siano abusi.       
          \end{itemize} \\\hline
         Pre-condizioni &  L'utente è registrato nella stanza in cui desidera inviare i messaggi.\\\hline
         Post-condizioni (garanzia di successo) & Ogni utente riceve il messaggio inviato. \\\hline
@@ -769,10 +785,10 @@
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC3 Class Diagram - Siuc}
+\begin{frame} {Iterazione 1 Progettazione: UC3 Class Diagram - Snuc}
    \begin{figure}
-     \includegraphics[scale=0.24]{image_astah/Iteration_2_DesignModel/ClassDiagramSiuc.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Siuc }
+     \includegraphics[scale=0.24]{image_astah/Iteration_2_DesignModel/ClassDiagramSnuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc }
      \label{fig_UC3_DCD_3} 
    \end{figure}
 \end{frame}
@@ -785,10 +801,10 @@
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 2 Progettazione: UC3 Class Diagram - Siuc Server}
+\begin{frame} {Iterazione 2 Progettazione: UC3 Class Diagram - Snuc Server}
    \begin{figure}
-     \includegraphics[scale=0.245]{image_astah/Iteration_2_DesignModel/ClassDiagramSiucServer.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Siuc Server }
+     \includegraphics[scale=0.245]{image_astah/Iteration_2_DesignModel/ClassDiagramSnucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc Server }
      \label{fig_UC3_DCD_2} 
    \end{figure}
 \end{frame}
@@ -819,8 +835,8 @@
         Nome caso d'uso &  UC3\_SendRoomMessage\\\hline
         Portata & Applicazione Smart Intelligent University Communications \\\hline
         Livello & Obiettivo Utente \\\hline
-        Attore primario & SiucUser  \\\hline
-        Parti interessate e interessi & SiucUser: vuole che i messaggi siano inviati all’utente selezionato presente nella stanza virtuale \\\hline
+        Attore primario & SnucUser  \\\hline
+        Parti interessate e interessi & SnucUser: vuole che i messaggi siano inviati all’utente selezionato presente nella stanza virtuale \\\hline
         Pre-condizioni &  L'utente è registrato nella stanza in cui desidera inviare un messaggio ad un altro utente presente \\\hline
         Post-condizioni (garanzia di successo) & L'utente selezionato riceve il messaggio inviato \\\hline
          Scenario principale di successo &  
@@ -932,10 +948,10 @@
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 3 Progettazione: UC4 Class Diagram - Siuc}
+\begin{frame} {Iterazione 3 Progettazione: UC4 Class Diagram - Snuc}
    \begin{figure}
-     \includegraphics[scale=0.235]{image_astah/Iteration_3_DesignModel/ClassDiagramSiuc.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Siuc }
+     \includegraphics[scale=0.235]{image_astah/Iteration_3_DesignModel/ClassDiagramSnuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc }
      \label{fig_UC4_DCD_3} 
    \end{figure}
 \end{frame}
@@ -948,10 +964,10 @@
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 3 Progettazione: UC4 Class Diagram - Siuc Server}
+\begin{frame} {Iterazione 3 Progettazione: UC4 Class Diagram - Snuc Server}
    \begin{figure}
-     \includegraphics[scale=0.245]{image_astah/Iteration_3_DesignModel/ClassDiagramSiucServer.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Siuc Server }
+     \includegraphics[scale=0.245]{image_astah/Iteration_3_DesignModel/ClassDiagramSnucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc Server }
      \label{fig_UC4_DCD_2} 
    \end{figure}
 \end{frame}
