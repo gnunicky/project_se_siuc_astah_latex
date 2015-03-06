@@ -69,7 +69,7 @@
 % Add a date and possibly the name of the event to the slides
 %  - again first a short version to be shown at the bottom of each slide
 %  - second the full date and event name for the title slide
-\date[27 Febbraio 2015]{27 Febbraio 2015}
+\date[06 Marzo 2015]{06 Marzo 2015}
 
 \begin{document}
 
@@ -95,7 +95,7 @@
   Per lo sviluppo del processo software descritto a breve, è stata applicata la metodologia dell'Unifiled Process (UP) suggerita
   durante il corso di studi di Ingegneria del Software.
    \begin{figure}
-     \includegraphics[scale=0.35]{image/Up_sep.png}{\centering}
+     \includegraphics[scale=0.40]{image/Up_sep.png}{\centering}
     \caption{Software Engineering Process} 
     \label{fig_SEP}
    \end{figure}
@@ -105,7 +105,7 @@
     Il ciclo di vita del progetto è diviso in quattro fasi: Principio (Inception), Elaborazione (Elaboration), Costruzione (Construction)
     e Transizione (Transition), come si può vedere nella figura \ref{fig_US}. 
    \begin{figure}
-     \includegraphics[scale=0.25]{image/Up_Structure.png}{\centering}
+     \includegraphics[scale=0.30]{image/Up_Structure.png}{\centering}
     \caption{Fasi dell'Unified Process} 
     \label{fig_US}
    \end{figure}
@@ -122,13 +122,25 @@
    \end{figure}
   \end{frame}
 
- \begin{frame} {Documenti costitutivi del progetto }
- \emph{INSERIRE DESCRIZIONE}
-   \begin{itemize} 
-     \item 
-     \item 
-     \item 
-   \end{itemize}
+ \begin{frame} [allowframebreaks] {Documenti del progetto realizzati }
+   Gli elementi che costituiscono il progetto realizzato sono:
+   \begin{enumerate} 
+     \item Documento di Visione;
+     \item Glossario;
+     \item Diagrammi dei casi d'uso;
+     \item Identificazione e descrizione dei casi d'uso in formato breve e dettagliato;
+     \item Prototipo UI (User Interface);
+     \item Modello, Oggetti e Diagramma di Sequenza di dominio del sistema dei vari casi d'uso in formato dettagliato;
+     \item SSD e DCD di progetto del sistema dei vari casi d'uso in formato dettagliato;
+     \item Codice sorgente dei diagrammi UML realizzati con Astah;
+     \item Software del progetto che comprende i casi d'uso in fomato dettagliato scritto in lingaggio a oggetti Java, 
+           con l'utilizzo di NetBeans IDE 8.0;
+     \item Test del software realizzati tramite JUnit 4.0; 
+     \item Documentazione tramite la Javadocs del codice sorgente; 
+     \item Guida utente dell'avvio e configurazione del software realizzato;
+     \item Documenti di istallazione, downloading dei repository di GitHub;
+     \item Documentazione realizzata in \LaTeX.
+   \end{enumerate}
  \end{frame}
 
 \section{Ideazione - Iterazione 1}
@@ -184,7 +196,7 @@
   \frametitle{Iterazione 1: Requisiti - Diagrammi dei casi d'uso}
    \begin{figure}[h]
     %\def\figurename{Figure 1}
-    \includegraphics[height=178px, width=330px]{image_astah/UseCaseDiagram.png}{\centering}
+    \includegraphics[scale=0.145]{image_astah/UseCaseDiagram.png}{\centering}
     \caption{Diagrammi dei casi uso} 
     \label{fig_UCD}
    \end{figure}
@@ -204,7 +216,7 @@
           si trovano nella stessa stanza di colui che ha inviato il messaggio.
     \item SendPrivateMessage. Il partecipante al servizio di messaggistica  invia un messaggio ``privato'' ad uno specifico partecipante.
     \item ReceiveNotify. Il sistema manda dei messaggi di notifica, che permettono di aggiornare l’utente di un cambiamento dello stato del sistema.
-    \item SendCommand. .......
+    \item SendCommand. IL sistema è in grado di ricevere e interpretare dei comandi.
     \item ExitRoom. Un partecipante richiede al sistema l’uscita dal servizio. Questo comporta la sua eliminazione dall’insieme dei partecipanti presenti nella 
           stanza del servizio cui era precedentemente associato l’utente.
     \item CreateRoom. L’amministratore del servizio di messaggistica è responsabile della creazione (preventiva) delle stanze che potranno successivamente essere 
@@ -221,14 +233,14 @@
 \begin{frame} [allowframebreaks]
   \frametitle{Glossario} 
    \begin{itemize} 
-    \item SnucUser, User, Utente: è l'utente del servizio di messaggistica che usufruisce dei servizi forniti.
+    \item SnucUser, User, Utente: è l'utente del servizio di messaggistica che è in grado di registrarsi a delle stanze, di inviare messaggi pubblici e privati.
     \item SnucAdmin, Admin, Amministratore: è il gestore del servizio di messaggistica, che possiede la facoltà di creare e/o eliminare una stanza, di inviare un 
           particolare messaggio di avviso ad un partecipante per un comportamento non corretto ed eventualmente di bannarlo eliminandolo dalla stanza.
     \item Messaging Service, Servizio di messaggistica, sistema, chat: sistema che si occupa della gestione.
-    \item Room, stanza, canale: insieme che si può differenziare dalle altre in base alle tematiche trattate.
+    \item Room, stanza, canale: rappresenta un luogo virtuale, dove gli utenti possono scambiarsi informazioni relative alle tematiche trattate.
     \item Messaggio Pubblico: messaggio testuale inviato da un partecipante a tutti gli utenti presenti nella stanza.
     \item Messaggio Privato: messaggio testuale inviato da un partecipante ad un particolare partecipante presente nella stanza.
-    \item Notifica: particolari messaggi di avviso inviati dal server agli utenti del servizio.  
+    \item Notifica: particolari messaggi di avviso inviati dal server agli utenti che usufruiscono del servizio.  
   \end{itemize}
 \end{frame}
 
@@ -331,54 +343,65 @@
 \end{frame}
 
 \begin{frame}{Descrizione Mockups User Interface}
- \emph{INSERIRE DESCRIZIONE}
+ Viene presentata una bozza dell'interfaccia grafica (GUI) al cliente realizzata tramite Balsamiq Mockups per rendere più visibile 
+ il confine del sistema di iterazione da parte delle figure coinvolte con l'ipotetico sistema da realizzare, in modo da sollevare
+ ipotetiche situazioni problematiche relative. 
 \end{frame} 
 
 \begin{frame} {Iterazione 1: Requisiti - Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/01_snuc_open.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/01_snuc_open.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti - Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/02_snuc_menu_server.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/02_snuc_menu_server.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti  - Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/03_snuc_menu_help.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/03_snuc_menu_help.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/04_snuc_menu_snuc.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/04_snuc_menu_snuc.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/05_snuc_config_network.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/05_snuc_config_network.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/06_snuc_connect.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/06_snuc_connect.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/07_snuc_user_room_ce.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/07_snuc_user_room_ce.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/08_snuc_user_room_ce_private.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/08_snuc_user_room_ce_private.png}{\centering}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Requisiti, Mockups Bozza User Interface}
-    \includegraphics[scale=0.29]{image_mockups/09_snuc_user_room_medical.png}{\centering}
+    \includegraphics[scale=0.28]{image_mockups/09_snuc_user_room_medical.png}{\centering}
 \end{frame}
 
 % ANALISI ITERAZIONE 1 - UC1_RequestConnection e UC2_AccessRoom
 \subsection{Iterazione 1: Analisi - UC1\_RequestConnection}
-\begin{frame} {Descrizione Analisi - UC1\_RequestConnection}
- \emph{INSERIRE DESCRIZIONE}
+\begin{frame}[allowframebreaks] {Descrizione Analisi - UC1\_RequestConnection}
+ In questa iterazione, del caso d’uso UC1 è di interesse lo scenario principale di successo.  Da esso è possibile identificare le seguenti classi concettuali: 	
+ \begin{itemize}
+  \item \textbf{User}: rappresenta il generico utente connesso al servizio di messaggistica. È caratterizzato da un ``nickname'' e può ricevere notifiche dal sistema 
+                centrale.
+  \item \textbf{MessagingService}: rappresenta ed incapsula il servizio di messaggistica nel suo complesso. Mantiene una lista di utenti connessi a tale sistema.
+  \item \textbf{Message}: individua un generico messaggio scambiato tra utenti della chat o tra servizio di messaggistica e utente. È costituito da un 
+               ``content'' (contenuto del messaggio), da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
+  \item \textbf{Notify}: è una specializzazione del tipo Message ed è caratterizzata da un ``typeNotify'' che serve a distinguere il tipo di notifica (ad es. 
+        CONNECTION\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente).        
+ \end{itemize}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Analisi - UC1\_RequestConnection}
    \begin{figure}
-     \includegraphics[scale=0.38]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_DM.png}{\centering}
+     \includegraphics[scale=0.34]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_DM.png}{\centering}
      \caption{UC1 - Modello di dominio}
      \label{fig_UC1_RC_DM} 
    \end{figure}
@@ -386,7 +409,7 @@
 
 \begin{frame} {Iterazione 1: Analisi - UC1\_RequestConnection}
    \begin{figure}
-     \includegraphics[scale=0.50]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_OM}{\centering}
+     \includegraphics[scale=0.35]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_OM}{\centering}
      \caption{UC1 - Oggetti di dominio}
      \label{fig_UC1_RC_OM} 
    \end{figure}
@@ -394,7 +417,7 @@
 
 \begin{frame} {Iterazione 1: Analisi - UC1\_RequestConnection}
    \begin{figure}
-     \includegraphics[scale=0.33]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_SSD.png}{\centering}
+     \includegraphics[scale=0.27]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_SSD.png}{\centering}
      \caption{UC1 - Diagramma di sequenza di sistema}
      \label{fig_UC1_RC_SSD} 
    \end{figure}
@@ -416,8 +439,27 @@
 \end{frame}
 
 \subsection{Iterazione 1: Analisi - UC2\_AccessRoom}
-\begin{frame} {Descrizione Analisi - UC2\_AccessRoom}
- \emph{INSERIRE DESCRIZIONE}
+\begin{frame} [allowframebreaks] {Descrizione Analisi - UC2\_AccessRoom}
+  In questa iterazione, del caso d’uso UC2 è di interesse lo scenario principale di successo.  Da esso è possibile identificare le seguenti classi concettuali: 
+  \begin{itemize}
+    \item \textbf{User}: rappresenta il generico utente, caratterizzato da un ``nickname'', connesso al servizio di messaggistica. \underline{Può richiedere la lista 
+     delle stanze, ricevere notifiche dal sistema centrale. Interagisce con il MessagingSevice richiedendo la registrazione e l'ingresso in una specifica stanza}.
+    \item \textbf{MessagingService}: rappresenta ed incapsula il servizio di messaggistica nel suo complesso. Mantiene una lista di utenti connessi a tale sistema. 
+          \underline{Mantiene una lista di stanze e riceve tramite comandi richieste di ingresso da parte degli utenti}.
+    \item \textbf{Message}: individua un generico messaggio scambiato tra utenti della chat o tra servizio di messaggistica e utente. È costituito da un ``content'' 
+          (contenuto del messaggio), da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
+    \item \textbf{Notify}: è una specializzazione del tipo Message ed è caratterizzata da un typeNotify che serve a distinguere il tipo di notifica (ad es. 
+          CONNECTIO\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente, \underline{BAD\_COMMAND nel caso in cui il comando inviato dall'User non 
+          sia riconosciuto dal Server)}.
+    \item \underline{\textbf{PublicNotify}: è una specializzazione di Notify e questo tipo di notifica viene ricevuta da tutti gli utenti registrati alla relativa 
+          stanza}. \underline{Un esempio di PublicNotify è la notifica caratterizzata dal seguente typeNotify: UPDATE\_LIST\_USERS, grazie alla quale viene 
+          aggiornata la lista degli utenti registrati nella relativa stanza}.
+   \item \underline{\textbf{Commad}: è una specializzazione di Message e rappresenta il comando che viene inviato dall'User e ricevuto ed interpretato dal            
+          MessagingService (es. /join '\#Medical' richiesta da parte dell'utente a registrarsi alla stanza Medical)}.        
+    \item \underline{\textbf{Room}: è caratterizzata da un nome. Ciascuna istanza individua una specifica stanza nella chat}.
+    \item \underline{\textbf{Register}: mantiene un riferimento all’insieme di partecipanti che in un certo istante sono presenti nella stanza}.
+
+   \end{itemize}
 \end{frame}
 
 \begin{frame} {Iterazione 1: Analisi - UC2\_AccessRoom}
@@ -725,8 +767,29 @@
 \end{frame}
 
 \subsection {Iterazione 2: Analisi - UC3\_SendPublicMessage}
-\begin{frame} {Descrizione Iterazione 2: Analisi - UC3\_SendPublicMessage}
-  \emph{INSERIRE DESCRIZIONE}
+\begin{frame} [allowframebreaks] {Descrizione Iterazione 2: Analisi - UC3\_SendPublicMessage}
+  In questa iterazione, del caso d’uso UC3 è di interesse lo scenario principale di successo.  Da esso è possibile identificare le seguenti classi concettuali: 
+  \begin{itemize}
+   \item \textbf{User}: rappresenta il generico utente, caratterizzato da un ``nickname'', connesso al servizio di messaggistica. Può richiedere la lista delle 
+         stanze, ricevere notifiche dal sistema centrale. Interagisce con il messagingSevice richiedendo la registrazione e l’ingresso in una specifica stanza. 
+         \underline{Può inviare messaggi pubblici agli utenti di una stanza}.
+   \item \textbf{MessagingService}: rappresenta ed incapsula il servizio di messaggistica nel suo complesso. Mantiene una lista di utenti connessi a tale sistema. 
+         Mantiene una lista di stanze e riceve tramite comandi richieste di ingresso da parte degli utenti.
+   \item \textbf{Message}: individua un generico messaggio scambiato tra utenti della chat o tra servizio di messaggistica e utente. È costituito da un 
+         ``content'' (contenuto del messaggio) , da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
+   \item \textbf{Notify}: è una specializzazione del tipo Message ed è caratterizzata da un typeNotify che serve a distinguere il tipo di notifica (ad es. 
+          CONNECTIO\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente, \underline{BAD\_COMMAND nel caso in cui il comando inviato dall'User non 
+          sia riconosciuto dal Server)}.
+    \item \textbf{PublicNotify}: è una specializzazione di Notify e questo tipo di notifica viene ricevuta da tutti gli utenti registrati alla relativa 
+          stanza. Un esempio di PublicNotify è la notifica caratterizzata dal seguente typeNotify: UPDATE\_LIST\_USERS, grazie alla quale viene 
+          aggiornata la lista degli utenti registrati nella relativa stanza.
+   \item  \textbf{Commad}: è una specializzazione di Message e rappresenta il comando che viene inviato dall'User e ricevuto ed interpretato dal            
+          MessagingService (es. /join '\#Medical' richiesta da parte dell'utente a registrarsi alla stanza Medical).        
+    \item \textbf{Room}: è caratterizzata da un nome. Ciascuna istanza individua una specifica stanza nella chat.
+    \item \textbf{Register}: mantiene un riferimento all’insieme di partecipanti che in un certo istante sono presenti nella stanza.
+   \item \underline{\textbf{PublicMessage}: è una specializzazione di Message ed individua un messaggio pubblico scambiato tra utenti della chat registrati nella 
+         stessa stanza}. 
+  \end{itemize}
 \end{frame}
 
 \begin{frame} {Iterazione 2: Analisi - UC3\_SendPublicMessage}
@@ -888,8 +951,31 @@
 \end{frame}
 
 \subsection {Iterazione 3: Analisi - UC4\_SendPrivateMessage}
-\begin{frame} {Descrizione Iterazione 3: Analisi - UC4\_SendPrivateMessage}
-  \emph{INSERIRE DESCRIZIONE}
+\begin{frame} [allowframebreaks] {Descrizione Iterazione 3: Analisi - UC4\_SendPrivateMessage}
+  In questa iterazione, del caso d’uso UC4 è di interesse lo scenario principale di successo.  Da esso è possibile identificare le seguenti classi concettuali: 
+  \begin{itemize}
+   \item \textbf{User}: rappresenta il generico utente, caratterizzato da un ``nickname'', connesso al servizio di messaggistica. Può richiedere la lista delle 
+         stanze, ricevere notifiche dal sistema centrale. Interagisce con il messagingSevice richiedendo la registrazione e l’ingresso in una specifica stanza. 
+         \underline{Può inviare messaggi pubblici agli utenti di una stanza}.
+   \item \textbf{MessagingService}: rappresenta ed incapsula il servizio di messaggistica nel suo complesso. Mantiene una lista di utenti connessi a tale sistema. 
+         Mantiene una lista di stanze e riceve tramite comandi richieste di ingresso da parte degli utenti.
+   \item \textbf{Message}: individua un generico messaggio scambiato tra utenti della chat o tra servizio di messaggistica e utente. È costituito da un 
+         ``content'' (contenuto del messaggio) , da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
+   \item \textbf{Notify}: è una specializzazione del tipo Message ed è caratterizzata da un typeNotify che serve a distinguere il tipo di notifica (ad es. 
+          CONNECTIO\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente, \underline{BAD\_COMMAND nel caso in cui il comando inviato dall'User non 
+          sia riconosciuto dal Server)}.
+   \item \textbf{PublicNotify}: è una specializzazione di Notify e questo tipo di notifica viene ricevuta da tutti gli utenti registrati alla relativa 
+          stanza. Un esempio di PublicNotify è la notifica caratterizzata dal seguente typeNotify: UPDATE\_LIST\_USERS, grazie alla quale viene 
+          aggiornata la lista degli utenti registrati nella relativa stanza.
+   \item  \textbf{Commad}: è una specializzazione di Message e rappresenta il comando che viene inviato dall'User e ricevuto ed interpretato dal            
+          MessagingService (es. /join '\#Medical' richiesta da parte dell'utente a registrarsi alla stanza Medical).        
+   \item \textbf{Room}: è caratterizzata da un nome. Ciascuna istanza individua una specifica stanza nella chat.
+   \item \textbf{Register}: mantiene un riferimento all’insieme di partecipanti che in un certo istante sono presenti nella stanza.
+   \item \textbf{PublicMessage}: è una specializzazione di Message ed individua un messaggio pubblico scambiato tra utenti della chat registrati nella 
+         stessa stanza. 
+   \item \underline{\textbf{PrivateMessage}: una specializzazione di Message ed individua un messaggio privato scambiato tra due utenti della chat registrati nella  
+         stessa stanza}. 
+  \end{itemize}
 \end{frame}
 
 \begin{frame} {Iterazione 3: Analisi - UC4\_SendPrivateMessage}
@@ -1003,8 +1089,10 @@
 \end{frame}
 
 \section {Riferimenti}
+\subsection {Bibliografia e Sitografia}
 \begin {frame} [allowframebreaks] 
- \frametitle {\refname}
+  \frametitle {Bigliografia e Sitografia}
+% \frametitle {\refname}
   \begin {thebibliography}{99}
    {\tiny 
      \setbeamertemplate{bibliography item}[book]

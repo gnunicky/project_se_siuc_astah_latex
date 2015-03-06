@@ -22,7 +22,9 @@
     oppure
    wget https://github.com/gnunicky/project_se_snuc_astah_latex/archive/master.zip
 2. Inoltre, sono presenti le seguenti cartelle:
-   - ../astah: in tale cartella sono presenti i sorgenti di Astah: UML and Modeling Tools, delle varie iterazioni;
-   - ../doc: in tale cartella è presente la documentazione realizzata latex con sorgenti e relativo documento in formato pdf.
+   - ../astah: in tale cartella sono presenti i sorgenti di Astah: UML and Modeling 
+     Tools, delle varie iterazioni;
+   - ../doc: in tale cartella è presente la documentazione realizzata latex con 
+     sorgenti e relativo documento in formato pdf.
    N.B. Per una corretta visualizzazione dei sorgenti astah occorre preferibilmente 
-       utilizzare con sistema operativo windows. 
+        utilizzare con sistema operativo windows. 

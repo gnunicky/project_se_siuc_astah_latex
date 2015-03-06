@@ -1,0 +1,29 @@
+\BOOKMARK [2][]{Outline0.1}{Indice}{}% 1
+\BOOKMARK [3][]{Outline0.1.1.5}{Prefazione}{Outline0.1}% 2
+\BOOKMARK [2][]{Outline0.2}{Ideazione - Iterazione 1}{}% 3
+\BOOKMARK [3][]{Outline0.2.1.13}{Iterazione 1: Requisiti}{Outline0.2}% 4
+\BOOKMARK [3][]{Outline0.2.2.36}{Iterazione 1: Analisi - UC1\137RequestConnection}{Outline0.2}% 5
+\BOOKMARK [3][]{Outline0.2.3.42}{Iterazione 1: Analisi - UC2\137AccessRoom}{Outline0.2}% 6
+\BOOKMARK [3][]{Outline0.2.4.48}{Iterazione 1: Progettazione - UC1\137RequestConnection}{Outline0.2}% 7
+\BOOKMARK [3][]{Outline0.2.5.50}{Iterazione 1: Progettazione - UC1\137AccessRoom}{Outline0.2}% 8
+\BOOKMARK [3][]{Outline0.2.6.60}{Iterazione 1: Implementazione - UC1 e UC2}{Outline0.2}% 9
+\BOOKMARK [3][]{Outline0.2.7.61}{Iterazione 1: Test - UC1 e UC2}{Outline0.2}% 10
+\BOOKMARK [2][]{Outline0.3}{Refactoring Iterazione 1}{}% 11
+\BOOKMARK [3][]{Outline0.3.1.63}{Refactoring Iterazione 1 - UC1\137RequestConnection}{Outline0.3}% 12
+\BOOKMARK [3][]{Outline0.3.2.65}{Refactoring Iterazione 1 - UC1\137AccessRoom}{Outline0.3}% 13
+\BOOKMARK [3][]{Outline0.3.3.75}{Refactoring Iterazione 1: Implementazione - UC1 e UC2}{Outline0.3}% 14
+\BOOKMARK [3][]{Outline0.3.4.76}{Refactoring Iterazione 1: Test - UC1 e UC2}{Outline0.3}% 15
+\BOOKMARK [2][]{Outline0.4}{Elaborazione - Iterazione 2}{}% 16
+\BOOKMARK [3][]{Outline0.4.1.78}{Iterazione 2: Requisiti - UC3\137SendPublicMessage}{Outline0.4}% 17
+\BOOKMARK [3][]{Outline0.4.2.81}{Iterazione 2: Analisi - UC3\137SendPublicMessage}{Outline0.4}% 18
+\BOOKMARK [3][]{Outline0.4.3.89}{Iterazione 2: Progettazione - UC3\137SendPublicMessage}{Outline0.4}% 19
+\BOOKMARK [3][]{Outline0.4.4.97}{Iterazione 2: Implementazione - UC3\137SendPublicMessage}{Outline0.4}% 20
+\BOOKMARK [3][]{Outline0.4.5.98}{Iterazione 2: Test - UC3\137SendPublicMessage}{Outline0.4}% 21
+\BOOKMARK [2][]{Outline0.5}{Elaborazione - Iterazione 3}{}% 22
+\BOOKMARK [3][]{Outline0.5.1.100}{Iterazione 3: Requisiti - UC4\137SendPrivateMessage}{Outline0.5}% 23
+\BOOKMARK [3][]{Outline0.5.2.102}{Iterazione 3: Analisi - UC4\137SendPrivateMessage}{Outline0.5}% 24
+\BOOKMARK [3][]{Outline0.5.3.110}{Iterazione 3: Progettazione - UC4\137SendPrivateMessage}{Outline0.5}% 25
+\BOOKMARK [3][]{Outline0.5.4.118}{Iterazione 3: Implementazione - UC4\137SendPrivateMessage}{Outline0.5}% 26
+\BOOKMARK [3][]{Outline0.5.5.119}{Iterazione 3: Implementazione - UC4\137SendPrivateMessage}{Outline0.5}% 27
+\BOOKMARK [2][]{Outline0.6}{Riferimenti}{}% 28
+\BOOKMARK [3][]{Outline0.6.1.120}{Bibliografia e Sitografia}{Outline0.6}% 29
