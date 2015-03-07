@@ -18,13 +18,22 @@
  */
 
 1. Come prima operazione bisogna scaricare la relativa documentazione utilizzando:
-   git clone https://github.com/gnunicky/project_se_snuc_astah_latex.git
-    oppure
-   wget https://github.com/gnunicky/project_se_snuc_astah_latex/archive/master.zip
+   a) digitare da terminale:
+     wget https://github.com/gnunicky/project_se_snuc_astah_latex/blob/master/download_snuc_repository.sh   
+      digitare da terminale:
+       chmod +x download_snuc_repository.sh
+       avviare lo script, digitando da terminale:
+       ./download_snuc_repository.sh
+   oppure
+   b) digitare da terminale:
+    git clone https://github.com/gnunicky/project_se_snuc_astah_latex.git
+   oppure
+   c) digitare da terminale: 
+    wget https://github.com/gnunicky/project_se_snuc_astah_latex/archive/master.zip
 2. Inoltre, sono presenti le seguenti cartelle:
    - ../astah: in tale cartella sono presenti i sorgenti di Astah: UML and Modeling 
      Tools, delle varie iterazioni;
    - ../doc: in tale cartella è presente la documentazione realizzata latex con 
      sorgenti e relativo documento in formato pdf.
-   N.B. Per una corretta visualizzazione dei sorgenti astah occorre preferibilmente 
-        utilizzare con sistema operativo windows. 
+   N.B. Visto che i sorgenti astah sono stati realizzati in ambiente windows, in caso di problemi di visualizzazione
+        con gli altri sistemi operativi  utilizzare il sistema operativo windows. 

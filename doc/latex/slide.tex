@@ -5,7 +5,33 @@
 \usepackage{pgf}
 \usepackage{xcolor}
 \usepackage{pifont}
-%\usepackage{soul}
+\newcommand{\listatopiccolo}{\fontsize{5}{6}\selectfont}
+% pacchetto che permette di inserire codice dentro un documento
+\usepackage{listings} 
+\lstset{
+        language=Java,
+        tabsize=3,
+        %frame=lines,
+        %caption=name,
+        %label=name,
+        basicstyle=\tiny\ttfamily,
+       % basicstyle=\listatopiccolo,
+        frame=shadowbox, 
+        rulesepcolor=\color{gray},
+        xleftmargin=20pt,
+        framexleftmargin=15pt,
+        keywordstyle=\color{blue}\bf,
+        commentstyle=\color{OliveGreen},
+        stringstyle=\color{red},
+        numbers=left,
+        numberstyle=\tiny,
+        numbersep=5pt,
+        breaklines=true,
+        showstringspaces=false,
+        %add your keywords here:
+        emph={volatile},emphstyle={\color{magenta}}
+}
+
 
 % pacchetto per l'inclusione di figure postscript
 \usepackage{graphics}
@@ -197,7 +223,6 @@
 \begin{frame}
   \frametitle{Iterazione 1: Requisiti - Diagrammi dei casi d'uso}
    \begin{figure}[h]
-    %\def\figurename{Figure 1}
     \includegraphics[scale=0.145]{image_astah/UseCaseDiagram.png}{\centering}
     \caption{Diagrammi dei casi uso} 
     \label{fig_UCD}
@@ -426,7 +451,7 @@
 \end{frame}
 
 \begin{frame}
- \frametitle{Iterazione 1: Analisi, UC1 contratto CO1 e CO2}
+ \frametitle{Iterazione 1: Analisi - UC1 contratti CO1/CO2}
   \begin{table}[!htbp]
    \caption {UC1 Contratto CO1 - connect}
     \label{table_CO1}
@@ -500,7 +525,7 @@
 \end{frame}
 
 \begin{frame} [allowframebreaks]
- \frametitle{Iterazione 1: Analisi, UC2 contratto CO3 - CO4}
+ \frametitle{Iterazione 1: Analisi - UC2 contratti CO3/CO4}
   \begin{table}[!htbp]
    \caption {UC2 Contratto CO3 - joinRoom}
     \label{table_CO3}
@@ -532,12 +557,39 @@
 \end{frame}
 
 %ITERAZIONE 1 PROGETTAZIONE 
-\subsection{Iterazione 1: Progettazione - UC1\_RequestConnection}
-\begin{frame} {Descrizione Progettazione - UC1\_RequestConnection }
+
+\subsection{Iterazione 1: Progettazione}
+\begin{frame} {Descrizione Iterazione 1: Progettazione}
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC1\_RequestConnection}
+\subsection{Iterazione 1: Progettazione - Class Diagram UC1 e UC2}
+\begin{frame} {Iterazione 1: Progettazione - Class Diagram Common UC1 e UC2}
+   \begin{figure}
+     \includegraphics[scale=0.18]{image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Common }
+     \label{fig_UC1_UC2_DCD_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1: Progettazione - Class Diagram Snuc Server UC1 e UC2}
+   \begin{figure}
+     \includegraphics[scale=0.155]{image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc Server }
+     \label{fig_UC1_UC2_DCD_2} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 1: Progettazione - Class Diagram Snuc UC1 e UC2}
+   \begin{figure}
+     \includegraphics[scale=0.169]{image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc }
+     \label{fig_UC1_UC2_DCD_3} 
+   \end{figure}
+\end{frame}
+
+\subsection{Iterazione 1: Progettazione - SSD  UC1\_RequestConnection}
+\begin{frame} {Iterazione 1: Progettazione, SSD UC1\_RequestConnection}
    \begin{figure}
      %\hypersetup{linkbordercolor={0 0.5 0.1}}
      \includegraphics[scale=0.065]{image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.png}{\centering}
@@ -548,36 +600,8 @@
    \end{figure}
 \end{frame}
 
-\subsection{Iterazione 1: Progettazione - UC1\_AccessRoom}
-\begin{frame} {Descrizione Progettazione - UC2\_AccessRoom }
- \emph{INSERIRE DESCRIZIONE}
-\end{frame}
-
-\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Common}
-   \begin{figure}
-     \includegraphics[scale=0.18]{image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Common }
-     \label{fig_UC1_UC2_DCD_1} 
-   \end{figure}
-\end{frame}
-
-\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Snuc Server}
-   \begin{figure}
-     \includegraphics[scale=0.155]{image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Snuc Server }
-     \label{fig_UC1_UC2_DCD_2} 
-   \end{figure}
-\end{frame}
-
-\begin{frame} {Iterazione 1 Progettazione: UC1 e UC2 Class Diagram - Snuc}
-   \begin{figure}
-     \includegraphics[scale=0.169]{image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Snuc }
-     \label{fig_UC1_UC2_DCD_3} 
-   \end{figure}
-\end{frame}
-
-\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP1}
+\subsection{Iterazione 1: Progettazione - SSD UC1\_AccessRoom}
+\begin{frame} {Iterazione 1: Progettazione, SSD UC2\_AccessRoom - OP1}
    \begin{figure}
      \includegraphics[scale=0.168]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_1_sendCommand.png}{\centering}
      \caption{SSD - OP1: sendCommand(cmd1) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
@@ -585,54 +609,44 @@
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP2}
+\begin{frame} {Iterazione 1: Progettazione, SSD UC2\_AccessRoom - OP2}
    \begin{figure}
-     \includegraphics[scale=0.105]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_2_getRoomsName.png}{\centering}
+     \includegraphics[scale=0.11]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_2_getRoomsName.png}{\centering}
      \caption{SSD - OP2: getRoomsName() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSD_AC_2} 
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP3}
+\begin{frame} {Iterazione 1: Progettazione, UC2\_AccessRoom - OP3}
    \begin{figure}
-     \includegraphics[scale=0.115]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_3_notify.png}{\centering}
+     \includegraphics[scale=0.10]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_3_notify.png}{\centering}
      \caption{SSD - OP3: notify(list) del modello di dominio (figura \ref{fig_UC2_AR_SSD})}
      \label{fig_UC2_SSD_AC_3} 
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP4}
+\begin{frame} {Iterazione 1: Progettazione, UC2\_AccessRoom - OP4}
    \begin{figure}
-     \includegraphics[scale=0.175]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_4_sendCommand.png}{\centering}
+     \includegraphics[scale=0.165]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_4_sendCommand.png}{\centering}
      \caption{SSD - OP4: sendCommand(cmd2) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSD_AC_4} 
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP5}
+\begin{frame} {Iterazione 1: Progettazione, UC2\_AccessRoom - OP5}
    \begin{figure}
-     \includegraphics[scale=0.09]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_5_join_add.png}{\centering}
+     \includegraphics[scale=0.08]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_5_join_add.png}{\centering}
      \caption{SSD - OP5: joinRoom(sender,room), addUserToRoom() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSD_AC_5} 
    \end{figure}
 \end{frame}
 
-\begin{frame} {Iterazione 1 Progettazione: UC2\_AccessRoom - OP6}
+\begin{frame} {Iterazione 1: Progettazione, UC2\_AccessRoom - OP6}
    \begin{figure}
-     \includegraphics[scale=0.09]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_6_notifypublic.png}{\centering}
+     \includegraphics[scale=0.07]{image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_6_notifypublic.png}{\centering}
      \caption{SSD - OP6: notifypublic(updateList) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSD_AC_6} 
    \end{figure}
-\end{frame}
-
-\subsection {Iterazione 1: Implementazione - UC1 e UC2}
-\begin{frame} {Iterazione 1: Implementazione - UC1 e UC2}
- \emph{INSERIRE DESCRIZIONE}
-\end{frame}
-
-\subsection{Iterazione 1: Test - UC1 e UC2}
-\begin{frame} {Iterazione 1: Test - UC1 e UC2}
- \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
 %ITERAZIONE 1 REFACTORING PROGETTAZIONE 
@@ -641,51 +655,51 @@
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection{Refactoring Iterazione 1 - UC1\_RequestConnection}
-\begin{frame} {Descrizione Refactoring Iterazione 1 - UC1\_RequestConnection }
- \emph{INSERIRE DESCRIZIONE}
-\end{frame}
-
-\begin{frame} {Refactoring Iterazione 1: UC1\_RequestConnection}
+\subsection{Refactoring Iterazione 1: Class Diagram UC1 e UC2}
+\begin{frame} [allowframebreaks] {Refactoring Iterazione 1: Class Diagram Common UC1 e UC2}
    \begin{figure}
-     \includegraphics[scale=0.068]{image_astah/Iteration_1_DesignModel_Refactored/UC1_RequestConnection_SSD_3_4_connect.png}{\centering}
-     \caption{SSD - OP1-4: connect(nick), notify(response) del modello dominio (figura \ref{fig_UC1_RC_SSD}) }
-     \label{fig_UC1_SSDR_RC_1_4} 
-   \end{figure}
-\end{frame}
-
-\subsection{Refactoring Iterazione 1 - UC1\_AccessRoom}
-\begin{frame} {Descrizione Refactoring Iterazione 1 - UC2\_AccessRoom }
- \emph{INSERIRE DESCRIZIONE}
-\end{frame}
-
-\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Common}
-   \begin{figure}
-     \includegraphics[scale=0.23]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramCommon.png}{\centering}
+     \includegraphics[scale=0.16]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramCommon.png}{\centering}
      \caption{DCD - Diagramma delle Classi: Package Common }
      \label{fig_UC1_UC2_DCDR_1} 
    \end{figure}
 \end{frame}
 
-\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Snuc}
+\begin{frame} {Refactoring Iterazione 1: Class Diagram Snuc UC1 e UC2}
    \begin{figure}
-     \includegraphics[scale=0.235]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnuc.png}{\centering}
+     \includegraphics[scale=0.15]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnuc.png}{\centering}
      \caption{DCD - Diagramma delle Classi: Package Snuc }
+     \label{fig_UC1_UC2_DCDR_2} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Refactoring Iterazione 1: Class Diagram Connector UC1 e UC2}
+   \begin{figure}
+     \includegraphics[scale=0.084]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramConnector.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Connector }
      \label{fig_UC1_UC2_DCDR_3} 
    \end{figure}
 \end{frame}
 
-\begin{frame} {Refactoring Iterazione 1: UC1 e UC2 Class Diagram - Snuc Server}
+\begin{frame} {Refactoring Iterazione 1: Class Diagram Snuc Server UC1 e UC2}
    \begin{figure}
-     \includegraphics[scale=0.245]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnucServer.png}{\centering}
+     \includegraphics[scale=0.144]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnucServer.png}{\centering}
      \caption{DCD - Diagramma delle Classi: Package Snuc Server }
-     \label{fig_UC1_UC2_DCDR_2} 
+     \label{fig_UC1_UC2_DCDR_4} 
+   \end{figure}
+\end{frame}
+
+\subsection{Refactoring Iterazione 1: SSD Diagram UC1 e UC2}
+\begin{frame} {Refactoring Iterazione 1: UC1\_RequestConnection}
+   \begin{figure}
+     \includegraphics[scale=0.0475]{image_astah/Iteration_1_DesignModel_Refactored/UC1_RequestConnection_SSD_3_4_connect.png}{\centering}
+     \caption{SSD - OP1-4: connect(nick), notify(response) del modello dominio (figura \ref{fig_UC1_RC_SSD}) }
+     \label{fig_UC1_SSDR_RC_1_4} 
    \end{figure}
 \end{frame}
 
 \begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP1}
    \begin{figure}
-     \includegraphics[scale=0.205]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_1_sendCommand.png}{\centering}
+     \includegraphics[scale=0.16]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_1_sendCommand.png}{\centering}
      \caption{SSD - OP1: sendCommand(cmd1) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSDR_AC_1} 
    \end{figure}
@@ -693,7 +707,7 @@
 
 \begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP2}
    \begin{figure}
-     \includegraphics[scale=0.17]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_2_getRoomsName.png}{\centering}
+     \includegraphics[scale=0.13]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_2_getRoomsName.png}{\centering}
      \caption{SSD - OP2: getRoomsName() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSDR_AC_2} 
    \end{figure}
@@ -701,7 +715,7 @@
 
 \begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP3}
    \begin{figure}
-     \includegraphics[scale=0.16]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_3_notify.png}{\centering}
+     \includegraphics[scale=0.09]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_3_notify.png}{\centering}
      \caption{SSD - OP3: notify(list) del modello di dominio (figura \ref{fig_UC2_AR_SSD})}
      \label{fig_UC2_SSDR_AC_3} 
    \end{figure}
@@ -709,7 +723,7 @@
 
 \begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP4}
    \begin{figure}
-     \includegraphics[scale=0.25]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_4_sendCommand.png}{\centering}
+     \includegraphics[scale=0.17]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_4_sendCommand.png}{\centering}
      \caption{SSD - OP4: sendCommand(cmd2) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSDR_AC_4} 
    \end{figure}
@@ -717,29 +731,29 @@
 
 \begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP5}
    \begin{figure}
-     \includegraphics[scale=0.0999]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_5_join_add.png}{\centering}
-     \caption{SSD - OP5: joinRoom(sender,room), addUserToRoom() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
+     \includegraphics[scale=0.10]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_5_join_add.png}{\centering}
+     \caption{SSD - OP5: joinRoom(sender,room), \newline addUserToRoom() del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSDR_AC_5} 
    \end{figure}
 \end{frame}
 
 \begin{frame} {Refactoring Iterazione 1: UC2\_AccessRoom - OP6}
    \begin{figure}
-     \includegraphics[scale=0.115]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_6_notifypublic.png}{\centering}
+     \includegraphics[scale=0.08]{image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_6_notifypublic.png}{\centering}
      \caption{SSD - OP6: notifypublic(updateList) del modello di dominio (figura \ref{fig_UC2_AR_SSD}) }
      \label{fig_UC2_SSDR_AC_6} 
    \end{figure}
 \end{frame}
 
-
-\subsection{Refactoring Iterazione 1: Implementazione - UC1 e UC2}
-\begin{frame} {Refactoring Iterazione 1: Implementazione - UC1 e UC2}
+\subsection{Refactoring Iterazione 1: Implementazione UC1 e UC2}
+\begin{frame} {Refactoring Iterazione 1: Implementazione UC1 e UC2}
  \emph{INSERIRE DESCRIZIONE}
 \end{frame}
 
-\subsection {Refactoring Iterazione 1: Test - UC1 e UC2}
-\begin{frame} {Refactoring Iterazione 1: Test - UC1 e UC2}
- \emph{INSERIRE DESCRIZIONE}
+\subsection {Refactoring Iterazione 1: Test UC1 e UC2}
+\begin{frame} {Refactoring Iterazione 1: Test UC1 e UC2}
+ \emph{INSERIRE ESEMPI DEI TEST EFFETTUATI}
+   \lstinputlisting[caption=sample,language=java]{example.java}
 \end{frame}
 
 % ELABORAZIONE ITERAZIONE 2 - UC3_SendPublicMessage
