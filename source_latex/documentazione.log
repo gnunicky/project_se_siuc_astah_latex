@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.17)  8 MAR 2015 22:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.17)  8 MAR 2015 23:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1593,19 +1593,13 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./ru_background.pdf> <./ru_logo.png>] (./documentazione.toc
-Overfull \hbox (4.55934pt too wide) in paragraph at lines 15--15
-[]| \OT1/cmss/m/n/10.95 2.10. []Ite-ra-zio-ne 1: Pro-get-ta-zio-ne - SSD UC1[]R
-equestConnection[] 
- []
-
-
-Overfull \hbox (0.71165pt too wide) in paragraph at lines 27--27
+Overfull \hbox (0.71165pt too wide) in paragraph at lines 26--26
 []| \OT1/cmss/m/n/10.95 4.5. []Ite-ra-zio-ne 2: Pro-get-ta-zio-ne - SSD UC3[]Se
 ndPublicMessage[] 
  []
 
 
-Overfull \hbox (4.7875pt too wide) in paragraph at lines 34--34
+Overfull \hbox (4.7875pt too wide) in paragraph at lines 33--33
 []| \OT1/cmss/m/n/10.95 5.5. []Ite-ra-zio-ne 3: Pro-get-ta-zio-ne - SSD UC4[]Se
 ndPrivateMessage[] 
  []
@@ -1618,7 +1612,7 @@ ndPrivateMessage[]
  <./ru_logo.png>] [4
 
 
- <./ru_logo.png>] (./prefazione.tex <image/Up_sep.png, id=313, 793.96625pt x 27
+ <./ru_logo.png>] (./prefazione.tex <image/Up_sep.png, id=305, 793.96625pt x 27
 6.03125pt>
 File: image/Up_sep.png Graphic file (type png)
  <use image/Up_sep.png>
@@ -1632,7 +1626,7 @@ Overfull \hbox (10.291pt too wide) in paragraph at lines 10--10
 [5
 
  <./ru_logo.png> <./image/Up_sep.png>]
-<image/Up_Structure.png, id=330, 1050.92625pt x 407.5225pt>
+<image/Up_Structure.png, id=322, 1050.92625pt x 407.5225pt>
 File: image/Up_Structure.png Graphic file (type png)
 
 <use image/Up_Structure.png>
@@ -1641,7 +1635,7 @@ Package pdftex.def Info: image/Up_Structure.png used on input line 20.
  [6
 
  <./ru_logo.png> <./image/Up_Structure.png>]
-<image/Up_Iteration_Workflows.png, id=347, 744.7825pt x 514.92375pt>
+<image/Up_Iteration_Workflows.png, id=339, 744.7825pt x 514.92375pt>
 File: image/Up_Iteration_Workflows.png Graphic file (type png)
 
 <use image/Up_Iteration_Workflows.png>
@@ -1710,7 +1704,7 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 
 
  <./ru_logo.png>]
-<image_astah/UseCaseDiagram.png, id=479, 1715.208pt x 1231.4808pt>
+<image_astah/UseCaseDiagram.png, id=471, 1715.208pt x 1231.4808pt>
 File: image_astah/UseCaseDiagram.png Graphic file (type png)
 
 <use image_astah/UseCaseDiagram.png>
@@ -1754,7 +1748,7 @@ Overfull \vbox (8.98003pt too high) detected at line 209
  <./ru_logo.png>] [27
 
  <./ru_logo.png>]
-<image_mockups/01_snuc_open.png, id=651, 1027.84pt x 682.55pt>
+<image_mockups/01_snuc_open.png, id=643, 1027.84pt x 682.55pt>
 File: image_mockups/01_snuc_open.png Graphic file (type png)
 
 <use image_mockups/01_snuc_open.png>
@@ -1764,7 +1758,7 @@ Package pdftex.def Info: image_mockups/01_snuc_open.png used on input line 219.
  [28
 
  <./ru_logo.png> <./image_mockups/01_snuc_open.png>]
-<image_mockups/02_snuc_menu_server.png, id=667, 1027.84pt x 682.55pt>
+<image_mockups/02_snuc_menu_server.png, id=659, 1027.84pt x 682.55pt>
 File: image_mockups/02_snuc_menu_server.png Graphic file (type png)
 
 <use image_mockups/02_snuc_menu_server.png>
@@ -1774,7 +1768,7 @@ ne 223.
  [29
 
  <./ru_logo.png> <./image_mockups/02_snuc_menu_server.png>]
-<image_mockups/03_snuc_menu_help.png, id=683, 1027.84pt x 682.55pt>
+<image_mockups/03_snuc_menu_help.png, id=675, 1027.84pt x 682.55pt>
 File: image_mockups/03_snuc_menu_help.png Graphic file (type png)
 
 <use image_mockups/03_snuc_menu_help.png>
@@ -1784,7 +1778,7 @@ Package pdftex.def Info: image_mockups/03_snuc_menu_help.png used on input line
  [30
 
  <./ru_logo.png> <./image_mockups/03_snuc_menu_help.png>]
-<image_mockups/04_snuc_menu_snuc.png, id=699, 1027.84pt x 682.55pt>
+<image_mockups/04_snuc_menu_snuc.png, id=691, 1027.84pt x 682.55pt>
 File: image_mockups/04_snuc_menu_snuc.png Graphic file (type png)
 
 <use image_mockups/04_snuc_menu_snuc.png>
@@ -1794,7 +1788,7 @@ Package pdftex.def Info: image_mockups/04_snuc_menu_snuc.png used on input line
  [31
 
  <./ru_logo.png> <./image_mockups/04_snuc_menu_snuc.png>]
-<image_mockups/05_snuc_config_network.png, id=716, 1027.84pt x 682.55pt>
+<image_mockups/05_snuc_config_network.png, id=708, 1027.84pt x 682.55pt>
 File: image_mockups/05_snuc_config_network.png Graphic file (type png)
 
 <use image_mockups/05_snuc_config_network.png>
@@ -1804,7 +1798,7 @@ Package pdftex.def Info: image_mockups/05_snuc_config_network.png used on input
  [32
 
  <./ru_logo.png> <./image_mockups/05_snuc_config_network.png>]
-<image_mockups/06_snuc_connect.png, id=732, 1027.84pt x 682.55pt>
+<image_mockups/06_snuc_connect.png, id=724, 1027.84pt x 682.55pt>
 File: image_mockups/06_snuc_connect.png Graphic file (type png)
 
 <use image_mockups/06_snuc_connect.png>
@@ -1814,7 +1808,7 @@ Package pdftex.def Info: image_mockups/06_snuc_connect.png used on input line 2
  [33
 
  <./ru_logo.png> <./image_mockups/06_snuc_connect.png>]
-<image_mockups/07_snuc_user_room_ce.png, id=748, 1027.84pt x 682.55pt>
+<image_mockups/07_snuc_user_room_ce.png, id=740, 1027.84pt x 682.55pt>
 File: image_mockups/07_snuc_user_room_ce.png Graphic file (type png)
 
 <use image_mockups/07_snuc_user_room_ce.png>
@@ -1824,7 +1818,7 @@ ine 243.
  [34
 
  <./ru_logo.png> <./image_mockups/07_snuc_user_room_ce.png>]
-<image_mockups/08_snuc_user_room_ce_private.png, id=765, 1027.84pt x 682.55pt>
+<image_mockups/08_snuc_user_room_ce_private.png, id=757, 1027.84pt x 682.55pt>
 File: image_mockups/08_snuc_user_room_ce_private.png Graphic file (type png)
 
 <use image_mockups/08_snuc_user_room_ce_private.png>
@@ -1834,7 +1828,7 @@ Package pdftex.def Info: image_mockups/08_snuc_user_room_ce_private.png used on
  [35
 
  <./ru_logo.png> <./image_mockups/08_snuc_user_room_ce_private.png>]
-<image_mockups/09_snuc_user_room_medical.png, id=781, 1027.84pt x 682.55pt>
+<image_mockups/09_snuc_user_room_medical.png, id=773, 1027.84pt x 682.55pt>
 File: image_mockups/09_snuc_user_room_medical.png Graphic file (type png)
 
 <use image_mockups/09_snuc_user_room_medical.png>
@@ -1849,7 +1843,7 @@ put line 251.
 
 
  <./ru_logo.png>]
-<image_astah/Iteration_1_DomainModel/UC1_RequestConnection_DM.png, id=825, 697.
+<image_astah/Iteration_1_DomainModel/UC1_RequestConnection_DM.png, id=817, 697.
 1646pt x 511.6716pt>
 File: image_astah/Iteration_1_DomainModel/UC1_RequestConnection_DM.png Graphic 
 file (type png)
@@ -1866,7 +1860,7 @@ Overfull \vbox (14.11386pt too high) detected at line 274
 
  <./ru_logo.png> <./image_astah/Iteration_1_DomainModel/UC1_RequestConnection_D
 M.png>]
-<image_astah/Iteration_1_DomainModel/UC1_RequestConnection_OM.png, id=842, 837.
+<image_astah/Iteration_1_DomainModel/UC1_RequestConnection_OM.png, id=834, 837.
 3684pt x 369.5406pt>
 File: image_astah/Iteration_1_DomainModel/UC1_RequestConnection_OM.png Graphic 
 file (type png)
@@ -1879,7 +1873,7 @@ ion_OM.png used on input line 282.
 
  <./ru_logo.png> <./image_astah/Iteration_1_DomainModel/UC1_RequestConnection_O
 M.png>]
-<image_astah/Iteration_1_DomainModel/UC1_RequestConnection_SSD.png, id=859, 105
+<image_astah/Iteration_1_DomainModel/UC1_RequestConnection_SSD.png, id=851, 105
 0.0831pt x 634.5306pt>
 File: image_astah/Iteration_1_DomainModel/UC1_RequestConnection_SSD.png Graphic
  file (type png)
@@ -1914,7 +1908,7 @@ LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
 
 
  <./ru_logo.png>]
-<image_astah/Iteration_1_DomainModel/UC2_AccessRoom_DM.png, id=949, 735.7086pt 
+<image_astah/Iteration_1_DomainModel/UC2_AccessRoom_DM.png, id=941, 735.7086pt 
 x 1035.3882pt>
 File: image_astah/Iteration_1_DomainModel/UC2_AccessRoom_DM.png Graphic file (t
 ype png)
@@ -1930,7 +1924,7 @@ Overfull \vbox (10.9795pt too high) detected at line 348
 
  <./ru_logo.png> <./image_astah/Iteration_1_DomainModel/UC2_AccessRoom_DM.png>]
 
-<image_astah/Iteration_1_DomainModel/UC2_AccessRoom_OM.png, id=966, 1900.2192pt
+<image_astah/Iteration_1_DomainModel/UC2_AccessRoom_OM.png, id=958, 1900.2192pt
  x 956.373pt>
 File: image_astah/Iteration_1_DomainModel/UC2_AccessRoom_OM.png Graphic file (t
 ype png)
@@ -1951,7 +1945,7 @@ Overfull \vbox (2.72908pt too high) detected at line 356
 
  <./ru_logo.png> <./image_astah/Iteration_1_DomainModel/UC2_AccessRoom_OM.png>]
 
-<image_astah/Iteration_1_DomainModel/UC2_AccessRoom_SSD.png, id=982, 1488.5211p
+<image_astah/Iteration_1_DomainModel/UC2_AccessRoom_SSD.png, id=974, 1488.5211p
 t x 873.9852pt>
 File: image_astah/Iteration_1_DomainModel/UC2_AccessRoom_SSD.png Graphic file (
 type png)
@@ -1972,96 +1966,95 @@ Overfull \vbox (14.94177pt too high) detected at line 364
  <./ru_logo.png>] [51
 
 
- <./ru_logo.png>]
-Overfull \hbox (51.10245pt too wide) in paragraph at lines 400--414
-\OT1/cmss/m/n/10.95 clas-si:    [][][] 
- []
+ <./ru_logo.png>] [52
+
+ <./ru_logo.png>] [53
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [52
-
- <./ru_logo.png>] [53 <./ru_logo.png>] [54
-
-
- <./ru_logo.png>] [55
-
- <./ru_logo.png>]
-[56
-
-
- <./ru_logo.png>] [57
-
- <./ru_logo.png>] [58
-
-
- <./ru_logo.png>] [59
+ <./ru_logo.png>] [54
 
 
  <./ru_logo.png>]
-<image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png, id=1142, 1859.2662
+<image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png, id=1063, 1859.2662
 pt x 983.8356pt>
 File: image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png Graphic file (
 type png)
 
 <use image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/ClassDiagramCommon
-.png used on input line 456.
-(pdftex.def)             Requested size: 297.48868pt x 157.4169pt.
- [60
+.png used on input line 425.
+(pdftex.def)             Requested size: 306.76569pt x 162.32587pt.
+
+Overfull \vbox (2.4737pt too high) detected at line 425
+ []
+
+[55
 
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png>
-]
-<image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.png, id=1159, 1893.
+] [56
+
+ <./ru_logo.png>] [57
+
+
+ <./ru_logo.png>]
+<image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png, id=1109, 1867.4568pt
+ x 1002.6258pt>
+File: image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png Graphic file (ty
+pe png)
+ <use image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png>
+Package pdftex.def Info: image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.p
+ng used on input line 448.
+(pdftex.def)             Requested size: 317.46346pt x 170.44412pt.
+
+Overfull \hbox (10.17358pt too wide) in paragraph at lines 448--448
+[][] 
+ []
+
+
+Overfull \vbox (10.59195pt too high) detected at line 448
+ []
+
+[58
+
+ <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png>] 
+[59
+
+ <./ru_logo.png>] [60
+
+
+ <./ru_logo.png>] [61
+
+
+ <./ru_logo.png>]
+<image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.png, id=1170, 1893.
 9558pt x 1118.2578pt>
 File: image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.png Graphic fi
 le (type png)
 
 <use image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/ClassDiagramSnucSe
-rver.png used on input line 464.
+rver.png used on input line 474.
 (pdftex.def)             Requested size: 295.46747pt x 174.45433pt.
 
-Overfull \vbox (14.60216pt too high) detected at line 464
- []
-
-[61
-
- <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.
-png>]
-<image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png, id=1177, 1867.4568pt
- x 1002.6258pt>
-File: image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png Graphic file (ty
-pe png)
- <use image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png>
-Package pdftex.def Info: image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.p
-ng used on input line 472.
-(pdftex.def)             Requested size: 317.46346pt x 170.44412pt.
-
-Overfull \hbox (10.17358pt too wide) in paragraph at lines 472--472
-[][] 
- []
-
-
-Overfull \vbox (10.59195pt too high) detected at line 472
+Overfull \vbox (14.60216pt too high) detected at line 474
  []
 
 [62
 
- <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png>]
+ <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.
+png>]
 <image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.png,
- id=1194, 3107.61pt x 2601.72pt>
+ id=1187, 3107.61pt x 2601.72pt>
 File: image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect
 .png Graphic file (type png)
 
 <use image_astah/Iteration_1_DesignModel/UC1_RequestConnection_SSD_3_4_connect.
 png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC1_RequestConnect
-ion_SSD_3_4_connect.png used on input line 484.
+ion_SSD_3_4_connect.png used on input line 486.
 (pdftex.def)             Requested size: 202.00174pt x 169.11774pt.
 
-Overfull \vbox (9.26556pt too high) detected at line 484
+Overfull \vbox (9.26556pt too high) detected at line 486
  []
 
 [63
@@ -2069,16 +2062,16 @@ Overfull \vbox (9.26556pt too high) detected at line 484
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/UC1_RequestConnection_S
 SD_3_4_connect.png>]
 <image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_1_sendCommand.png, id=1
-211, 1615.9572pt x 1014.189pt>
+204, 1615.9572pt x 1014.189pt>
 File: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_1_sendCommand.png 
 Graphic file (type png)
 
 <use image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_1_sendCommand.png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD
-_1_sendCommand.png used on input line 493.
+_1_sendCommand.png used on input line 495.
 (pdftex.def)             Requested size: 274.70909pt x 172.40985pt.
 
-Overfull \vbox (12.55768pt too high) detected at line 493
+Overfull \vbox (12.55768pt too high) detected at line 495
  []
 
 [64
@@ -2086,38 +2079,38 @@ Overfull \vbox (12.55768pt too high) detected at line 493
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_1_se
 ndCommand.png>]
 <image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_2_getRoomsName.png, id=
-1228, 2757.8232pt x 1607.2848pt>
+1221, 2757.8232pt x 1607.2848pt>
 File: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_2_getRoomsName.png
  Graphic file (type png)
 
 <use image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_2_getRoomsName.png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD
-_2_getRoomsName.png used on input line 501.
+_2_getRoomsName.png used on input line 503.
 (pdftex.def)             Requested size: 303.3615pt x 176.80188pt.
 
-Overfull \vbox (16.9497pt too high) detected at line 501
+Overfull \vbox (16.9497pt too high) detected at line 503
  []
 
 [65
 
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_2_ge
 tRoomsName.png>]
-<image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_3_notify.png, id=1245, 
+<image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_3_notify.png, id=1238, 
 2595.4566pt x 1468.0446pt>
 File: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_3_notify.png Graph
 ic file (type png)
 
 <use image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_3_notify.png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD
-_3_notify.png used on input line 509.
+_3_notify.png used on input line 511.
 (pdftex.def)             Requested size: 311.44136pt x 176.15775pt.
 
-Overfull \hbox (4.15149pt too wide) in paragraph at lines 509--509
+Overfull \hbox (4.15149pt too wide) in paragraph at lines 511--511
 [][] 
  []
 
 
-Overfull \vbox (16.30557pt too high) detected at line 509
+Overfull \vbox (16.30557pt too high) detected at line 511
  []
 
 [66
@@ -2125,38 +2118,38 @@ Overfull \vbox (16.30557pt too high) detected at line 509
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_3_no
 tify.png>]
 <image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_4_sendCommand.png, id=1
-262, 1785.5508pt x 962.6364pt>
+255, 1785.5508pt x 962.6364pt>
 File: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_4_sendCommand.png 
 Graphic file (type png)
 
 <use image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_4_sendCommand.png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD
-_4_sendCommand.png used on input line 517.
+_4_sendCommand.png used on input line 519.
 (pdftex.def)             Requested size: 321.38528pt x 173.26707pt.
 
-Overfull \hbox (14.09541pt too wide) in paragraph at lines 517--517
+Overfull \hbox (14.09541pt too wide) in paragraph at lines 519--519
 [][] 
  []
 
 
-Overfull \vbox (13.4149pt too high) detected at line 517
+Overfull \vbox (13.4149pt too high) detected at line 519
  []
 
 [67
 
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_4_se
 ndCommand.png>]
-<image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_5_join_add.png, id=1280
+<image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_5_join_add.png, id=1273
 , 3179.88pt x 1943.0994pt>
 File: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_5_join_add.png Gra
 phic file (type png)
 
 <use image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_5_join_add.png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD
-_5_join_add.png used on input line 525.
+_5_join_add.png used on input line 527.
 (pdftex.def)             Requested size: 286.17685pt x 174.8714pt.
 
-Overfull \vbox (15.01923pt too high) detected at line 525
+Overfull \vbox (15.01923pt too high) detected at line 527
  []
 
 [68
@@ -2164,16 +2157,16 @@ Overfull \vbox (15.01923pt too high) detected at line 525
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_5_jo
 in_add.png>]
 <image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_6_notifypublic.png, id=
-1299, 3646.7442pt x 1704.6084pt>
+1292, 3646.7442pt x 1704.6084pt>
 File: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_6_notifypublic.png
  Graphic file (type png)
 
 <use image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD_6_notifypublic.png>
 Package pdftex.def Info: image_astah/Iteration_1_DesignModel/UC2_AccessRoom_SSD
-_6_notifypublic.png used on input line 533.
+_6_notifypublic.png used on input line 535.
 (pdftex.def)             Requested size: 328.19283pt x 153.40813pt.
 
-Overfull \hbox (20.90295pt too wide) in paragraph at lines 533--533
+Overfull \hbox (20.90295pt too wide) in paragraph at lines 535--535
 [][] 
  []
 
@@ -2202,7 +2195,7 @@ tifypublic.png>]) (./iterazione_1_refactored.tex [70
 
 
  <./ru_logo.png>]
-<image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramCommon.png, id=1416
+<image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramCommon.png, id=1408
 , 2049.5772pt x 1066.7052pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramCommon.png Gra
 phic file (type png)
@@ -2224,7 +2217,7 @@ Overfull \vbox (16.14659pt too high) detected at line 93
 
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/ClassDiagram
 Common.png>]
-<image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnuc.png, id=1431, 
+<image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnuc.png, id=1424, 
 2069.8128pt x 1143.3114pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnuc.png Graph
 ic file (type png)
@@ -2247,7 +2240,7 @@ Overfull \vbox (17.35925pt too high) detected at line 101
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/ClassDiagram
 Snuc.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramConnector.png, id=1
-447, 2551.131pt x 2087.1576pt>
+440, 2551.131pt x 2087.1576pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramConnector.png 
 Graphic file (type png)
 
@@ -2264,7 +2257,7 @@ Overfull \vbox (15.46786pt too high) detected at line 109
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/ClassDiagram
 Connector.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnucServer.png, id=
-1464, 2338.6572pt x 1081.1592pt>
+1457, 2338.6572pt x 1081.1592pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnucServer.png
  Graphic file (type png)
 
@@ -2282,7 +2275,7 @@ Overfull \hbox (29.46938pt too wide) in paragraph at lines 117--117
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/ClassDiagram
 SnucServer.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/UC1_RequestConnection_SSD_3_4_c
-onnect.png, id=1480, 6185.3484pt x 3673.725pt>
+onnect.png, id=1473, 6185.3484pt x 3673.725pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/UC1_RequestConnection_SSD_
 3_4_connect.png Graphic file (type png)
 
@@ -2300,7 +2293,7 @@ Overfull \vbox (14.65158pt too high) detected at line 126
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/UC1_RequestC
 onnection_SSD_3_4_connect.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_1_sendComman
-d.png, id=1497, 1864.566pt x 1068.8733pt>
+d.png, id=1490, 1864.566pt x 1068.8733pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_1_sendC
 ommand.png Graphic file (type png)
 
@@ -2318,7 +2311,7 @@ Overfull \vbox (11.17105pt too high) detected at line 134
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRo
 om_SSD_1_sendCommand.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_2_getRoomsNa
-me.png, id=1514, 2430.4401pt x 1288.5741pt>
+me.png, id=1507, 2430.4401pt x 1288.5741pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_2_getRo
 omsName.png Graphic file (type png)
 
@@ -2341,7 +2334,7 @@ Overfull \vbox (14.09782pt too high) detected at line 142
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRo
 om_SSD_2_getRoomsName.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_3_notify.png
-, id=1531, 3773.9394pt x 1484.4258pt>
+, id=1524, 3773.9394pt x 1484.4258pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_3_notif
 y.png Graphic file (type png)
 
@@ -2360,7 +2353,7 @@ Overfull \hbox (13.51953pt too wide) in paragraph at lines 150--150
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRo
 om_SSD_3_notify.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_4_sendComman
-d.png, id=1549, 2079.9306pt x 858.5676pt>
+d.png, id=1542, 2079.9306pt x 858.5676pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_4_sendC
 ommand.png Graphic file (type png)
 
@@ -2379,7 +2372,7 @@ Overfull \hbox (21.34827pt too wide) in paragraph at lines 158--158
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRo
 om_SSD_4_sendCommand.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_5_join_add.p
-ng, id=1568, 3307.0752pt x 2322.7578pt>
+ng, id=1561, 3307.0752pt x 2322.7578pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_5_join_
 add.png Graphic file (type png)
 
@@ -2397,7 +2390,7 @@ Overfull \vbox (14.34714pt too high) detected at line 166
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRo
 om_SSD_5_join_add.png>]
 <image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_6_notifypubl
-ic.png, id=1586, 4284.1656pt x 1887.6924pt>
+ic.png, id=1579, 4284.1656pt x 1887.6924pt>
 File: image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRoom_SSD_6_notif
 ypublic.png Graphic file (type png)
 
@@ -2415,7 +2408,7 @@ Overfull \hbox (22.5723pt too wide) in paragraph at lines 174--174
 
  <./ru_logo.png> <./image_astah/Iteration_1_DesignModel_Refactored/UC2_AccessRo
 om_SSD_6_notifypublic.png>]
-<image_implementation/uc1/1.png, id=1603, 1027.84pt x 548.0475pt>
+<image_implementation/uc1/1.png, id=1596, 1027.84pt x 548.0475pt>
 File: image_implementation/uc1/1.png Graphic file (type png)
 
 <use image_implementation/uc1/1.png>
@@ -2434,7 +2427,7 @@ Overfull \vbox (15.52661pt too high) detected at line 182
 [88
 
  <./ru_logo.png> <./image_implementation/uc1/1.png>]
-<image_implementation/uc1/2.png, id=1617, 1027.84pt x 548.0475pt>
+<image_implementation/uc1/2.png, id=1610, 1027.84pt x 548.0475pt>
 File: image_implementation/uc1/2.png Graphic file (type png)
 
 <use image_implementation/uc1/2.png>
@@ -2453,7 +2446,7 @@ Overfull \vbox (15.52661pt too high) detected at line 189
 [89
 
  <./ru_logo.png> <./image_implementation/uc1/2.png>]
-<image_implementation/uc1/3.png, id=1632, 1027.84pt x 549.05125pt>
+<image_implementation/uc1/3.png, id=1625, 1027.84pt x 549.05125pt>
 File: image_implementation/uc1/3.png Graphic file (type png)
 
 <use image_implementation/uc1/3.png>
@@ -2472,7 +2465,7 @@ Overfull \vbox (15.84781pt too high) detected at line 196
 [90
 
  <./ru_logo.png> <./image_implementation/uc1/3.png>]
-<image_implementation/uc1/4.png, id=1647, 1027.84pt x 549.05125pt>
+<image_implementation/uc1/4.png, id=1640, 1027.84pt x 549.05125pt>
 File: image_implementation/uc1/4.png Graphic file (type png)
 
 <use image_implementation/uc1/4.png>
@@ -2491,7 +2484,7 @@ Overfull \vbox (15.84781pt too high) detected at line 203
 [91
 
  <./ru_logo.png> <./image_implementation/uc1/4.png>]
-<image_implementation/uc1/5.png, id=1663, 1027.84pt x 547.04375pt>
+<image_implementation/uc1/5.png, id=1656, 1027.84pt x 547.04375pt>
 File: image_implementation/uc1/5.png Graphic file (type png)
 
 <use image_implementation/uc1/5.png>
@@ -2510,7 +2503,7 @@ Overfull \vbox (15.2054pt too high) detected at line 210
 [92
 
  <./ru_logo.png> <./image_implementation/uc1/5.png>]
-<image_implementation/uc2/6.png, id=1678, 1027.84pt x 549.05125pt>
+<image_implementation/uc2/6.png, id=1671, 1027.84pt x 549.05125pt>
 File: image_implementation/uc2/6.png Graphic file (type png)
 
 <use image_implementation/uc2/6.png>
@@ -2529,7 +2522,7 @@ Overfull \vbox (15.84781pt too high) detected at line 217
 [93
 
  <./ru_logo.png> <./image_implementation/uc2/6.png>]
-<image_implementation/uc2/7.png, id=1694, 1027.84pt x 555.07375pt>
+<image_implementation/uc2/7.png, id=1687, 1027.84pt x 555.07375pt>
 File: image_implementation/uc2/7.png Graphic file (type png)
 
 <use image_implementation/uc2/7.png>
@@ -2548,7 +2541,7 @@ Overfull \vbox (17.77504pt too high) detected at line 224
 [94
 
  <./ru_logo.png> <./image_implementation/uc2/7.png>]
-<image_implementation/uc2/8.png, id=1709, 1027.84pt x 554.07pt>
+<image_implementation/uc2/8.png, id=1702, 1027.84pt x 554.07pt>
 File: image_implementation/uc2/8.png Graphic file (type png)
 
 <use image_implementation/uc2/8.png>
@@ -2576,17 +2569,18 @@ Overfull \vbox (17.45384pt too high) detected at line 231
 [98
 
 
- <./ru_logo.png>]) (./iterazione_2.tex [99
-
- <./ru_logo.png>]
-Overfull \vbox (7.29321pt too high) detected at line 32
+ <./ru_logo.png>]) (./iterazione_2.tex
+Overfull \vbox (7.29321pt too high) detected at line 28
  []
 
-[100
+[99
+
+ <./ru_logo.png>] [100
 
  <./ru_logo.png>] [101
 
  <./ru_logo.png>] [102
+
 
  <./ru_logo.png>] [103
 
@@ -2594,240 +2588,240 @@ Overfull \vbox (7.29321pt too high) detected at line 32
  <./ru_logo.png>] [104
 
 
- <./ru_logo.png>] [105
-
-
  <./ru_logo.png>]
-<image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_DM.png, id=1865, 117
+<image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_DM.png, id=1845, 117
 1.2558pt x 1017.5616pt>
 File: image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_DM.png Graphic 
 file (type png)
 
 <use image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_DM.png>
 Package pdftex.def Info: image_astah/Iteration_2_DomainModel/UC3_SendPublicMess
-age_DM.png used on input line 85.
+age_DM.png used on input line 81.
 (pdftex.def)             Requested size: 199.11086pt x 172.98318pt.
 
-Overfull \vbox (13.13101pt too high) detected at line 85
+Overfull \vbox (13.13101pt too high) detected at line 81
  []
 
-[106
+[105
 
  <./ru_logo.png> <./image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_D
 M.png>]
-<image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_OM.png, id=1882, 136
+<image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_OM.png, id=1862, 136
 8.7938pt x 777.1434pt>
 File: image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_OM.png Graphic 
 file (type png)
 
 <use image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_OM.png>
 Package pdftex.def Info: image_astah/Iteration_2_DomainModel/UC3_SendPublicMess
-age_OM.png used on input line 93.
+age_OM.png used on input line 89.
 (pdftex.def)             Requested size: 307.9862pt x 174.86157pt.
 
-Overfull \hbox (0.69633pt too wide) in paragraph at lines 93--93
+Overfull \hbox (0.69633pt too wide) in paragraph at lines 89--89
 [][] 
  []
 
 
-Overfull \vbox (15.0094pt too high) detected at line 93
+Overfull \vbox (15.0094pt too high) detected at line 89
  []
 
-[107
+[106
 
  <./ru_logo.png> <./image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_O
 M.png>]
-<image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_SSD.png, id=1898, 10
+<image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_SSD.png, id=1878, 10
 19.2479pt x 636.6987pt>
 File: image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_SSD.png Graphic
  file (type png)
 
 <use image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_SSD.png>
 Package pdftex.def Info: image_astah/Iteration_2_DomainModel/UC3_SendPublicMess
-age_SSD.png used on input line 101.
+age_SSD.png used on input line 97.
 (pdftex.def)             Requested size: 275.2006pt x 171.91093pt.
 
-Overfull \vbox (12.05876pt too high) detected at line 101
+Overfull \vbox (12.05876pt too high) detected at line 97
  []
 
-[108
+[107
 
  <./ru_logo.png> <./image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_S
-SD.png>] [109
+SD.png>] [108
 
- <./ru_logo.png>] [110
+ <./ru_logo.png>] [109
 
  <./ru_logo.png>]
-<image_astah/Iteration_2_DesignModel/ClassDiagramCommon.png, id=1944, 2010.5514
+<image_astah/Iteration_2_DesignModel/ClassDiagramCommon.png, id=1923, 2010.5514
 pt x 973.4769pt>
 File: image_astah/Iteration_2_DesignModel/ClassDiagramCommon.png Graphic file (
 type png)
 
 <use image_astah/Iteration_2_DesignModel/ClassDiagramCommon.png>
 Package pdftex.def Info: image_astah/Iteration_2_DesignModel/ClassDiagramCommon
-.png used on input line 137.
+.png used on input line 133.
 (pdftex.def)             Requested size: 331.72667pt x 160.61676pt.
 
-Overfull \hbox (24.4368pt too wide) in paragraph at lines 137--137
+Overfull \hbox (24.4368pt too wide) in paragraph at lines 133--133
 [][] 
  []
 
 
-Overfull \vbox (0.76459pt too high) detected at line 137
+Overfull \vbox (0.76459pt too high) detected at line 133
  []
 
-[111
+[110
 
  <./ru_logo.png> <./image_astah/Iteration_2_DesignModel/ClassDiagramCommon.png>
 ]
-<image_astah/Iteration_2_DesignModel/ClassDiagramSnuc.png, id=1959, 2030.0643pt
+<image_astah/Iteration_2_DesignModel/ClassDiagramSnuc.png, id=1939, 2030.0643pt
  x 1079.7138pt>
 File: image_astah/Iteration_2_DesignModel/ClassDiagramSnuc.png Graphic file (ty
 pe png)
  <use image_astah/Iteration_2_DesignModel/ClassDiagramSnuc.png>
 Package pdftex.def Info: image_astah/Iteration_2_DesignModel/ClassDiagramSnuc.p
-ng used on input line 145.
+ng used on input line 141.
 (pdftex.def)             Requested size: 324.81693pt x 172.75774pt.
 
-Overfull \hbox (17.52705pt too wide) in paragraph at lines 145--145
+Overfull \hbox (17.52705pt too wide) in paragraph at lines 141--141
 [][] 
  []
 
 
-Overfull \vbox (12.90556pt too high) detected at line 145
+Overfull \vbox (12.90556pt too high) detected at line 141
  []
 
-[112
+[111
 
  <./ru_logo.png> <./image_astah/Iteration_2_DesignModel/ClassDiagramSnuc.png>]
-<image_astah/Iteration_2_DesignModel/ClassDiagramConnector.png, id=1975, 2463.6
+<image_astah/Iteration_2_DesignModel/ClassDiagramConnector.png, id=1955, 2463.6
 843pt x 2094.3846pt>
 File: image_astah/Iteration_2_DesignModel/ClassDiagramConnector.png Graphic fil
 e (type png)
 
 <use image_astah/Iteration_2_DesignModel/ClassDiagramConnector.png>
 Package pdftex.def Info: image_astah/Iteration_2_DesignModel/ClassDiagramConnec
-tor.png used on input line 153.
+tor.png used on input line 149.
 (pdftex.def)             Requested size: 199.5423pt x 169.63144pt.
 
-Overfull \vbox (9.77927pt too high) detected at line 153
+Overfull \vbox (9.77927pt too high) detected at line 149
  []
 
-[113
+[112
 
  <./ru_logo.png> <./image_astah/Iteration_2_DesignModel/ClassDiagramConnector.p
 ng>]
-<image_astah/Iteration_2_DesignModel/ClassDiagramSnucServer.png, id=1991, 2043.
+<image_astah/Iteration_2_DesignModel/ClassDiagramSnucServer.png, id=1971, 2043.
 7956pt x 1110.7899pt>
 File: image_astah/Iteration_2_DesignModel/ClassDiagramSnucServer.png Graphic fi
 le (type png)
 
 <use image_astah/Iteration_2_DesignModel/ClassDiagramSnucServer.png>
 Package pdftex.def Info: image_astah/Iteration_2_DesignModel/ClassDiagramSnucSe
-rver.png used on input line 161.
+rver.png used on input line 157.
 (pdftex.def)             Requested size: 316.78505pt x 172.17065pt.
 
-Overfull \hbox (9.49518pt too wide) in paragraph at lines 161--161
+Overfull \hbox (9.49518pt too wide) in paragraph at lines 157--157
 [][] 
  []
 
 
-Overfull \vbox (12.31848pt too high) detected at line 161
+Overfull \vbox (12.31848pt too high) detected at line 157
  []
 
-[114
+[113
 
  <./ru_logo.png> <./image_astah/Iteration_2_DesignModel/ClassDiagramSnucServer.
 png>]
 <image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_1_sendMsg.png, i
-d=2007, 1994.652pt x 938.7873pt>
+d=1987, 1994.652pt x 938.7873pt>
 File: image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_1_sendMsg.p
 ng Graphic file (type png)
 
 <use image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_1_sendMsg.pn
 g>
 Package pdftex.def Info: image_astah/Iteration_2_DesignModel/UC3_SendPublicMess
-age_SSD_1_sendMsg.png used on input line 170.
+age_SSD_1_sendMsg.png used on input line 166.
 (pdftex.def)             Requested size: 319.15085pt x 150.20903pt.
 
-Overfull \hbox (11.86098pt too wide) in paragraph at lines 170--170
+Overfull \hbox (11.86098pt too wide) in paragraph at lines 166--166
 [][] 
  []
 
-[115
+[114
 
  <./ru_logo.png> <./image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_S
 SD_1_sendMsg.png>]
 <image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_2_publicMsg.png,
- id=2025, 3569.4153pt x 1634.0247pt>
+ id=2004, 3569.4153pt x 1634.0247pt>
 File: image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_2_publicMsg
 .png Graphic file (type png)
 
 <use image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_2_publicMsg.
 png>
 Package pdftex.def Info: image_astah/Iteration_2_DesignModel/UC3_SendPublicMess
-age_SSD_2_publicMsg.png used on input line 178.
+age_SSD_2_publicMsg.png used on input line 174.
 (pdftex.def)             Requested size: 321.23352pt x 147.05588pt.
 
-Overfull \hbox (13.94365pt too wide) in paragraph at lines 178--178
+Overfull \hbox (13.94365pt too wide) in paragraph at lines 174--174
 [][] 
  []
 
-[116
+[115
 
  <./ru_logo.png> <./image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_S
 SD_2_publicMsg.png>]
 <image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_3_receiveMsg.png
-, id=2043, 2338.6572pt x 866.5173pt>
+, id=2023, 2338.6572pt x 866.5173pt>
 File: image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_3_receiveMs
 g.png Graphic file (type png)
 
 <use image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_3_receiveMsg
 .png>
 Package pdftex.def Info: image_astah/Iteration_2_DesignModel/UC3_SendPublicMess
-age_SSD_3_receiveMsg.png used on input line 186.
+age_SSD_3_receiveMsg.png used on input line 182.
 (pdftex.def)             Requested size: 327.40977pt x 121.31158pt.
 
-Overfull \hbox (20.1199pt too wide) in paragraph at lines 186--186
+Overfull \hbox (20.1199pt too wide) in paragraph at lines 182--182
 [][] 
+ []
+
+[116
+
+ <./ru_logo.png> <./image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_S
+SD_3_receiveMsg.png>]
+<image_implementation/uc3/9.png, id=2041, 1027.84pt x 554.07pt>
+File: image_implementation/uc3/9.png Graphic file (type png)
+
+<use image_implementation/uc3/9.png>
+Package pdftex.def Info: image_implementation/uc3/9.png used on input line 190.
+
+(pdftex.def)             Requested size: 328.91551pt x 177.30602pt.
+
+Overfull \hbox (21.62564pt too wide) in paragraph at lines 190--190
+[][] 
+ []
+
+
+Overfull \vbox (17.45384pt too high) detected at line 190
  []
 
 [117
 
- <./ru_logo.png> <./image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_S
-SD_3_receiveMsg.png>]
-<image_implementation/uc3/9.png, id=2061, 1027.84pt x 554.07pt>
-File: image_implementation/uc3/9.png Graphic file (type png)
-
-<use image_implementation/uc3/9.png>
-Package pdftex.def Info: image_implementation/uc3/9.png used on input line 194.
-
-(pdftex.def)             Requested size: 328.91551pt x 177.30602pt.
-
-Overfull \hbox (21.62564pt too wide) in paragraph at lines 194--194
-[][] 
- []
-
-
-Overfull \vbox (17.45384pt too high) detected at line 194
- []
-
-[118
-
  <./ru_logo.png> <./image_implementation/uc3/9.png>]) (./iterazione_3.tex
-[119
-
- <./ru_logo.png>]
-Underfull \hbox (badness 1521) in paragraph at lines 29--29
+Underfull \hbox (badness 1521) in paragraph at lines 25--25
 []\OT1/cmss/m/n/10.95 SnucUser: vuo-le che i mes-sag-gi sia-no in-via-ti al-l'u
 -ten-te
  []
 
-[120
+[118
+
+ <./ru_logo.png>] [119
+
+ <./ru_logo.png>] [120
 
  <./ru_logo.png>] [121
 
+
  <./ru_logo.png>] [122
+
 
  <./ru_logo.png>] [123
 
@@ -2835,229 +2829,223 @@ Underfull \hbox (badness 1521) in paragraph at lines 29--29
  <./ru_logo.png>] [124
 
 
- <./ru_logo.png>] [125
-
-
- <./ru_logo.png>] [126
-
-
  <./ru_logo.png>]
-<image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_DM.png, id=2188, 12
+<image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_DM.png, id=2154, 12
 82.5516pt x 1035.87pt>
 File: image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_DM.png Graphic
  file (type png)
 
 <use image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_DM.png>
 Package pdftex.def Info: image_astah/Iteration_3_DomainModel/UC4_SendPrivateMes
-sage_DM.png used on input line 84.
+sage_DM.png used on input line 80.
 (pdftex.def)             Requested size: 205.21245pt x 165.74258pt.
 
-Overfull \vbox (5.89041pt too high) detected at line 84
+Overfull \vbox (5.89041pt too high) detected at line 80
  []
 
-[127
+[125
 
  <./ru_logo.png> <./image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_
 DM.png>]
-<image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_OM.png, id=2205, 11
+<image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_OM.png, id=2170, 11
 24.0394pt x 783.4068pt>
 File: image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_OM.png Graphic
  file (type png)
 
 <use image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_OM.png>
 Package pdftex.def Info: image_astah/Iteration_3_DomainModel/UC4_SendPrivateMes
-sage_OM.png used on input line 92.
+sage_OM.png used on input line 88.
 (pdftex.def)             Requested size: 247.28943pt x 172.35002pt.
 
-Overfull \vbox (12.49785pt too high) detected at line 92
+Overfull \vbox (12.49785pt too high) detected at line 88
  []
 
-[128
+[126
 
  <./ru_logo.png> <./image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_
 OM.png>]
-<image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_SSD.png, id=2221, 1
+<image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_SSD.png, id=2186, 1
 005.9984pt x 620.5584pt>
 File: image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_SSD.png Graphi
 c file (type png)
 
 <use image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_SSD.png>
 Package pdftex.def Info: image_astah/Iteration_3_DomainModel/UC4_SendPrivateMes
-sage_SSD.png used on input line 100.
+sage_SSD.png used on input line 96.
 (pdftex.def)             Requested size: 281.67763pt x 173.75516pt.
 
-Overfull \vbox (13.90298pt too high) detected at line 100
+Overfull \vbox (13.90298pt too high) detected at line 96
  []
 
-[129
+[127
 
  <./ru_logo.png> <./image_astah/Iteration_3_DomainModel/UC4_SendPrivateMessage_
-SSD.png>] [130
+SSD.png>] [128
 
- <./ru_logo.png>] [131
+ <./ru_logo.png>] [129
 
  <./ru_logo.png>]
-<image_astah/Iteration_3_DesignModel/ClassDiagramCommon.png, id=2266, 2173.1589
+<image_astah/Iteration_3_DesignModel/ClassDiagramCommon.png, id=2233, 2173.1589
 pt x 1159.9335pt>
 File: image_astah/Iteration_3_DesignModel/ClassDiagramCommon.png Graphic file (
 type png)
 
 <use image_astah/Iteration_3_DesignModel/ClassDiagramCommon.png>
 Package pdftex.def Info: image_astah/Iteration_3_DesignModel/ClassDiagramCommon
-.png used on input line 141.
+.png used on input line 137.
 (pdftex.def)             Requested size: 325.95978pt x 173.98251pt.
 
-Overfull \hbox (18.6699pt too wide) in paragraph at lines 141--141
+Overfull \hbox (18.6699pt too wide) in paragraph at lines 137--137
 [][] 
  []
 
 
-Overfull \vbox (14.13034pt too high) detected at line 141
+Overfull \vbox (14.13034pt too high) detected at line 137
  []
 
-[132
+[130
 
  <./ru_logo.png> <./image_astah/Iteration_3_DesignModel/ClassDiagramCommon.png>
 ]
-<image_astah/Iteration_3_DesignModel/ClassDiagramSnuc.png, id=2281, 2041.6275pt
+<image_astah/Iteration_3_DesignModel/ClassDiagramSnuc.png, id=2248, 2041.6275pt
  x 961.9137pt>
 File: image_astah/Iteration_3_DesignModel/ClassDiagramSnuc.png Graphic file (ty
 pe png)
  <use image_astah/Iteration_3_DesignModel/ClassDiagramSnuc.png>
 Package pdftex.def Info: image_astah/Iteration_3_DesignModel/ClassDiagramSnuc.p
-ng used on input line 149.
+ng used on input line 145.
 (pdftex.def)             Requested size: 326.66707pt x 153.90933pt.
 
-Overfull \hbox (19.3772pt too wide) in paragraph at lines 149--149
+Overfull \hbox (19.3772pt too wide) in paragraph at lines 145--145
 [][] 
  []
 
-[133
+[131
 
  <./ru_logo.png> <./image_astah/Iteration_3_DesignModel/ClassDiagramSnuc.png>]
-<image_astah/Iteration_3_DesignModel/ClassDiagramConnector.png, id=2298, 2488.2
+<image_astah/Iteration_3_DesignModel/ClassDiagramConnector.png, id=2264, 2488.2
 561pt x 2227.3614pt>
 File: image_astah/Iteration_3_DesignModel/ClassDiagramConnector.png Graphic fil
 e (type png)
 
 <use image_astah/Iteration_3_DesignModel/ClassDiagramConnector.png>
 Package pdftex.def Info: image_astah/Iteration_3_DesignModel/ClassDiagramConnec
-tor.png used on input line 157.
+tor.png used on input line 153.
 (pdftex.def)             Requested size: 191.58492pt x 171.49716pt.
 
-Overfull \vbox (11.64499pt too high) detected at line 157
+Overfull \vbox (11.64499pt too high) detected at line 153
  []
 
-[134
+[132
 
  <./ru_logo.png> <./image_astah/Iteration_3_DesignModel/ClassDiagramConnector.p
 ng>]
-<image_astah/Iteration_3_DesignModel/ClassDiagramSnucServer.png, id=2314, 2119.
+<image_astah/Iteration_3_DesignModel/ClassDiagramSnucServer.png, id=2280, 2119.
 6791pt x 953.964pt>
 File: image_astah/Iteration_3_DesignModel/ClassDiagramSnucServer.png Graphic fi
 le (type png)
 
 <use image_astah/Iteration_3_DesignModel/ClassDiagramSnucServer.png>
 Package pdftex.def Info: image_astah/Iteration_3_DesignModel/ClassDiagramSnucSe
-rver.png used on input line 165.
+rver.png used on input line 161.
 (pdftex.def)             Requested size: 328.54686pt x 147.86288pt.
 
-Overfull \hbox (21.25699pt too wide) in paragraph at lines 165--165
+Overfull \hbox (21.25699pt too wide) in paragraph at lines 161--161
 [][] 
  []
 
-[135
+[133
 
  <./ru_logo.png> <./image_astah/Iteration_3_DesignModel/ClassDiagramSnucServer.
 png>]
 <image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_1_sendMsg.png, 
-id=2331, 2074.149pt x 999.4941pt>
+id=2297, 2074.149pt x 999.4941pt>
 File: image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_1_sendMsg.
 png Graphic file (type png)
 
 <use image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_1_sendMsg.p
 ng>
 Package pdftex.def Info: image_astah/Iteration_3_DesignModel/UC4_SendPrivateMes
-sage_SSD_1_sendMsg.png used on input line 174.
+sage_SSD_1_sendMsg.png used on input line 170.
 (pdftex.def)             Requested size: 331.87062pt x 159.92232pt.
 
-Overfull \hbox (24.58075pt too wide) in paragraph at lines 174--174
+Overfull \hbox (24.58075pt too wide) in paragraph at lines 170--170
 [][] 
  []
 
-[136
+[134
 
  <./ru_logo.png> <./image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_
 SSD_1_sendMsg.png>]
 <image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_2_privateMsg.pn
-g, id=2348, 3054.1302pt x 1644.1425pt>
+g, id=2314, 3054.1302pt x 1644.1425pt>
 File: image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_2_privateM
 sg.png Graphic file (type png)
 
 <use image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_2_privateMs
 g.png>
 Package pdftex.def Info: image_astah/Iteration_3_DesignModel/UC4_SendPrivateMes
-sage_SSD_2_privateMsg.png used on input line 182.
+sage_SSD_2_privateMsg.png used on input line 178.
 (pdftex.def)             Requested size: 320.66985pt x 172.62752pt.
 
-Overfull \hbox (13.37997pt too wide) in paragraph at lines 182--182
+Overfull \hbox (13.37997pt too wide) in paragraph at lines 178--178
 [][] 
  []
 
 
-Overfull \vbox (12.77534pt too high) detected at line 182
+Overfull \vbox (12.77534pt too high) detected at line 178
  []
 
-[137
+[135
 
  <./ru_logo.png> <./image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_
 SSD_2_privateMsg.png>]
 <image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_3_receive.png, 
-id=2366, 2326.3713pt x 907.7112pt>
+id=2333, 2326.3713pt x 907.7112pt>
 File: image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_3_receive.
 png Graphic file (type png)
 
 <use image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_SSD_3_receive.p
 ng>
 Package pdftex.def Info: image_astah/Iteration_3_DesignModel/UC4_SendPrivateMes
-sage_SSD_3_receive.png used on input line 190.
+sage_SSD_3_receive.png used on input line 186.
 (pdftex.def)             Requested size: 325.68976pt x 127.07869pt.
 
-Overfull \hbox (18.39989pt too wide) in paragraph at lines 190--190
+Overfull \hbox (18.39989pt too wide) in paragraph at lines 186--186
 [][] 
  []
 
-[138
+[136
 
  <./ru_logo.png> <./image_astah/Iteration_3_DesignModel/UC4_SendPrivateMessage_
 SSD_3_receive.png>]
-<image_implementation/uc4/10.png, id=2384, 1027.84pt x 555.07375pt>
+<image_implementation/uc4/10.png, id=2351, 1027.84pt x 555.07375pt>
 File: image_implementation/uc4/10.png Graphic file (type png)
 
 <use image_implementation/uc4/10.png>
-Package pdftex.def Info: image_implementation/uc4/10.png used on input line 199
+Package pdftex.def Info: image_implementation/uc4/10.png used on input line 195
 .
 (pdftex.def)             Requested size: 328.91551pt x 177.62721pt.
 
-Overfull \hbox (21.62564pt too wide) in paragraph at lines 199--199
+Overfull \hbox (21.62564pt too wide) in paragraph at lines 195--195
 [][] 
  []
 
 
-Overfull \vbox (17.77504pt too high) detected at line 199
+Overfull \vbox (17.77504pt too high) detected at line 195
  []
 
-[139
+[137
 
  <./ru_logo.png> <./image_implementation/uc4/10.png>]) (./conclusioni.tex
-[140
+[138
 
- <./ru_logo.png>] [141
+ <./ru_logo.png>] [139
 
- <./ru_logo.png>]) (./bibliositografia.tex [142
+ <./ru_logo.png>]) (./bibliositografia.tex [140
 
  <./ru_logo.png> </usr/share/texmf/tex/latex/beamer/base/art/beamericonbook.pdf
-> </usr/share/texmf/tex/latex/beamer/base/art/beamericononline.pdf>] [143
+> </usr/share/texmf/tex/latex/beamer/base/art/beamericononline.pdf>] [141
 
 
  <./ru_logo.png>])
@@ -3076,7 +3064,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 137.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 137.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 137.
 Package rerunfilecheck Info: File `documentazione.out' has not changed.
-(rerunfilecheck)             Checksum: B1E5AD855E40EA34D3066BC2A7975A96;3284.
+(rerunfilecheck)             Checksum: 2BBF248DD770B9E8D32B04084D8D6690;3189.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -3088,10 +3076,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 137.
  ) 
 Here is how much of TeX's memory you used:
- 21532 strings out of 493307
- 391338 string characters out of 6139905
- 558814 words of memory out of 5000000
- 24008 multiletter control sequences out of 15000+600000
+ 21522 strings out of 493307
+ 391224 string characters out of 6139905
+ 558888 words of memory out of 5000000
+ 24003 multiletter control sequences out of 15000+600000
  14080 words of font info for 52 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,19n,57p,430b,1290s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3107,10 +3095,10 @@ public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
 ts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/symbols/msam7.pfb>
-Output written on documentazione.pdf (143 pages, 23141410 bytes).
+Output written on documentazione.pdf (141 pages, 23070845 bytes).
 PDF statistics:
- 2691 PDF objects out of 2984 (max. 8388607)
- 2084 compressed objects within 21 object streams
- 397 named destinations out of 1000 (max. 500000)
- 1432 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2656 PDF objects out of 2984 (max. 8388607)
+ 2055 compressed objects within 21 object streams
+ 392 named destinations out of 1000 (max. 500000)
+ 1414 words of extra memory for PDF output out of 10000 (max. 10000000)
 

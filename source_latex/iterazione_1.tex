@@ -396,11 +396,12 @@
 \end{frame}
 
 %ITERAZIONE 1 PROGETTAZIONE 
-\subsection{Iterazione 1: Progettazione - Descrizione }
- Da un'analisi del modello di domino sono state realizzate le seguenti classi:   
-\begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Descrizione}
+\subsection{Iterazione 1: Progettazione - Class Diagram UC1 e UC2}
+ \begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Class Diagram UC1 e UC2}
+   Da un'analisi del modello di domino sono state realizzate le seguenti classi:  
+  \newline
+  \centerline{\textbf{PACKAGE COMMON}}
   \begin{itemize}
-   \centerline{\textbf{PACKAGE COMMON}}
    \item \textbf{Message}: è una classe astratta che definisce tutti gli attributi di in un generico messaggio che saranno necessari per la corretta gestione.
                  È costituito da un ``content'' (contenuto del messaggio), da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
    \item \textbf{Command}: è una sottoclasse di Message e permette di identificare che nel contenuto del messaggio avremo un comando.
@@ -410,12 +411,22 @@
          determinata stanza. È stato dunque necessario aggiungere un ulteriore attributo nel quale viene memorizzata la stanza a cui è riferita. Inoltre in quanto 
          l'utente può essere connesso a più stanze contemporaneamente, l'aggiunta di tale attributo ha permesso all'Utente che riceve una PublicNotify di comprendere 
          a quale stanza è riferita.
+   \item \textbf{UserInteraction}: è un interfaccia che definisce tutti i metodi che saranno necessari per interazione tra UI e il UserController.
+   \item \textbf{IMessagingService}: è un interfaccia che definisce la struttura per le funzioni che dovrà svolgere il MessagingService.
+   \item \textbf{IUser}: è un interfaccia che definisce la struttura per le funzioni che dovrà svolgere l'UserController.
   \end{itemize} 
  \end{frame}
+\begin{frame} {Iterazione 1: Progettazione - Class Diagram Common UC1 e UC2}
+   \begin{figure}
+     \includegraphics[scale=0.165]{image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Common }
+     \label{fig_UC1_UC2_DCD_1} 
+   \end{figure}
+\end{frame}
 
-\begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Descrizione}
+\begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Class Diagram Snuc UC1 e UC2}
+  \centerline{\textbf{PACKAGE SNUC}}
   \begin{itemize}
-   \centerline{\textbf{PACKAGE SNUC}}
    \item \textbf{UserView}: rappresenta l'interfaccia utente. Implementa l'interfaccia UserInteraction.
    \item \textbf{UserController}: è il primo oggetto oltre allo strato UI a ricevere e coordinare una operazione di sistema. Fa in modo che l'interfaccia utente non 
          contenga logica applicativa.
@@ -427,13 +438,21 @@
    \item \textbf{SnucMain}: tale classe si occupa della creazione e dell'avvio di tutti gli oggetti necessari al funzionamento dell'applicazione lato Client.
   \end{itemize} 
  \end{frame}
-   
-\begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Descrizione}
+
+\begin{frame} {Iterazione 1: Progettazione - Class Diagram Snuc UC1 e UC2}
+   \begin{figure}
+     \includegraphics[scale=0.170]{image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc }
+     \label{fig_UC1_UC2_DCD_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Class Diagram Snuc UC1 e UC2}
+  \centerline{\textbf{PACKAGE SNUCSERVER}}
   \begin{itemize}
-   \centerline{\textbf{PACKAGE SNUCSERVER}}
-   \item \textbf{MessagingService}: tale classe che rappresenta il servizio di messaggistica ed in cui sono implementate tutte le funzioni necessarie al 
-         funzionamento di tale servizio tra cui per esempio la gestione dell'invio delle notifiche agli User, dell'interpretazione dei comandi e del controllo della 
-         disponibilità del nickname. Questa classe lancia inoltre un Thread che si occupa di gestire le connessioni da parte degli User.
+   \item \textbf{MessagingService}: rappresenta il servizio di messaggistica ed in tale classe sono implementate tutte le funzioni necessarie al 
+         funzionamento del suddetto servizio tra cui per esempio la gestione dell'invio delle notifiche agli User, l'interpretazione dei comandi e del controllo 
+         della disponibilità del nickname. Questa classe lancia inoltre un Thread che si occupa di gestire le connessioni da parte degli User.
    \item \textbf{UserConnectionHandler}: una volta che il MessagingService instaura delle connessioni crea degli oggetti di questo tipo e da quel momento in poi la 
          comunicazione di rete con il corrispettivo Client sarà gestita da tale oggetto. Si occupa in particolare della ricezione di oggetti di tipo Message e di 
          richiamare l'opportuna procedura del server per la loro gestione. Il MessagingService instanzia un UserConnectionHandler per ogni User che si connette. 
@@ -446,28 +465,11 @@
   \end{itemize} 
 \end{frame}
 
-\subsection{Iterazione 1: Progettazione - Class Diagram UC1 e UC2}
-\begin{frame} {Iterazione 1: Progettazione - Class Diagram Common UC1 e UC2}
-   \begin{figure}
-     \includegraphics[scale=0.16]{image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Common }
-     \label{fig_UC1_UC2_DCD_1} 
-   \end{figure}
-\end{frame}
-
 \begin{frame} {Iterazione 1: Progettazione - Class Diagram Snuc Server UC1 e UC2}
    \begin{figure}
      \includegraphics[scale=0.156]{image_astah/Iteration_1_DesignModel/ClassDiagramSnucServer.png}{\centering}
      \caption{DCD - Diagramma delle Classi: Package Snuc Server }
      \label{fig_UC1_UC2_DCD_2} 
-   \end{figure}
-\end{frame}
-
-\begin{frame} {Iterazione 1: Progettazione - Class Diagram Snuc UC1 e UC2}
-   \begin{figure}
-     \includegraphics[scale=0.17]{image_astah/Iteration_1_DesignModel/ClassDiagramSnuc.png}{\centering}
-     \caption{DCD - Diagramma delle Classi: Package Snuc }
-     \label{fig_UC1_UC2_DCD_3} 
    \end{figure}
 \end{frame}
 
