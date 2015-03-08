@@ -1,0 +1,192 @@
+% ELABORAZIONE ITERAZIONE 2 - UC3_SendPublicMessage
+\section{Elaborazione - Iterazione 2}
+\begin{frame} {Descrizione Elaborazione - Iterazione 2}
+  \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
+\subsection{Iterazione 2: Requisiti - UC3\_SendPublicMessage}
+\begin{frame} {Iterazione 2: Requisiti - UC3\_SendPublicMessage}
+  \begin{table}[!htbp]
+    \caption {Caso d'uso UC3\_SendPublicMessage}
+     \label{table_UC3_SPM}
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+        Nome caso d'uso &  UC3\_SendPublicMessage\\\hline
+        Portata & Applicazione Smart Intelligent University Communications \\\hline
+        Livello & Obiettivo Utente \\\hline
+        Attore primario & SnucUser  \\\hline
+        Parti interessate e interessi & 
+         \begin{itemize}
+          \item SnucUser, vuole che i messaggi siano inviati a ogni utente della stanza virtuale.
+          \item SnucAdmin, è interessato a supervisionare gli utenti del servizio affinché non ci siano abusi.       
+         \end{itemize} \\\hline
+        Pre-condizioni &  L'utente è registrato nella stanza in cui desidera inviare i messaggi.\\\hline
+        Post-condizioni (garanzia di successo) & Ogni utente riceve il messaggio inviato. \\\hline
+         Scenario principale di successo &  
+         \begin{enumerate} 
+          \item L’utente inserisce in una opportuna area il messaggio da inviare.
+          \item Il messaggio viene inoltrato agli utenti presenti nella stanza selezionata. 
+         \end{enumerate} \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Requisiti - UC3\_SendPublicMessage}
+  \begin{table}[!htbp]
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
+                                                        invio e ricezione del messaggio\\\hline
+         Elenco delle varianti tecnologiche &  
+          \begin{itemize}  
+           \item \`E possibile inviare messaggi confidenziali, autenticati e integri al server del servizio di messaggistica.
+           \item L’applicazione dovrebbe essere flessibile al funzionamento di diversi protocolli di comunicazione (es. TCP, UDP) e con diversi strati middleware 
+                 (es. Socket, RMI)
+          \end{itemize} \\\hline
+         Frequenza di ripetizione & Potrebbe essere quasi ininterrotta \\\hline
+         Varie e/o Problemi Aperti &  // \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\subsection {Iterazione 2: Analisi - UC3\_SendPublicMessage}
+\begin{frame} [allowframebreaks] {Descrizione Iterazione 2: Analisi - UC3\_SendPublicMessage}
+  In questa iterazione, del caso d’uso UC3 è di interesse lo scenario principale di successo.  Da esso è possibile identificare le seguenti classi concettuali: 
+  \begin{itemize}
+   \item \textbf{User}: rappresenta il generico utente, caratterizzato da un ``nickname'', connesso al servizio di messaggistica. Può richiedere la lista delle 
+         stanze, ricevere notifiche dal sistema centrale. Interagisce con il MessagingSevice richiedendo la registrazione e l’ingresso in una specifica stanza. 
+         \textit{Può inviare messaggi pubblici agli utenti di una stanza}.
+   \item \textbf{MessagingService}: rappresenta ed incapsula il servizio di messaggistica nel suo complesso. Mantiene una lista di utenti connessi a tale sistema. 
+          Mantiene una lista di stanze e riceve tramite comandi richieste di ingresso da parte degli utenti. \textit{Svolge il ruolo di smistatore di messaggi 
+          inviati dagli User}.
+   \item \textbf{Message}: individua un generico messaggio scambiato tra utenti della chat o tra servizio di messaggistica e utente. È costituito da un 
+         ``content'' (contenuto del messaggio), da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
+   \item \textbf{Notify}: è una specializzazione del tipo Message ed è caratterizzata da un typeNotify che serve a distinguere il tipo di notifica (ad es. 
+          CONNECTIO\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente, BAD\_COMMAND nel caso in cui il comando inviato dall'User non 
+          sia riconosciuto dal Server).
+    \item \textbf{PublicNotify}: è una specializzazione di Notify e questo tipo di notifica viene ricevuta da tutti gli utenti registrati alla relativa 
+          stanza. Un esempio di PublicNotify è la notifica caratterizzata dal seguente typeNotify: UPDATE\_LIST\_USERS, grazie alla quale viene 
+          aggiornata la lista degli utenti registrati nella relativa stanza.
+   \item  \textbf{Commad}: è una specializzazione di Message e rappresenta il comando che viene inviato dall'User e ricevuto ed interpretato dal            
+          MessagingService (es. /join '\#Medical' richiesta da parte dell'utente a registrarsi alla stanza Medical).        
+    \item \textbf{Room}: è caratterizzata da un nome. Ciascuna istanza individua una specifica stanza nella chat.
+    \item \textbf{Register}: mantiene un riferimento all’insieme di partecipanti che in un certo istante sono presenti nella stanza.
+   \item \textit{\textbf{PublicMessage}: è una specializzazione di Message ed individua un messaggio pubblico scambiato tra utenti della chat registrati nella 
+         stessa stanza}. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Analisi - UC3\_SendPublicMessage}
+   \begin{figure}
+     \includegraphics[scale=0.17]{image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_DM.png}{\centering}
+     \caption{UC3 - Modello di dominio}
+     \label{fig_UC3_SPM_DM} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Analisi - UC3\_SendPublicMessage}
+   \begin{figure}
+     \includegraphics[scale=0.225]{image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_OM.png}{\centering}
+     \caption{UC3 - Oggetti di dominio}
+     \label{fig_UC3_SPM_OM} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Analisi - UC3\_SendPublicMessage}
+   \begin{figure}
+     \includegraphics[scale=0.27]{image_astah/Iteration_2_DomainModel/UC3_SendPublicMessage_SSD.png}{\centering}
+     \caption{UC3 - Diagramma di sequenza di sistema}
+     \label{fig_UC3_SPM_SSD} 
+   \end{figure}
+\end{frame}
+
+\begin{frame}
+ \frametitle{Iterazione 2: Analisi, UC3 contratto CO5}
+  \begin{table}[!htbp]
+   \caption {UC3 Contratto CO5 - publicMsg}
+    \label{table_CO5}
+      \resizebox{\linewidth}{!}{%
+       \begin{tabular}{|l|p{10cm}|}\hline
+         Operazione & \textbf{publicMsg(msg:PublicMessage)} \\\hline 
+         Riferimenti & Caso d'uso: UC3\_SendPublicMessage \\\hline
+         Pre-condizione & L'utente è registrato nella stanza \\\hline 
+         Post-condizione & Gli utenti registrati nella stanza ricevono il messaggio inviato \\\hline
+      \end{tabular}}
+   \end{table}
+\end{frame}
+
+\subsection{Iterazione 2: Progettazione}
+\begin{frame} {Descrizione Iterazione 2: Progettazione}
+  \begin{scriptsize}
+    In questa iterazione è stato sviluppato il caso d'uso relativo all'invio del messaggio pubblico. Rispetto al class diagram precedentemente mostrato è stata 
+    aggiunta la classe PublicMessage nel package Common. Tale classe, come la classe Notify e Command, è una sottoclasse di Message avente come attributo aggiuntivo 
+    il nome della stanza a cui è indirizzato il messaggio pubblico.
+    Per la gestione dei messaggi pubblici sono state modificate le interfacce IUser, in cui è stato inserito un metodo per la ricezione dei messaggi pubblici, e 
+    IMessagingService nella quale invece è stato inserito un metodo per l'invio dei messaggi pubblici. Anche l'interfaccia IUserInteraction verrà modificata per 
+    permettere la visualizzazione nell'interfaccia utente del messaggio pubblico.
+  \end{scriptsize}
+\end{frame}
+
+\subsection{Iterazione 2: Progettazione Class Diagram UC3}
+\begin{frame} {Iterazione 2: Progettazione Class Diagram Common UC3}
+   \begin{figure}
+     \includegraphics[scale=0.165]{image_astah/Iteration_2_DesignModel/ClassDiagramCommon.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Common }
+     \label{fig_UC3_DCD_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Progettazione - Class Diagram Snuc UC3}
+   \begin{figure}
+     \includegraphics[scale=0.16]{image_astah/Iteration_2_DesignModel/ClassDiagramSnuc.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc }
+     \label{fig_UC3_DCD_3} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Progettazione - Class Diagram Connector UC3}
+   \begin{figure}
+     \includegraphics[scale=0.081]{image_astah/Iteration_2_DesignModel/ClassDiagramConnector.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Connector }
+     \label{fig_UC3_DCD_4} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Progettazione - Class Diagram Snuc Server UC3}
+   \begin{figure}
+     \includegraphics[scale=0.155]{image_astah/Iteration_2_DesignModel/ClassDiagramSnucServer.png}{\centering}
+     \caption{DCD - Diagramma delle Classi: Package Snuc Server }
+     \label{fig_UC3_DCD_2} 
+   \end{figure}
+\end{frame}
+
+\subsection{Iterazione 2: Progettazione - SSD UC3\_SendPublicMessage}
+\begin{frame} {Iterazione 2: Progettazione, UC3\_SendPublicMessage - OP1}
+   \begin{figure}
+     \includegraphics[scale=0.16]{image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_1_sendMsg.png}{\centering}
+     \caption{SSD - OP1: sendMsg(msg) del modello di dominio (figura \ref{fig_UC3_SPM_SSD}) }
+     \label{fig_UC3_SSD_SRM_1} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Progettazione, UC3\_SendPublicMessage - OP2}
+   \begin{figure}
+     \includegraphics[scale=0.09]{image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_2_publicMsg.png}{\centering}
+     \caption{SSD - OP2: pubblicMsg(msg) del modello di dominio (figura \ref{fig_UC3_SPM_SSD}) }
+     \label{fig_UC3_SSD_SRM_2} 
+   \end{figure}
+\end{frame}
+
+\begin{frame} {Iterazione 2: Progettazione, UC3\_SendPublicMessage - OP3}
+   \begin{figure}
+     \includegraphics[scale=0.14]{image_astah/Iteration_2_DesignModel/UC3_SendPublicMessage_SSD_3_receiveMsg.png}{\centering}
+     \caption{SSD - OP3: receive(msg) del modello di dominio (figura \ref{fig_UC3_SPM_SSD})}
+     \label{fig_UC3_SSD_SRM_3} 
+   \end{figure}
+\end{frame}
+
+\subsection{Iterazione 2: Implementazione - UC3\_SendPublicMessage}
+\begin{frame} {Iterazione 2: Implementazione - UC3\_SendPublicMessage}
+  \emph{INSERIRE DESCRIZIONE}
+\end{frame}
+
