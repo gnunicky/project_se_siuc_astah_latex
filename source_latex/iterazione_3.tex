@@ -1,15 +1,7 @@
 % ELABORAZIONE ITERAZIONE 3 - UC4_SendPrivateMessage
 \section{Elaborazione - Iterazione 3}
 \begin{frame} {Descrizione Elaborazione: Iterazione 3}
-  \begin{scriptsize}
-    In questa terza iterazione è stato sviluppato il caso d'uso relativo all'invio del messaggio privato. Rispetto al class diagram precedentemente è stata aggiunta 
-    la classe PrivateMessage nel package Common. Tale classe, come la classe Notify, Command e PublicMessage, è una sottoclasse di Message avente come attributo 
-    aggiuntivo il nickname del destinatario a cui è indirizzato il messaggio privato.
-    \newline
-    Per la gestione dei messaggi privati sono state modificate le interfacce IUser in cui è stato inserito un metodo per la ricezione dei messaggi privati, e   
-    IMessagingService nella quale invece è stato inserito un metodo per l'invio dei messaggi privati. Anche l'interfaccia IUserInteraction verrà modificata per 
-    permettere la visualizzazione nell'interfaccia utente del messaggio privato.
-  \end{scriptsize}
+
 \end{frame}
 
 \subsection {Iterazione 3: Requisiti - UC4\_SendPrivateMessage}
@@ -20,7 +12,7 @@
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
         Nome caso d'uso &  UC3\_SendRoomMessage\\\hline
-        Portata & Applicazione Smart Intelligent University Communications \\\hline
+        Portata & Applicazione Smart Network University Communications \\\hline
         Livello & Obiettivo Utente \\\hline
         Attore primario & SnucUser  \\\hline
         Parti interessate e interessi & SnucUser: vuole che i messaggi siano inviati all’utente selezionato presente nella stanza virtuale \\\hline
@@ -126,9 +118,17 @@
    \end{table}
 \end{frame}
 
-\subsection{Iterazione 3: Progettazione}
-\begin{frame} {Descrizione Iterazione 3: Progettazione}
-  \emph{INSERIRE DESCRIZIONE}
+\subsection{Iterazione 3: Progettazione - Descrizione}
+\begin{frame} {Iterazione 3: Progettazione - Descrizione}
+  \begin{scriptsize}
+    In questa terza iterazione è stato sviluppato il caso d'uso relativo all'invio del messaggio privato. Rispetto al class diagram precedentemente è stata aggiunta 
+    la classe PrivateMessage nel package Common. Tale classe, come la classe Notify, Command e PublicMessage, è una sottoclasse di Message avente come attributo 
+    aggiuntivo il nickname del destinatario a cui è indirizzato il messaggio privato.
+    \newline
+    Per la gestione dei messaggi privati sono state modificate le interfacce IUser in cui è stato inserito un metodo per la ricezione dei messaggi privati, e   
+    IMessagingService nella quale invece è stato inserito un metodo per l'invio dei messaggi privati. Anche l'interfaccia IUserInteraction verrà modificata per 
+    permettere la visualizzazione nell'interfaccia utente del messaggio privato.
+  \end{scriptsize}
 \end{frame}
 
 \subsection{Iterazione 3: Progettazione Class Diagram UC4}
@@ -192,6 +192,9 @@
 
 \subsection {Iterazione 3: Implementazione - UC4\_SendPrivateMessage}
 \begin{frame} {Iterazione 3: Implementazione - UC4\_SendPrivateMessage}
- \emph{INSERIRE DESCRIZIONE}
+    \begin{figure}
+    \includegraphics[scale=0.32]{image_implementation/uc4/10.png}{\centering}
+    \caption{UC4 - SendPrivateMessage }
+   \end{figure}
 \end{frame}
 

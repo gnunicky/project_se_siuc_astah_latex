@@ -4,9 +4,13 @@
   \frametitle {Descrizione realtà d'interesse} 
    Nel Piano Nazionale della Ricerca (PNR)  messo a punto da HORIZON ITALIA e MIUR viene bandito un progetto chiamato:\newline
    \textbf{\virgolette{Smart Network University Communications (SNUC)}} destinato a tutti gli atenei italiani.\newline 
-   Tale progetto è caratterizzato dalle seguenti specifiche descritti nel seguito, che consente ad appassionati, studenti,    
+   Tale progetto è caratterizzato dalle seguenti specifiche descritte nel seguito, che consente ad appassionati, studenti,    
    ricercatori, docenti e imprese di scambiarsi messaggi in tempo reale su condivisioni, integrazioni e competenze di idee per una contaminazione tra ambiti 
-   disciplinari diversi, realtà diverse e stimolare nei partecipanti lo sviluppo della  cultura dell’intraprendere e dell’innovazione.\newline 
+   disciplinari diversi, realtà diverse e stimolare nei partecipanti lo sviluppo della  cultura dell’intraprendere e dell’innovazione.
+   \newline 
+   \newline 
+   \newline 
+   \newline
    In tale sistema si richiedono le seguenti specifiche:
    \begin{itemize} 
     \item Esistono diversi canali o stanze virtuali (ciascuna legata a un corso di laurea per ogni facoltà, includendo sia la triennale e la magistrale di quel 
@@ -19,39 +23,41 @@
                                         destinatario selezionato sarà l’unico a ricevere il messaggio.
           \end{itemize}
           \setbeamertemplate{itemize items}[circle]
-    \item In ogni istante il sistema prevede la presenza di una tipologia di utente particolare, chiamato amministratore. I compiti più importanti di un 
-          amministratore sono i seguenti: 
+    \item In ogni istante il sistema prevede la presenza di una tipologia di utente particolare, chiamato amministratore. 
+    \newline
+    I compiti di un amministratore sono i seguenti: 
           \setbeamertemplate{itemize items}[triangle]
           \begin{itemize} 
             \item può creare o eliminare stanze del servizio di messaggistica; 
             \item inviare messaggi di avviso ad un utente;
-            \item in caso di comportamenti irregolari è possibile espellere un utente dalla stanza e l'utente non può più rientrare fin quando questo non sarà
-                  rimosso dalla lista dei partecipanti bannati della stanza presente nel sistema.
+            \item in caso di comportamenti irregolari è possibile espellere un utente dalla stanza. L'utente espluso non può più rientrare fin quando questo non sarà
+                  rimosso dalla lista dei partecipanti bannati della stanza.
           \end{itemize}
     \item Il sistema deve mandare dei messaggi di notifica, che permettono di aggiornare l’utente di un cambiamento dello stato del sistema.
   \end{itemize}
 \end{frame}
 
-\subsection{Iterazione 1: Requisiti}
+\subsection{Iterazione 1: Requisiti - Documento di Visione}
 \begin{frame} [allowframebreaks]
   \frametitle{Iterazione 1: Requisiti - Documento di Visione}
    La caratteristica principale del progetto è quella di consentire ad appassionati, studenti, ricercatori, docenti e imprese di scambiarsi messaggi in tempo reale   
    per ogni ateneo.  In particolare in questo progetto sono presenti diverse stanze virtuali che rappresentano le facoltà di un ateneo con due tipologie di    
-   utilizzatori di sistema, ovvero l’amministratore e gli utenti del servizio di messaggistica.  Con le seguenti  caratteristiche:
+   utilizzatori di sistema, ovvero l’amministratore e gli utenti del servizio di messaggistica. Gli utilizzatori del sistema avranno le seguenti  caratteristiche:
    \begin{itemize} 
     \item l’amministratore gestisce le stanze virtuali e supervisiona gli utenti del servizio;
     \item gli utenti per usufruire di tale servizio inseriscono un nickname e si collegano al server impostando dei parametri di connessione. Ogni utente può    
-          accedere a una stanza e inviare messaggi ad ogni utente presente nella stanza in tempo reale, inoltre ognuno può contattare in maniera privata gli altri 
+          accedere ad una stanza e inviare messaggi ad ogni utente presente nella stanza in tempo reale; inoltre ognuno può contattare in maniera privata gli altri 
           partecipanti presenti nella stanza.
    \end{itemize}
    L’architettura utilizzata per offrire il servizio è di tipo client-server, questo approccio consente di fornire un’interfaccia  più flessibile per l’accesso al   
    servizio di messaggistica anche con un semplice browser, senza modificare pesantemente la progettazione rispetto ad un architettura peer-to-peer. 
 \end{frame}
 
+\subsection{Iterazione 1: Requisiti - Diagrammi dei casi d'uso}
 \begin{frame}
   \frametitle{Iterazione 1: Requisiti - Diagrammi dei casi d'uso}
    \begin{figure}[h]
-    \includegraphics[scale=0.145]{image_astah/UseCaseDiagram.png}{\centering}
+    \includegraphics[scale=0.142]{image_astah/UseCaseDiagram.png}{\centering}
     \caption{Diagrammi dei casi uso} 
     \label{fig_UCD}
    \end{figure}
@@ -70,32 +76,35 @@
     \item \textbf{SendPublicMessage}. Il partecipante al servizio di messaggistica invia un messaggio ``pubblico'' che viene inviato dal sistema a tutti i 
           partecipanti che si trovano nella stessa stanza di colui che ha inviato il messaggio.
     \item \textbf{SendPrivateMessage}. Il partecipante al servizio di messaggistica  invia un messaggio ``privato'' ad uno specifico partecipante.
-    \item \textbf{ReceiveNotify}. Il sistema manda dei messaggi di notifica, che permettono di aggiornare l’utente di un cambiamento dello stato del sistema.
-    \item \textbf{SendCommand}. Il sistema è in grado di ricevere e interpretare dei comandi.
     \item \textbf{ExitRoom}. Un partecipante richiede al sistema l’uscita dal servizio. Questo comporta la sua eliminazione dall’insieme dei partecipanti presenti 
           nella stanza del servizio cui era precedentemente associato l’utente.
-    \item \textbf{CreateRoom}. L’amministratore del servizio di messaggistica è responsabile della creazione (preventiva) delle stanze che potranno successivamente 
+    \item \textbf{CreateRoom}. L’amministratore del servizio di messaggistica è responsabile della creazione delle stanze che potranno successivamente 
           essere visitate dai partecipanti.
     \item \textbf{RemoveRoom}. In ogni momento l’amministratore può eliminare una stanza dal servizio (ad esempio perchè non ci sono partecipanti). Ciò comporta 
-          l’invio preventivo di un messaggio a tutti i patecipanti eventualmente presenti nella stanza, i quali potranno in seguito richiedere l’ingresso in una   
+          l’invio preventivo di un messaggio a tutti i patecipanti presenti nella stanza, i quali potranno in seguito richiedere l’ingresso in una   
           nuova stanza del servizio.
     \item \textbf{SendAlertUser}. L’amministratore può in ogni momento inviare un messaggio di avviso ad uno specifico partecipante al servizio.
     \item \textbf{ExpulsionUser}. L’amministratore può in ogni momento espellere da una stanza uno specifico partecipante.  
+    \newline
+    Descrizione breve dei sottocasi d'uso identificati:  
+    \item \textbf{ReceiveNotify}. Il sistema manda dei messaggi di notifica, che permettono di aggiornare l’utente di un cambiamento dello stato del sistema.
+    \item \textbf{SendCommand}. Il sistema è in grado di ricevere e interpretare dei comandi.
    \end{enumerate}
 \end{frame}
 
+\subsection{Iterazione 1: Requisiti - Glossario}
 \setbeamertemplate{itemize items}[triangle]
 \begin{frame} [allowframebreaks]
-  \frametitle{Glossario} 
+  \frametitle{Iterazione 1: Requisiti - Glossario} 
    \begin{itemize} 
     \item SnucUser, User, Utente: è l'utente del servizio di messaggistica che è in grado di registrarsi a delle stanze, di inviare messaggi pubblici e privati.
     \item SnucAdmin, Admin, Amministratore: è il gestore del servizio di messaggistica, che possiede la facoltà di creare e/o eliminare una stanza, di inviare un 
           particolare messaggio di avviso ad un partecipante per un comportamento non corretto ed eventualmente di bannarlo eliminandolo dalla stanza.
-    \item Messaging Service, Servizio di messaggistica, sistema, chat: sistema che si occupa della gestione.
+    \item Messaging Service, Servizio di messaggistica, sistema, chat: rappresenta ed incapsula il servizio di messaggistica nel suo complesso.
     \item Room, stanza, canale: rappresenta un luogo virtuale, dove gli utenti possono scambiarsi informazioni relative alle tematiche trattate.
     \item Messaggio Pubblico: messaggio testuale inviato da un partecipante a tutti gli utenti presenti nella stanza.
     \item Messaggio Privato: messaggio testuale inviato da un partecipante ad un particolare partecipante presente nella stanza.
-    \item Notifica: particolari messaggi di avviso inviati dal server agli utenti che usufruiscono del servizio.  
+    \item Notifica: particolare messaggi di avviso inviato dal server agli utenti che usufruiscono del servizio.  
   \end{itemize}
 \end{frame}
 
@@ -108,7 +117,7 @@
      \resizebox{\linewidth}{!}{%
       \begin{tabular}{|l|p{10cm}|}\hline
        Nome caso d'uso &  UC1\_RequestConnection \\\hline
-       Portata & Applicazione Smart Intelligent University Communications \\\hline
+       Portata & Applicazione Smart Network University Communications \\\hline
        Livello &  Obiettivo Utente \\\hline
        Attore primario &  SnucUser \\\hline
        Parti interessate e interessi &  SnucUser: vuole collegarsi al servizio di messaggistica \\\hline
@@ -117,7 +126,7 @@
                                                  messaggio di benvenuto \\\hline
        Scenario principale di successo &  
        \begin{enumerate} 
-        \item L'utente inserisci un nickname, l'address e la porta del server.
+        \item L'utente inserisce un nickname, l'address e la porta del server.
         \item Il sistema esamina il nickname inviato dall'utente e verifica se è presente una omonimia.
         \item Il sistema conferma l'inserimento tra gli utenti online inviando una notifica di benvenuto.
        \end{enumerate} \\\hline
@@ -137,7 +146,7 @@
           \end{itemize} 
            2A - Omonimia del nickname:
           \begin{itemize}       
-           \item Il sistema cambia il nickname aggiungendo "\_" al nickname (es. \_nickname). 
+           \item Il sistema cambia il nickname aggiungendo il carattere ``"\_"'' al nickname (es. \_nickname). 
            \item Il sistema conferma l'inserimento tra gli utenti online inviando una notifica di benvenuto.
           \end{itemize} \\\hline
        Requisiti speciali (Requisiti Non Funzionali) &  Comunicazione asincrona in cui lo scambio di informazioni avviene in tempo reale, senza sensibili pause tra 
@@ -159,7 +168,7 @@
      \resizebox{\linewidth}{!}{%
       \begin{tabular}{|l|p{10cm}|}\hline
        Nome caso d'uso &  UC2\_AccessRoom\\\hline
-       Portata & Applicazione Smart Intelligent University Communications \\\hline
+       Portata & Applicazione Smart Network University Communications \\\hline
        Livello & Obiettivo Utente \\\hline
        Attore primario & SnucUser  \\\hline
        Parti interessate e interessi & SnucUser: vuole registrarsi e effettuare l’ingresso in una stanza presente nel servizio di messaggistica \\\hline
@@ -275,7 +284,7 @@
 \begin{frame} {Iterazione 1: Analisi - UC1\_RequestConnection}
    \begin{figure}
      \includegraphics[scale=0.27]{image_astah/Iteration_1_DomainModel/UC1_RequestConnection_SSD.png}{\centering}
-     \caption{UC1 - Diagramma di sequenza di sistema}
+     \caption{UC1 - Diagramma di sequenza di dominio}
      \label{fig_UC1_RC_SSD} 
    \end{figure}
 \end{frame}
@@ -318,13 +327,13 @@
     \item \textbf{Message}: individua un generico messaggio scambiato tra utenti della chat o tra servizio di messaggistica e utente. È costituito da un ``content'' 
           (contenuto del messaggio), da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
     \item \textbf{Notify}: è una specializzazione del tipo Message ed è caratterizzata da un typeNotify che serve a distinguere il tipo di notifica (ad es. 
-          CONNECTIO\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente, \textit{BAD\_COMMAND nel caso in cui il comando inviato dall'User non 
+          CONNECTION\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente, \textit{BAD\_COMMAND nel caso in cui il comando inviato dall'User non 
           sia riconosciuto dal Server)}.
     \item \textit{\textbf{PublicNotify}: è una specializzazione di Notify e questo tipo di notifica viene ricevuta da tutti gli utenti registrati alla relativa 
           stanza. Un esempio di PublicNotify è la notifica caratterizzata dal seguente typeNotify: UPDATE\_LIST\_USERS, grazie alla quale viene 
           aggiornata la lista degli utenti registrati nella relativa stanza}.
    \item  \textit{\textbf{Commad}: è una specializzazione di Message e rappresenta il comando che viene inviato dall'User e ricevuto ed interpretato dal            
-          MessagingService (es. /join '\#Medical' richiesta da parte dell'utente a registrarsi alla stanza Medical)}.        
+          MessagingService (es. /join '\#Medical'  è richiesta da parte dell'utente a registrarsi alla stanza Medical)}.        
     \item \textit{\textbf{Room}: è caratterizzata da un nome. Ciascuna istanza individua una specifica stanza nella chat}.
     \item \textit{\textbf{Register}: mantiene un riferimento all’insieme di partecipanti che in un certo istante sono presenti nella stanza}.
    \end{itemize}
@@ -349,7 +358,7 @@
 \begin{frame} {Iterazione 1: Analisi - UC2\_AccessRoom}
    \begin{figure}
      \includegraphics[scale=0.20]{image_astah/Iteration_1_DomainModel/UC2_AccessRoom_SSD.png}{\centering}
-     \caption{UC2 - Diagramma di sequenza di sistema}
+     \caption{UC2 - Diagramma di sequenza di dominio}
      \label{fig_UC2_AR_SSD} 
    \end{figure}
 \end{frame}
@@ -377,7 +386,7 @@
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
          Operazione & \textit{notifypublic(n: PublicNotify)} \\\hline 
-         Riferimenti & Caso d'uso: UC1\_RequestConnection \\\hline
+         Riferimenti & Caso d'uso: UC2\_AccessRoom \\\hline
          Pre-condizione & Registrazione utente tra gli utenti della stanza \\\hline 
          Post-condizione & Tutti gli utenti registrati nella stanza ricevono la notifica pubblica relativa all'aggiornamento della lista degli utenti  \\\hline
       \end{tabular}}
@@ -387,19 +396,25 @@
 \end{frame}
 
 %ITERAZIONE 1 PROGETTAZIONE 
-\subsection{Iterazione 1: Progettazione}
-\begin{frame} [allowframebreaks] {Descrizione Iterazione 1: Progettazione}
+\subsection{Iterazione 1: Progettazione - Descrizione }
+ Da un'analisi del modello di domino sono state realizzate le seguenti classi:   
+\begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Descrizione}
   \begin{itemize}
    \centerline{\textbf{PACKAGE COMMON}}
    \item \textbf{Message}: è una classe astratta che definisce tutti gli attributi di in un generico messaggio che saranno necessari per la corretta gestione.
+                 È costituito da un ``content'' (contenuto del messaggio), da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
    \item \textbf{Command}: è una sottoclasse di Message e permette di identificare che nel contenuto del messaggio avremo un comando.
    \item \textbf{Notify}: è una sottoclasse di Message che permette di identificare le notifiche inviate dal MessagingServer agli User per evidenziare che vi sono 
           stati dei cambiamenti di stato del sistema. Aggiunge un ulteriore attributo per permettere di distitinguere il tipo di notifica.
    \item \textbf{PublicNotify}: è una sottoclasse di Notify. Questo tipo di notifica viene inviata dal MessagingService a tutti gli utenti che sono registrati in una 
-         determinata stanza. È stato dunque necessario aggiungere un ulteriore attributo in cui viene memorizzata la stanza a cui è riferita. Inoltre in quanto 
+         determinata stanza. È stato dunque necessario aggiungere un ulteriore attributo nel quale viene memorizzata la stanza a cui è riferita. Inoltre in quanto 
          l'utente può essere connesso a più stanze contemporaneamente, l'aggiunta di tale attributo ha permesso all'Utente che riceve una PublicNotify di comprendere 
          a quale stanza è riferita.
-   \newline
+  \end{itemize} 
+ \end{frame}
+
+\begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Descrizione}
+  \begin{itemize}
    \centerline{\textbf{PACKAGE SNUC}}
    \item \textbf{UserView}: rappresenta l'interfaccia utente. Implementa l'interfaccia UserInteraction.
    \item \textbf{UserController}: è il primo oggetto oltre allo strato UI a ricevere e coordinare una operazione di sistema. Fa in modo che l'interfaccia utente non 
@@ -410,7 +425,11 @@
          la gestione di tale messaggio. Poiché dovrà effettuare la continua ricezione di messaggi è stato necessario lanciare un nuovo Thread che resterà in ascolto 
          per ricevere eventuali messaggi da parte del server.
    \item \textbf{SnucMain}: tale classe si occupa della creazione e dell'avvio di tutti gli oggetti necessari al funzionamento dell'applicazione lato Client.
-   \newline
+  \end{itemize} 
+ \end{frame}
+   
+\begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Descrizione}
+  \begin{itemize}
    \centerline{\textbf{PACKAGE SNUCSERVER}}
    \item \textbf{MessagingService}: tale classe che rappresenta il servizio di messaggistica ed in cui sono implementate tutte le funzioni necessarie al 
          funzionamento di tale servizio tra cui per esempio la gestione dell'invio delle notifiche agli User, dell'interpretazione dei comandi e del controllo della 
@@ -430,7 +449,7 @@
 \subsection{Iterazione 1: Progettazione - Class Diagram UC1 e UC2}
 \begin{frame} {Iterazione 1: Progettazione - Class Diagram Common UC1 e UC2}
    \begin{figure}
-     \includegraphics[scale=0.18]{image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png}{\centering}
+     \includegraphics[scale=0.16]{image_astah/Iteration_1_DesignModel/ClassDiagramCommon.png}{\centering}
      \caption{DCD - Diagramma delle Classi: Package Common }
      \label{fig_UC1_UC2_DCD_1} 
    \end{figure}
