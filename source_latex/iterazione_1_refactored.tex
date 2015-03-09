@@ -10,6 +10,7 @@
    client e del server dal tipo di comunicazione. Abbiamo per questo pensato di adottare dei remote Proxy a cui possiamo dare delle responsabilità accessorie da 
    connettore, senza cambiare gli aspetti funzionali del client e del server.
    \newline
+   \newline
    Abbiamo avuto la necessità di creare due tipi di remote Proxy:
    \newline
    ProxyMessagingService e ProxyUser. Il primo non è altro che una rappresentazione del MessagingService in locale al client; il secondo invece è una 	
@@ -21,9 +22,9 @@
    \newline
    Analogamente a quanto scritto sopra, il ProxyUser non comunicherà direttamente con l'UserController, ma anche in questo caso abbiamo bisogno di un intermediario, 
    il Dispatcher. Sia il ProxyUser che il UserController implementano la stessa interfaccia IUser in modo tale che, se necessario, possiamo sostituire, modificare 
-   classi o componenti in futuro senza dover modificare il resto. L'oggetto Dispatcher è stato progettato in modo da essere uguale sia per il client che per il 
-   server. Se viene settato come riferimento un IMessagingService il dispatcher sta lavorando lato server. Se invece viene settato come riferimento un IUser, allora 
-   il dispatcher sta lavorando lato client.
+   classi o componenti in futuro senza dover modificare il resto. 
+   \newline L'oggetto Dispatcher è stato progettato in modo da essere uguale sia per il client che per il server. Se viene settato come riferimento un 
+   IMessagingService il dispatcher sta lavorando lato server. Se invece viene settato come riferimento un IUser, allora il dispatcher sta lavorando lato client.
    \newline
    Rimane il problema di chi nel server si occupa di rimanere in ascolto per permettere l'instaurazione di connessioni. Abbiamo per questo pensato di introdurre un 
    nuovo oggetto con tale funzionalità chiamato ConnectionHandler. Tale oggetto viene lanciato in un Thread a parte. Ad ogni richiesta di connessione da parte del 
@@ -41,7 +42,7 @@
    \newline 
    - ConnectionHandlerTCP 
    \newline 
-   Se invece utilizziamo la comunicazione UDP:
+   Se invece utilizzassimo la comunicazione UDP:
    \newline
    - ProxyMessagingServiceUDP
    \newline
@@ -51,8 +52,8 @@
    \newline 
    - ConnectionHandlerUDP 
    \newline 
-   Relativamente al problema della creazione degli oggetti che si occupano della comunicazione abbiamo pensato di utilizzare un ulteriore patter Gof: l'abstract 
-   factory. L'Abstract Factory è un pattern creazionale che ha lo scopo di fornire un'interfaccia per la creazione di famiglie di oggetti tra loro correlati o 
+   Relativamente al problema della creazione degli oggetti che si occupano della comunicazione, abbiamo pensato di utilizzare un ulteriore pattern GOF: l'Abstract 
+   Factory. L'Abstract Factory è un pattern creazionale che ha lo scopo di fornire un'interfaccia per la creazione di famiglie di oggetti tra loro correlati o 
    dipendenti limitando l'accoppiamento derivante dall'uso diretto delle classi concrete. Nel nostro caso le famiglie di oggetti sono relative al tipo di protocollo 
    utilizzato. L'applicazione di questo pattern si rivela assai utile quando si vuole rendere un sistema indipendente dalle modalità di creazione, composizione e 
    rappresentazione degli oggetti costituenti.
@@ -69,10 +70,10 @@
    \newline
    Un'ulteriore modifica apportata alla struttura del progetto è stata realizzata utilizzando il pattern Observer. Tale pattern comportamentale consente la    
    definizione di associazioni di dipendenza di molti oggetti verso di uno, in modo che se quest'ultimo cambia il suo stato, tutti gli altri sono notificati e 
-   aggiornati automaticamente. Nel nostro caso gli oggetti che saranno osservati sono la Room e l'UserOnLine, classe che rappresenta gli utenti connessi al server; 
+   aggiornati automaticamente. Nel nostro caso gli oggetti che saranno osservati sono la Room e l'UserOnLine (classe che rappresenta gli utenti connessi al server); 
    mentre l'osservatore è il MessagingService.
    \newline
-   Gli oggetti osservati, anche se ignari dell'identità del loro osservatore, non appena ci sarà un cambiamento del loro stato dovranno notificare l'osservatore il 
+   Gli oggetti osservati, anche se ignari dell'identità del loro osservatore, non appena ci sarà un cambiamento del loro stato dovranno notificare all'osservatore il 
    quale, in base al cambiamento notificato, dovrà richiamare l'opportuna procedura di gestione.
    \newline
    Ogni qual volta un utente si connette e viene aggiunto alla lista degli utenti online, il MessagingService verrà informato di tale cambiamento di stato e 
@@ -86,7 +87,7 @@
 \subsection{Refactoring Iterazione 1: Class Diagram UC1 e UC2}
 \begin{frame} {Refactoring Iterazione 1: Class Diagram Common UC1 e UC2}
    \begin{figure}
-     \includegraphics[scale=0.165]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramCommon.png}{\centering}
+     \includegraphics[scale=0.155]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramCommon.png}{\centering}
      \caption{DCD - Diagramma delle Classi: Package Common }
      \label{fig_UC1_UC2_DCDR_1} 
    \end{figure}
@@ -110,7 +111,7 @@
 
 \begin{frame} {Refactoring Iterazione 1: Class Diagram Snuc Server UC1 e UC2}
    \begin{figure}
-     \includegraphics[scale=0.144]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnucServer.png}{\centering}
+     \includegraphics[scale=0.135]{image_astah/Iteration_1_DesignModel_Refactored/ClassDiagramSnucServer.png}{\centering}
      \caption{DCD - Diagramma delle Classi: Package Snuc Server }
      \label{fig_UC1_UC2_DCDR_4} 
    \end{figure}
@@ -174,6 +175,15 @@
 \end{frame}
 
 \subsection{Refactoring Iterazione 1: Implementazione UC1 e UC2}
+ \begin{frame} {Refactoring Iterazione 1: Descrizione Implementazione }
+   L'implementazione del progetto è stata realizzata sfruttando il linguaggio ad oggetti Java 1.8, utilizzando l'ambiente di sviluppo NetBeans IDE 8. L'interfaccia 
+   grafica è stata realiazzata tramite il framework Swing di Java. Inoltre gli screenshot di seguito rappresentano il risultato dell'implementazione effettuata per 
+   la prima iterazione e per il refactored relativa ai casi d'uso UC1\_RequestConnection e UC2\_AccessRoom.
+   \newline
+   Il codice relativo delle iterazione\_1 e iterazione\_1\_refactored è reperibile nel repository GitHub del progetto.
+ \end{frame}
+
+
  \begin{frame} {Refactoring Iterazione 1: Implementazione  UC1\_RequestConnection }
    \begin{figure}
     \includegraphics[scale=0.32]{image_implementation/uc1/1.png}{\centering}
@@ -232,7 +242,7 @@
 
 \subsection {Refactoring Iterazione 1: Test UC1 e UC2}
  \begin{frame}[allowframebreaks] {Refactoring Iterazione 1: Test UC1 e UC2}
-    Questa è l'ultima dei cinque workflows che descrive lo sviluppo del software ed è anch'essa estremamente importante e delicata. Un programma perché possa 
+   Questa è l'ultima dei cinque workflows che descrive lo sviluppo del software ed è anch'essa estremamente importante e delicata. Un programma perché possa 
    essere consegnato al committente o immesso nel mercato ha bisogno di essere garantito come funzionante. Testare tutte le possibilità di stati in cui può 
    transitare un programma sarebbe una cosa dispendiosa e difficile per piccoli progetti, pressoché impossibile per programmi di grandi dimensioni. Ecco dunque che 
    diventano indispensabili altri tool specifici per il testing, che possano generare casi di test e dare una mano automatizzando controlli altrimenti
@@ -242,8 +252,14 @@
    \newline 
    Con unit testing si intende la procedura usata per verificare le singole parti di un codice sorgente.
    Se come nel nostro caso si decide di procedere al test del codice utilizzando JUnit, si devono creare delle apposite classi di test che controlleranno pezzo per   
-   pezzo il corretto funzionamento dei metodi. Qui possiamo visualizzare un esempio di test effettuato:
-  \lstinputlisting[caption=sample,language=java]{example_test_java/example.java}
+   pezzo il corretto funzionamento dei metodi. 
+   \newline
+   Nella slide seguente possiamo visualizzare un esempio di test effettuato, sono stati testati due metodi del CommandParser, ovvero il getCommand() e il getParameter
+   (). Nel primo caso è stato inserito un comando appositamente errato per verificare che non ci siano malfunzionamenti, invece nel secondo test si verifica la   
+   correttezza del parametro in relazione al comando inserito. 
+   \newline
+   Ulteriori test sono reperibili nel repository  GitHub del progetto.
+  \lstinputlisting[caption=Esempio di test effettuato,language=java]{example_test_java/example.java}
 \end{frame}
 
 

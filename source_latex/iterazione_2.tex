@@ -17,7 +17,7 @@
           \item SnucAdmin, è interessato a supervisionare gli utenti del servizio affinché non ci siano abusi.       
          \end{itemize} \\\hline
         Pre-condizioni &  L'utente è registrato nella stanza in cui desidera inviare i messaggi.\\\hline
-        Post-condizioni (garanzia di successo) & Ogni utente riceve il messaggio inviato. \\\hline
+        Post-condizioni (garanzia di successo) & Ogni utente della stanza riceve il messaggio inviato. \\\hline
          Scenario principale di successo &  
          \begin{enumerate} 
           \item L’utente inserisce in una opportuna area il messaggio da inviare.
@@ -103,7 +103,7 @@
     \label{table_CO5}
       \resizebox{\linewidth}{!}{%
        \begin{tabular}{|l|p{10cm}|}\hline
-         Operazione & \textbf{publicMsg(msg:PublicMessage)} \\\hline 
+         Operazione & \textit{publicMsg(msg:PublicMessage)} \\\hline 
          Riferimenti & Caso d'uso: UC3\_SendPublicMessage \\\hline
          Pre-condizione & L'utente è registrato nella stanza \\\hline 
          Post-condizione & Gli utenti registrati nella stanza ricevono il messaggio inviato \\\hline
@@ -182,6 +182,13 @@
 \end{frame}
 
 \subsection{Iterazione 2: Implementazione - UC3\_SendPublicMessage}
+ \begin{frame} {Iterazione 2: Implementazione - UC3\_SendPublicMessage }
+   Gli screenshot di seguito rappresentano il risultato dell'implementazione effettuata per la seconda iterazione relativa al caso d'uso UC3\_SendPublicMessage.
+   \newline
+   Il codice relativo delle iterazione\_2 è reperibile nel repository GitHub del progetto.
+ \end{frame}
+
+
 \begin{frame} {Iterazione 2: Implementazione - UC3\_SendPublicMessage}
    \begin{figure}
     \includegraphics[scale=0.32]{image_implementation/uc3/9.png}{\centering}
