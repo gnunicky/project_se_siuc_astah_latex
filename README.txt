@@ -34,6 +34,6 @@
    - source_astah: in tale cartella sono presenti i sorgenti di Astah: UML and Modeling Tools, delle varie iterazioni;
    - doc: in tale cartella è presente una guida utente del software prodotto e le specifiche del cliente;
    - source_latex: in tale cartella sono presenti i sorgenti della documentazione realizzata con latex;
-   - documentazione.pdf: è il file della documentazione prodotto per progetto realizzato.
+   - documentazione.pdf: è il file della documentazione prodotto per il progetto realizzato.
    N.B. Visto che i sorgenti astah sono stati realizzati in ambiente windows, in caso di problemi di visualizzazione
         con gli altri sistemi operativi  utilizzare il sistema operativo windows. 

@@ -411,9 +411,9 @@
          determinata stanza. È stato dunque necessario aggiungere un ulteriore attributo nel quale viene memorizzata la stanza a cui è riferita. Inoltre in quanto 
          l'utente può essere connesso a più stanze contemporaneamente, l'aggiunta di tale attributo ha permesso all'Utente che riceve una PublicNotify di comprendere 
          a quale stanza è riferita.
-   \item \textbf{UserInteraction}: è un interfaccia che definisce tutti i metodi che saranno necessari per interazione tra UI e il UserController.
-   \item \textbf{IMessagingService}: è un interfaccia che definisce la struttura per le funzioni che dovrà svolgere il MessagingService.
-   \item \textbf{IUser}: è un interfaccia che definisce la struttura per le funzioni che dovrà svolgere l'UserController.
+   \item \textbf{IUserInteraction}: è un'interfaccia che definisce tutti i metodi che saranno necessari per l'interazione tra UI e il UserController.
+   \item \textbf{IMessagingService}: è un'interfaccia che definisce la struttura per le funzioni che dovrà svolgere il MessagingService.
+   \item \textbf{IUser}: è un'interfaccia che definisce la struttura per le funzioni che dovrà svolgere l'UserController.
   \end{itemize} 
  \end{frame}
 \begin{frame} {Iterazione 1: Progettazione - Class Diagram Common UC1 e UC2}
@@ -427,7 +427,7 @@
 \begin{frame} [allowframebreaks] {Iterazione 1: Progettazione - Class Diagram Snuc UC1 e UC2}
   \centerline{\textbf{PACKAGE SNUC}}
   \begin{itemize}
-   \item \textbf{UserView}: rappresenta l'interfaccia utente. Implementa l'interfaccia UserInteraction.
+   \item \textbf{UserView}: rappresenta l'interfaccia utente. Implementa l'interfaccia IUserInteraction.
    \item \textbf{UserController}: è il primo oggetto oltre allo strato UI a ricevere e coordinare una operazione di sistema. Fa in modo che l'interfaccia utente non 
          contenga logica applicativa.
    \item \textbf{User}: è l'oggetto dove sono memorizzati tutti i dati relativi all'utente.

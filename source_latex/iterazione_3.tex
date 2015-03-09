@@ -53,9 +53,9 @@
           Mantiene una lista di stanze e riceve tramite comandi richieste di ingresso da parte degli utenti. Svolge il ruolo di smistatore di messaggi inviati dagli 
           User.
    \item \textbf{Message}: individua un generico messaggio scambiato tra utenti della chat o tra servizio di messaggistica e utente. È costituito da un 
-         ``content'' (contenuto del messaggio) , da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
+         ``content'' (contenuto del messaggio), da una ``date'' (rappresenta la data) e dal ``sender'' (mittente).
    \item \textbf{Notify}: è una specializzazione del tipo Message ed è caratterizzata da un typeNotify che serve a distinguere il tipo di notifica (ad es. 
-          CONNECTIO\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente, BAD\_COMMAND nel caso in cui il comando inviato dall'User non 
+          CONNECTION\_ACCEPT nel caso in cui la connessione è stata stabilita correttamente, BAD\_COMMAND nel caso in cui il comando inviato dall'User non 
           sia riconosciuto dal Server).
    \item \textbf{PublicNotify}: è una specializzazione di Notify e questo tipo di notifica viene ricevuta da tutti gli utenti registrati alla relativa 
           stanza. Un esempio di PublicNotify è la notifica caratterizzata dal seguente typeNotify: UPDATE\_LIST\_USERS, grazie alla quale viene 
@@ -188,7 +188,7 @@
 
 \subsection {Iterazione 3: Implementazione - UC4\_SendPrivateMessage}
  \begin{frame} {Iterazione 3: Implementazione - UC4\_SendPrivateMessage }
-   Gli screenshot di seguito rappresentano il risultato dell'implementazione effettuata per la terza iterazione relativa al caso d'uso UC4\_SendPrivateMessage.
+   Gli screenshot di seguito rappresentano il risultato dell'implementazione effettuata per la terza iterazione relativa al caso d'uso UC4 SendPrivateMessage.
    \newline
    Il codice relativo delle iterazione\_3 è reperibile nel repository GitHub del progetto.
  \end{frame}
